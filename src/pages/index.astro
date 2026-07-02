@@ -7,7 +7,7 @@ import About from '../components/About.astro';
 import Experience from '../components/Experience.astro';
 import FeaturedProjects from '../components/FeaturedProjects.astro';
 import SocialIcons from '../components/SocialIcons.astro';
-import { TAGLINE, SOCIALS } from '../consts';
+import { TAGLINE } from '../consts';
 import '../styles/tabs.css';
 ---
 
@@ -17,10 +17,9 @@ import '../styles/tabs.css';
     <div class="shell__inner">
       <div class="shell__head">
         <div class="shell__top">
-          <p class="eyebrow blend-eyebrow">@{SOCIALS.handle}</p>
+          <DecryptWordmark text="stanley_tejakusuma" id="hero-title" />
           <SocialIcons />
         </div>
-        <DecryptWordmark text="stanley_tejakusuma" id="hero-title" />
         <p class="tagline">{TAGLINE}</p>
         <CommandBar />
       </div>

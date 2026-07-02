@@ -15,16 +15,20 @@
   flex: 1;
   min-height: 0;
   flex-direction: column;
-  gap: clamp(1rem, 2.4vh, 1.6rem);
+  gap: clamp(0.7rem, 1.6vh, 1rem);
   width: min(100% - 32px, 1120px);
   margin: 0 auto;
-  padding: clamp(1.5rem, 5vh, 3rem) 0 clamp(1.1rem, 3vh, 1.8rem);
+  padding: clamp(1rem, 2.5vh, 1.6rem) 0 clamp(0.9rem, 2vh, 1.4rem);
 }
 
 .shell__head {
   display: flex;
   flex-direction: column;
-  gap: clamp(0.6rem, 1.6vh, 1rem);
+  gap: clamp(0.35rem, 1vh, 0.6rem);
+}
+
+.shell__head .tagline {
+  line-height: 1.5;
 }
 
 .shell__top {
@@ -35,12 +39,9 @@
   gap: 0.75rem 1rem;
 }
 
-.shell__top .blend-eyebrow {
-  margin-bottom: 0;
-}
 
 .shell #hero-title {
-  font-size: clamp(1.25rem, 3.4vw, 2.3rem);
+  font-size: clamp(1.15rem, 2.6vw, 1.8rem);
 }
 
 .shell .tagline {
@@ -52,12 +53,12 @@
   display: flex;
   gap: 0.5rem;
   border-bottom: 1px solid var(--color-border);
-  padding-bottom: 0.85rem;
+  padding-bottom: 0.6rem;
 }
 
 .tab {
-  min-height: 40px;
-  padding: 0.5rem 1.1rem;
+  min-height: 36px;
+  padding: 0.4rem 0.95rem;
   border: 1px solid var(--color-border);
   border-radius: 6px;
   background: transparent;
@@ -91,7 +92,7 @@
 .panel {
   height: 100%;
   overflow-y: auto;
-  padding: clamp(1rem, 2.5vh, 1.75rem) 2px 0 0;
+  padding: clamp(0.6rem, 1.4vh, 1rem) 2px 0 0;
 }
 
 .panel[hidden] {
