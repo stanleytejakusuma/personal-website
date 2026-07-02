@@ -30,18 +30,6 @@
         foolish.
       </p>
     </div>
-
-    <div class="tcard about__log">
-      <p class="tcard__cmd"><span class="tcard__prompt">visitor@stanley:~$</span> git log --author=stanley --oneline</p>
-      <pre class="tcard__out"><span class="dim">d47a5e7</span> <span class="ref">(HEAD -> main)</span> go independent — data &amp; trading systems
-<span class="dim">f11de57</span> ship on-chain models for 10+ chains @ flipside
-<span class="dim">24d36a2</span> graduate purdue — b.s. data science
-<span class="dim">3d9f21c</span> hack on MEV disclosure @ ETHGlobal NYC
-<span class="dim">b01d3c4</span> lead research &amp; delegation @ boiler blockchain
-<span class="dim">a17c9e0</span> intern @ kargo, write crypto research @ wagmi
-<span class="dim">c0ffee5</span> pour first latte @ starbucks — first job ever
-<span class="dim">0001337</span> initial commit: trade stocks from the school restroom</pre>
-    </div>
   </div>
 
   <div class="about__side">
@@ -79,11 +67,20 @@ mountain_air     <span class="bar">▓▓</span><span class="dim">░░░░�
 
   .about__avatar {
     float: left;
-    width: clamp(96px, 11vw, 124px);
+    width: min(46%, 280px);
     height: auto;
-    margin: 0.2rem 1.25rem 0.6rem 0;
+    margin: 0.2rem 1.4rem 0.75rem 0;
     border: 1px solid var(--color-border);
     border-radius: 12px;
+  }
+
+  @media (max-width: 880px) {
+    .about__avatar {
+      float: none;
+      display: block;
+      width: min(100%, 320px);
+      margin: 0 0 1.1rem;
+    }
   }
 
   .about__bio {
@@ -151,25 +148,10 @@ mountain_air     <span class="bar">▓▓</span><span class="dim">░░░░�
     opacity: 0.7;
   }
 
-  .tcard__out .ref {
-    color: var(--color-accent);
-  }
-
-  .about__log {
-    margin-top: 1.25rem;
-  }
-
   @media (max-width: 880px) {
     .about {
       grid-template-columns: 1fr;
     }
   }
 
-  @media (max-width: 520px) {
-    .about__avatar {
-      float: none;
-      display: block;
-      margin: 0 0 1.1rem;
-    }
-  }
 </style>
