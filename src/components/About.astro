@@ -9,25 +9,27 @@
       src="/avatar.png"
       width="112"
       height="112"
-      alt="Stanley Tejakusuma, rendered in binary"
+      alt="Stanley Tejakusuma avatar, rendered in binary"
       loading="lazy"
       decoding="async"
     />
     <div class="about__bio">
       <p>
-        Hey hey! I'm Stanley. I live and breathe data, working between the blockchain and analytics
-        space. Started out as a data scientist and it became a habit I can't shake: markets,
-        blockchains, models, even my own routines all look like datasets to me. Sometimes I break
-        things along the way, but that's part of the learning curve 😉.
+        Hey hey! I'm Stanley. I <strong>live and breathe data</strong>, working between the
+        <strong>blockchain and analytics</strong> space. Started out as a
+        <strong>data scientist</strong> and it became a habit I can't shake: markets, blockchains,
+        models, even my own routines all look like datasets to me. Sometimes I break things along
+        the way, but that's part of the learning curve 😉.
       </p>
       <p>
-        I rarely stop at the analysis. I build the pipelines that collect the data, the models that
-        learn from it, and the tools that act upon it — and I care a ton about making them simple
-        enough to actually trust.
+        I rarely stop at the analysis. I build the <strong>pipelines</strong> that collect the
+        data, the <strong>models</strong> that learn from it, and the <strong>tools that act upon
+        it</strong> — and I care a ton about making them simple enough to
+        <strong>actually trust</strong>.
       </p>
       <p>
-        Off the clock: a Tennis or Padel court, or the nearest mountain in Java. Stay hungry, stay
-        foolish.
+        Off the clock: a <strong>Tennis or Padel</strong> court, or the nearest mountain in Java.
+        <strong>Stay hungry, stay foolish.</strong>
       </p>
     </div>
   </div>
@@ -36,8 +38,8 @@
     <div class="tcard">
       <p class="tcard__cmd"><span class="tcard__prompt">visitor@stanley:~$</span> cat stanley.json</p>
       <pre class="tcard__out">{`{`}
-  <span class="k">"base"</span>: <span class="v">"Jakarta · UTC+7"</span>,
-  <span class="k">"alma_mater"</span>: <span class="v">"Purdue '24 — data science"</span>,
+  <span class="k">"base"</span>: [<span class="v">"Jakarta · UTC+7"</span>, <span class="v">"California · UTC-7"</span>],
+  <span class="k">"alma_mater"</span>: <span class="v">"Purdue — data science"</span>,
   <span class="k">"daily_drivers"</span>: [<span class="v">"python"</span>, <span class="v">"sql"</span>, <span class="v">"dbt"</span>, <span class="v">"typescript"</span>],
   <span class="k">"obsessions"</span>: [<span class="v">"on-chain data"</span>, <span class="v">"llms"</span>, <span class="v">"market microstructure"</span>],
   <span class="k">"first_job"</span>: <span class="v">"starbucks barista ☕"</span>,
@@ -96,6 +98,11 @@ mountain_air     <span class="bar">▓▓</span><span class="dim">░░░░�
 
   .about__bio p + p {
     margin-top: 0.85rem;
+  }
+
+  .about__bio strong {
+    color: var(--color-fg);
+    font-weight: 600;
   }
 
   .about__side {
