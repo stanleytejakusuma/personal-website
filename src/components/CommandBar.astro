@@ -12,7 +12,7 @@
       autocomplete="off"
       spellcheck="false"
       inputmode="text"
-      aria-label="Type a command: about, experience, projects, musings, contact, writing, help, clear"
+      aria-label="Type a command: about, experience, projects, musings, resume, contact, help, clear"
       placeholder="try: projects"
     />
   </form>
@@ -71,20 +71,41 @@
   };
 
   const run = (raw: string) => {
-    const cmd = raw.trim().toLowerCase();
+    const trimmed = raw.trim();
+    const cmd = trimmed.toLowerCase();
     if (!cmd) return;
     if (TABS.includes(cmd)) {
       window.dispatchEvent(new CustomEvent('tab:set', { detail: cmd }));
       setAck(`-> ${cmd}`);
+    } else if (cmd === 'resume' || cmd === 'cat resume') {
+      window.location.href = '/resume';
     } else if (cmd === 'contact') {
       setAck('reach me via the icons up top ↗');
     } else if (cmd === 'help') {
-      setAck('commands: about, experience, projects, musings, contact, writing, help, clear');
+      setAck('commands: about, experience, projects, musings, resume, contact, help, clear');
     } else if (cmd === 'clear') {
       setAck('');
     } else if (cmd === 'blog' || cmd === 'writing') {
       window.dispatchEvent(new CustomEvent('tab:set', { detail: 'musings' }));
       setAck('-> musings');
+    } else if (cmd === 'ls') {
+      setAck('about/ experience/ projects/ musings/');
+    } else if (cmd === 'pwd') {
+      setAck('/home/stanley');
+    } else if (cmd.startsWith('sudo')) {
+      setAck('stanley is not in the sudoers file. this incident will be reported.');
+    } else if (cmd === 'vim') {
+      setAck('you are now stuck in vim. try :q! or just click a tab.');
+    } else if (cmd === 'rm' || cmd.startsWith('rm ')) {
+      setAck('permission denied: nice try');
+    } else if (cmd === 'exit' || cmd === ':q' || cmd === ':q!') {
+      setAck('there is no escape. try a tab instead.');
+    } else if (cmd === 'cat stanley.json') {
+      setAck('see the about tab — it is literally right there');
+    } else if (cmd.startsWith('echo ')) {
+      setAck(trimmed.slice(5).trim());
+    } else if (cmd === 'whoami') {
+      setAck('visitor (stanley is the one with the keyboard)');
     } else {
       setAck(`unknown command: ${cmd} (try "help")`);
     }

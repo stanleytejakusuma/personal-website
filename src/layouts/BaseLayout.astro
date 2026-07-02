@@ -13,9 +13,17 @@ interface Props {
   path?: string;
   footer?: boolean;
   ogType?: 'website' | 'article';
+  ogImage?: string;
 }
 
-const { title, description = SITE_DESC, path = '/', footer = true, ogType = 'website' } = Astro.props;
+const {
+  title,
+  description = SITE_DESC,
+  path = '/',
+  footer = true,
+  ogType = 'website',
+  ogImage,
+} = Astro.props;
 ---
 
 <!doctype html>
@@ -28,7 +36,8 @@ const { title, description = SITE_DESC, path = '/', footer = true, ogType = 'web
     <meta name="theme-color" content="#F4F4F1" media="(prefers-color-scheme: light)" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <ThemeScript />
-    <SEO title={title} description={description} path={path} ogType={ogType} />
+    <SEO title={title} description={description} path={path} ogType={ogType} ogImage={ogImage} />
+    <link rel="alternate" type="application/rss+xml" title="Stanley Tejakusuma — musings" href="/rss.xml" />
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>

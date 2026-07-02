@@ -1,0 +1,387 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { AUTHOR, SOCIALS, SITE_URL, TAGLINE } from '../consts';
+
+interface Entry {
+  dates: string;
+  role: string;
+  org: string;
+  bullets: string[];
+}
+
+const siteHost = new URL(SITE_URL).hostname;
+
+const entries: Entry[] = [
+  {
+    dates: '2026–now',
+    role: 'Independent',
+    org: 'data & trading systems',
+    bullets: [
+      'Research, backtest, and run systematic strategies end to end.',
+      'Self-hosted data platform: archivers, pipelines, dashboards.',
+    ],
+  },
+  {
+    dates: '2024–2026',
+    role: 'Analytics Engineer',
+    org: 'Flipside Crypto',
+    bullets: [
+      'Built Snowflake + dbt ELT pipelines across 10+ chains — 150K+ MAU, 10M+ transactions.',
+      'Designed an agent-driven cost-intelligence pipeline watching $1M+ of annual compute spend.',
+      'Anchored the NEAR client relationship; shipped an Intents intelligence layer validated against $12B+ in cumulative volume.',
+    ],
+  },
+  {
+    dates: '2022–2024',
+    role: 'Research & Delegation Lead',
+    org: 'Boiler Blockchain, Purdue',
+    bullets: [
+      'Led a three-person team overseeing $6M+ in governance votes across Optimism, dYdX, Stader, and Origin.',
+      'Built and taught the club’s Introduction to Blockchain certification course.',
+    ],
+  },
+  {
+    dates: '2021–2022',
+    role: 'Data Scientist Intern',
+    org: 'Kargo Technologies',
+    bullets: [
+      'Cohort retention and customer-lifetime-value models for a freight-logistics marketplace; weekly reviews with the COO.',
+    ],
+  },
+  {
+    dates: '2021–2022',
+    role: 'Research Writer',
+    org: 'Wagmi Journal',
+    bullets: [
+      'Bi-weekly crypto research for angel investors — my first Dune Analytics dashboards and on-chain deep dives.',
+    ],
+  },
+  {
+    dates: '2021',
+    role: 'Data Scientist',
+    org: 'The Data Mine, Purdue',
+    bullets: [
+      'Cut electricity-usage prediction times by 24% for the Midcontinent Independent System Operator.',
+    ],
+  },
+  {
+    dates: '2021',
+    role: 'Barista',
+    org: 'Starbucks',
+    bullets: [
+      'My first employment, ever. Survived the 7am rush — turns out that was my first lesson in high-frequency order flow.',
+    ],
+  },
+  {
+    dates: '2020–2024',
+    role: 'B.S. Data Science',
+    org: 'Purdue University',
+    bullets: [
+      'Business economics minor. Boiler Blockchain, boxing club, Dean’s List.',
+    ],
+  },
+];
+---
+
+<BaseLayout title={`${AUTHOR} resume`} path="/resume" footer={false}>
+  <article class="resume" aria-labelledby="resume-h">
+    <header class="resume__header">
+      <div>
+        <p class="resume__prompt">resume.txt</p>
+        <h1 id="resume-h">{AUTHOR}</h1>
+        <p class="resume__tagline">{TAGLINE}</p>
+      </div>
+      <button class="resume__print" type="button" onclick="window.print()">print / save as pdf</button>
+    </header>
+
+    <div class="resume__links" aria-label="Profile links">
+      <a href={SITE_URL}>{siteHost}</a>
+      <a href={SOCIALS.github}>GitHub</a>
+      <a href={SOCIALS.linkedin}>LinkedIn</a>
+    </div>
+
+    <p class="resume__skills"><span>skills</span> python · sql · dbt · typescript</p>
+
+    <section class="resume__section" aria-labelledby="experience-h">
+      <h2 id="experience-h">experience</h2>
+      <div class="resume__entries">
+        {
+          entries.map((entry) => (
+            <article class="resume__entry">
+              <p class="resume__dates">{entry.dates}</p>
+              <div>
+                <h3>
+                  {entry.role} <span>{entry.org}</span>
+                </h3>
+                <ul>
+                  {entry.bullets.map((line) => (
+                    <li>{line}</li>
+                  ))}
+                </ul>
+              </div>
+            </article>
+          ))
+        }
+      </div>
+    </section>
+  </article>
+</BaseLayout>
+
+<style>
+  .resume {
+    width: min(100% - 32px, 900px);
+    margin: 0 auto;
+    padding: clamp(2.5rem, 7vw, 5rem) 0;
+    font-family: var(--font-mono);
+  }
+
+  .resume__header {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    gap: 1.5rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .resume__prompt {
+    margin: 0 0 0.75rem;
+    color: var(--color-accent);
+    font-size: 0.78rem;
+  }
+
+  .resume h1 {
+    margin: 0;
+    color: var(--color-fg);
+    font-family: var(--font-display);
+    font-size: clamp(2.4rem, 8vw, 5rem);
+    line-height: 0.95;
+    letter-spacing: 0;
+  }
+
+  .resume__tagline {
+    max-width: 54ch;
+    margin: 1rem 0 0;
+    color: var(--color-muted);
+    font-size: 0.9rem;
+    line-height: 1.7;
+  }
+
+  .resume__print {
+    min-height: 34px;
+    flex: 0 0 auto;
+    padding: 0.45rem 0.75rem;
+    border: 1px solid color-mix(in srgb, var(--color-accent) 52%, var(--color-border));
+    border-radius: 6px;
+    background: color-mix(in srgb, var(--color-accent) 9%, transparent);
+    color: var(--color-accent);
+    cursor: pointer;
+    font-family: var(--font-mono);
+    font-size: 0.74rem;
+  }
+
+  .resume__print:hover,
+  .resume__print:focus-visible {
+    border-color: var(--color-accent);
+  }
+
+  .resume__links,
+  .resume__skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.55rem 0.8rem;
+    margin: 1rem 0 0;
+    color: var(--color-muted);
+    font-size: 0.8rem;
+  }
+
+  .resume__links a {
+    color: var(--color-accent);
+  }
+
+  .resume__links a:not(:last-child)::after {
+    margin-left: 0.8rem;
+    color: var(--color-border);
+    content: '/';
+  }
+
+  .resume__skills span {
+    color: var(--color-accent);
+  }
+
+  .resume__section {
+    margin-top: clamp(2rem, 5vw, 3.5rem);
+  }
+
+  .resume h2 {
+    margin: 0 0 0.8rem;
+    color: var(--color-accent);
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0;
+    text-transform: uppercase;
+  }
+
+  .resume__entries {
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .resume__entry {
+    display: grid;
+    grid-template-columns: 9.5rem minmax(0, 1fr);
+    gap: 1.25rem;
+    padding: 1.05rem 0;
+    border-top: 1px solid var(--color-border);
+  }
+
+  .resume__dates {
+    margin: 0;
+    color: var(--color-muted);
+    font-size: 0.78rem;
+    line-height: 1.8;
+    text-transform: uppercase;
+  }
+
+  .resume h3 {
+    margin: 0;
+    color: var(--color-fg);
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .resume h3 span {
+    color: var(--color-accent);
+    font-weight: 500;
+  }
+
+  .resume h3 span::before {
+    color: var(--color-muted);
+    content: ' · ';
+  }
+
+  .resume ul {
+    margin: 0.45rem 0 0;
+    padding: 0;
+    list-style: none;
+    color: color-mix(in srgb, var(--color-fg) 72%, var(--color-muted));
+    font-size: 0.82rem;
+    line-height: 1.7;
+  }
+
+  .resume li::before {
+    margin-right: 0.6ch;
+    color: var(--color-accent);
+    content: '·';
+  }
+
+  .resume li + li {
+    margin-top: 0.22rem;
+  }
+
+  @media (max-width: 680px) {
+    .resume__header,
+    .resume__entry {
+      grid-template-columns: 1fr;
+    }
+
+    .resume__header {
+      display: grid;
+    }
+  }
+
+  @media print {
+    @page {
+      margin: 0.45in;
+    }
+
+    :global(:root),
+    :global(:root[data-theme='dark']),
+    :global(html),
+    :global(body) {
+      background: #fff !important;
+      color: #000 !important;
+      color-scheme: light;
+    }
+
+    :global(.nav),
+    :global(.footer),
+    :global(.skip-link),
+    :global(button) {
+      display: none !important;
+    }
+
+    .resume,
+    .resume * {
+      background: transparent !important;
+      color: #000 !important;
+      box-shadow: none !important;
+      text-shadow: none !important;
+    }
+
+    .resume {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      font-size: 10pt;
+    }
+
+    .resume__header {
+      display: block;
+      padding-bottom: 0.18in;
+      border-bottom: 1px solid #000;
+    }
+
+    .resume__prompt {
+      display: none;
+    }
+
+    .resume h1 {
+      font-size: 22pt;
+      line-height: 1.05;
+    }
+
+    .resume__tagline,
+    .resume__links,
+    .resume__skills {
+      margin-top: 0.08in;
+      font-size: 8.5pt;
+      line-height: 1.35;
+    }
+
+    .resume__section {
+      margin-top: 0.22in;
+    }
+
+    .resume h2 {
+      margin-bottom: 0.06in;
+      font-size: 9pt;
+    }
+
+    .resume__entries {
+      border-bottom: 1px solid #aaa;
+    }
+
+    .resume__entry {
+      break-inside: avoid;
+      grid-template-columns: 1.05in minmax(0, 1fr);
+      gap: 0.16in;
+      padding: 0.08in 0;
+      border-top: 1px solid #aaa;
+    }
+
+    .resume__dates,
+    .resume h3,
+    .resume ul {
+      font-size: 8.5pt;
+      line-height: 1.35;
+    }
+
+    .resume ul {
+      margin-top: 0.03in;
+    }
+
+    .resume li + li {
+      margin-top: 0.02in;
+    }
+  }
+</style>

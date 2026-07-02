@@ -9,29 +9,40 @@ const VENUES = {
 } as const;
 
 export async function getStaticPaths() {
-  const entries = await getCollection('musings', ({ data }) =>
-    (import.meta.env.PROD ? !data.draft : true) && !data.external,
-  );
-  return entries.map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
+  const entries = (
+    await getCollection('musings', ({ data }) =>
+      (import.meta.env.PROD ? !data.draft : true) && !data.external,
+    )
+  ).sort((a, b) => a.data.date.getTime() - b.data.date.getTime());
+  return entries.map((entry, i) => ({
+    params: { slug: entry.id },
+    props: { entry, prev: entries[i - 1] ?? null, next: entries[i + 1] ?? null },
+  }));
 }
 
-const { entry } = Astro.props;
+const { entry, prev, next } = Astro.props;
 const { Content } = await render(entry);
-const dateLabel = entry.data.date.toLocaleDateString('en-US', {
-  year: 'numeric',
-  month: 'short',
-  day: 'numeric',
-});
+const fmtDate = (d: Date) =>
+  d.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
+const dateLabel = fmtDate(entry.data.date);
+const readMinutes = Math.max(1, Math.round((entry.body ?? '').split(/\s+/).length / 200));
 const description = entry.data.description ?? 'Preserved crypto research writing by Stanley Tejakusuma.';
 ---
 
-<BaseLayout title={entry.data.title} description={description} path={`/musings/${entry.id}/`} ogType="article">
+<BaseLayout
+  title={entry.data.title}
+  description={description}
+  path={`/musings/${entry.id}/`}
+  ogType="article"
+  ogImage={`/og/musings/${entry.id}.png`}
+>
   <article class="representative musing-post" aria-labelledby="musing-h">
     <a class="musing-post__back inline-link" href="/#musings">← musings</a>
 
     <header class="archive-banner">
       <span><time datetime={entry.data.date.toISOString()}>{dateLabel}</time></span>
       <span>{VENUES[entry.data.venue]}</span>
+      <span>~{readMinutes} min read</span>
       <span>preserved as written</span>
       <span>not financial advice</span>
     </header>
@@ -49,6 +60,25 @@ const description = entry.data.description ?? 'Preserved crypto research writing
     <div class="musing-post__body">
       <Content />
     </div>
+
+    {(prev || next) && (
+      <nav class="musing-post__adjacent" aria-label="Adjacent musings">
+        {prev ? (
+          <a class="inline-link" href={`/musings/${prev.id}/`}>
+            ← {prev.data.title}
+            <span class="musing-post__adjdate">{fmtDate(prev.data.date)}</span>
+          </a>
+        ) : (
+          <span />
+        )}
+        {next && (
+          <a class="inline-link musing-post__next" href={`/musings/${next.id}/`}>
+            {next.data.title} →
+            <span class="musing-post__adjdate">{fmtDate(next.data.date)}</span>
+          </a>
+        )}
+      </nav>
+    )}
   </article>
 </BaseLayout>
 
@@ -175,6 +205,34 @@ const description = entry.data.description ?? 'Preserved crypto research writing
   .musing-post__body :global(code) {
     font-family: var(--font-mono);
     font-size: 0.92em;
+  }
+
+  .musing-post__adjacent {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+    max-width: 76ch;
+    margin-top: clamp(2.5rem, 5vw, 4rem);
+    padding: 1.1rem 0 2.5rem;
+    border-top: 1px solid var(--color-border);
+    font-family: var(--font-mono);
+    font-size: 0.82rem;
+  }
+
+  .musing-post__adjacent a {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    max-width: 45%;
+  }
+
+  .musing-post__next {
+    text-align: right;
+  }
+
+  .musing-post__adjdate {
+    color: var(--color-muted);
+    font-size: 0.7rem;
   }
 
   @media (max-width: 720px) {
