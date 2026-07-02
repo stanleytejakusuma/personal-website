@@ -1,0 +1,33 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="404" description="Page not found." path="/404">
+  <section class="representative representative--narrow notfound" aria-labelledby="nf-h">
+    <p class="mono-label">error / 404</p>
+    <h1 class="section-heading" id="nf-h">command not found.</h1>
+    <p class="section-copy">
+      That page doesn't exist. Head back to the
+      <a class="inline-link" href="/">home page</a>, or jump to
+      <a class="inline-link" href="/#work">work</a>.
+    </p>
+    <p class="notfound__cmd">visitor@stanley:~$ <span>cd /</span></p>
+  </section>
+</BaseLayout>
+
+<style>
+  .notfound {
+    min-height: 64vh;
+  }
+
+  .notfound__cmd {
+    margin-top: 2.5rem;
+    color: var(--color-muted);
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+  }
+
+  .notfound__cmd span {
+    color: var(--color-accent);
+  }
+</style>

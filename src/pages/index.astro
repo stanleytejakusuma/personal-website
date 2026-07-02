@@ -1,0 +1,92 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CurlField from '../components/heroes/CurlField.astro';
+import DecryptWordmark from '../components/heroes/DecryptWordmark.astro';
+import CommandBar from '../components/CommandBar.astro';
+import About from '../components/About.astro';
+import FeaturedProjects from '../components/FeaturedProjects.astro';
+import SocialIcons from '../components/SocialIcons.astro';
+import { TAGLINE, SOCIALS } from '../consts';
+import '../styles/tabs.css';
+---
+
+<BaseLayout path="/" footer={false}>
+  <section class="shell" data-curl-root>
+    <CurlField />
+    <div class="shell__inner">
+      <div class="shell__head">
+        <div class="shell__top">
+          <p class="eyebrow blend-eyebrow">@{SOCIALS.handle}</p>
+          <SocialIcons />
+        </div>
+        <DecryptWordmark text="stanley_tejakusuma" id="hero-title" />
+        <p class="tagline">{TAGLINE}</p>
+        <CommandBar />
+      </div>
+
+      <div class="tabs" role="tablist" aria-label="Sections">
+        <button class="tab" role="tab" id="tab-about" data-tab="about" aria-controls="panel-about" aria-selected="true">about</button>
+        <button class="tab" role="tab" id="tab-projects" data-tab="projects" aria-controls="panel-projects" aria-selected="false" tabindex="-1">projects</button>
+      </div>
+
+      <div class="panels">
+        <div class="panel" id="panel-about" role="tabpanel" data-panel="about" aria-labelledby="tab-about">
+          <About />
+        </div>
+        <div class="panel" id="panel-projects" role="tabpanel" data-panel="projects" aria-labelledby="tab-projects" hidden>
+          <FeaturedProjects />
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  const tabs = Array.from(document.querySelectorAll<HTMLElement>('[role="tab"][data-tab]'));
+  const panels = Array.from(document.querySelectorAll<HTMLElement>('[role="tabpanel"][data-panel]'));
+  const VALID = ['about', 'projects'];
+
+  const render = (name: string) => {
+    tabs.forEach((t) => {
+      const active = t.dataset.tab === name;
+      t.setAttribute('aria-selected', active ? 'true' : 'false');
+      t.tabIndex = active ? 0 : -1;
+    });
+    panels.forEach((p) => {
+      if (p.dataset.panel === name) p.removeAttribute('hidden');
+      else p.setAttribute('hidden', '');
+    });
+  };
+
+  const go = (name: string, focus = false) => {
+    if (!VALID.includes(name)) return;
+    if (location.hash.replace('#', '') !== name) {
+      location.hash = name; // triggers hashchange -> render
+    } else {
+      render(name);
+    }
+    if (focus) tabs.find((t) => t.dataset.tab === name)?.focus();
+  };
+
+  tabs.forEach((t) => t.addEventListener('click', () => go(t.dataset.tab || '')));
+
+  const tablist = document.querySelector('[role="tablist"]');
+  tablist?.addEventListener('keydown', (e: Event) => {
+    const ev = e as KeyboardEvent;
+    if (ev.key !== 'ArrowRight' && ev.key !== 'ArrowLeft') return;
+    ev.preventDefault();
+    const current = tabs.findIndex((t) => t.getAttribute('aria-selected') === 'true');
+    const dir = ev.key === 'ArrowRight' ? 1 : -1;
+    const next = (current + dir + tabs.length) % tabs.length;
+    go(tabs[next].dataset.tab || '', true);
+  });
+
+  window.addEventListener('tab:set', (e: Event) => go((e as CustomEvent<string>).detail));
+
+  const fromHash = () => {
+    const h = location.hash.replace('#', '');
+    render(VALID.includes(h) ? h : 'about');
+  };
+  window.addEventListener('hashchange', fromHash);
+  fromHash();
+</script>

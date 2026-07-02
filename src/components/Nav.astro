@@ -1,0 +1,80 @@
+---
+import ThemeToggle from './ThemeToggle.astro';
+---
+
+<header class="nav">
+  <a class="nav__brand" href="/" aria-label="Home">stanley<span class="nav__brand-accent">_</span>tejakusuma</a>
+  <nav class="nav__links" aria-label="Primary">
+    <a href="/blog">writing</a>
+  </nav>
+  <div class="nav__actions">
+    <ThemeToggle />
+  </div>
+</header>
+
+<style>
+  .nav {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.85rem clamp(1rem, 4vw, 3rem);
+    border-bottom: 1px solid var(--color-border);
+    background: color-mix(in srgb, var(--color-bg) 78%, transparent);
+    backdrop-filter: blur(10px);
+    font-family: var(--font-mono);
+    font-size: 0.82rem;
+  }
+
+  .nav__brand {
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    color: var(--color-fg);
+  }
+
+  .nav__brand-accent {
+    color: var(--color-accent);
+  }
+
+  .nav__links {
+    display: flex;
+    gap: clamp(1rem, 3vw, 2rem);
+    color: var(--color-muted);
+  }
+
+  .nav__links a {
+    position: relative;
+    transition: color 160ms var(--ease-out);
+  }
+
+  .nav__links a:hover,
+  .nav__links a:focus-visible {
+    color: var(--color-accent);
+  }
+
+  .nav__actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .nav__handle {
+    color: var(--color-muted);
+    transition: color 160ms var(--ease-out);
+  }
+
+  .nav__handle:hover,
+  .nav__handle:focus-visible {
+    color: var(--color-accent);
+  }
+
+  @media (max-width: 720px) {
+    .nav__links,
+    .nav__handle {
+      display: none;
+    }
+  }
+</style>

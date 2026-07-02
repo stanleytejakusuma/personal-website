@@ -1,0 +1,23 @@
+---
+import ProjectCard from './ProjectCard.astro';
+import { workProjects, personalProjects } from '../data/projects';
+---
+
+<div class="projects">
+  <div class="prow-list" aria-label="Featured projects">
+    {workProjects.map((project) => <ProjectCard project={project} />)}
+  </div>
+
+  {
+    personalProjects.length > 0 && (
+      <div class="projects__personal">
+        <p class="mono-label">also / personal</p>
+        <div class="prow-list" aria-label="Personal projects">
+          {personalProjects.map((project) => (
+            <ProjectCard project={project} />
+          ))}
+        </div>
+      </div>
+    )
+  }
+</div>

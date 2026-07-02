@@ -1,0 +1,72 @@
+---
+// About tab panel body: avatar + conversational bio (verbatim copy).
+---
+
+<div class="about">
+  <img
+    class="about__avatar"
+    src="/avatar.jpg"
+    width="112"
+    height="112"
+    alt="Stanley Tejakusuma avatar"
+    loading="lazy"
+    decoding="async"
+  />
+  <p class="section-copy">
+    Hey hey! I'm Stanley. I live and breathe data working in between blockchain and analytics space.
+    Started out as a data scientist and it turned into a habit I can't shake: whenever something has
+    numbers behind it, I become curious to know what they're really saying. Markets, blockchains,
+    models, you name it, even my own routines all look like datasets to me. I learn better by first
+    understanding the full contextual insight, then take action upon it - sometimes breaking things
+    along the way but it's part of the learning curve 😉.
+  </p>
+  <p class="section-copy">
+    Most of my work sits where data meets real decision. I deep dive into on-chain activity and turn
+    it into actionable insights, build and backtest systematic trading strategies, and fine-tuning
+    language models to run on household hardware. The domain/subject may change, but chasing the
+    signal in the noise never does.
+  </p>
+  <p class="section-copy">
+    I rarely stop at the analysis. I build the pipelines that collect the data, the models that learn
+    from it, and the tools that act upon it. I came up through data science and taught myself the
+    rest by shipping things that had real consequences (fire drill *ugh). I care a ton about making
+    complex systems simple enough to actually trust; whether a human or an agent is using them.
+  </p>
+  <p class="section-copy">
+    Outside of work, you can see me in either a Tennis or Padel court. That, or, perhaps in the
+    nearest mountain in the Java island. I'm always looking to make mine and people's life easier.
+    Never stop grinding. Stay hungry and stay foolish.
+  </p>
+</div>
+
+<style>
+  .about {
+    max-width: 66ch;
+  }
+
+  .about .section-copy {
+    font-size: 0.94rem;
+    line-height: 1.55;
+  }
+
+  .about__avatar {
+    float: left;
+    width: clamp(72px, 8vw, 88px);
+    height: auto;
+    margin: 0.2rem 1.25rem 0.6rem 0;
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+  }
+
+  .about .section-copy + .section-copy {
+    margin-top: 0.85rem;
+  }
+
+  @media (max-width: 520px) {
+    .about__avatar {
+      float: none;
+      display: block;
+      margin: 0 0 1.1rem;
+    }
+  }
+</style>

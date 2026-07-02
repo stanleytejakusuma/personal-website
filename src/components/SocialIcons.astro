@@ -1,0 +1,64 @@
+---
+import Icon from './Icon.astro';
+import { SOCIALS, EMAIL_USER, EMAIL_DOMAIN } from '../consts';
+
+const links = [
+  { name: 'github', href: SOCIALS.github, label: 'GitHub' },
+  { name: 'linkedin', href: SOCIALS.linkedin, label: 'LinkedIn' },
+  { name: 'x', href: SOCIALS.x, label: 'X' },
+] as const;
+---
+
+<div class="socials" aria-label="Contact and social links">
+  <a
+    class="socials__link"
+    data-email-user={EMAIL_USER}
+    data-email-domain={EMAIL_DOMAIN}
+    href="#"
+    rel="nofollow"
+    aria-label="Email"
+  >
+    <Icon name="mail" size={18} />
+  </a>
+  {
+    links.map((l) => (
+      <a class="socials__link" href={l.href} target="_blank" rel="noopener noreferrer" aria-label={l.label}>
+        <Icon name={l.name} size={18} />
+      </a>
+    ))
+  }
+</div>
+
+<style>
+  .socials {
+    display: flex;
+    gap: 0.55rem;
+  }
+
+  .socials__link {
+    display: inline-flex;
+    width: 34px;
+    height: 34px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--color-border);
+    border-radius: 7px;
+    color: var(--color-muted);
+    transition: color 160ms var(--ease-out), border-color 160ms var(--ease-out);
+  }
+
+  .socials__link:hover,
+  .socials__link:focus-visible {
+    color: var(--color-accent);
+    border-color: color-mix(in srgb, var(--color-accent) 55%, var(--color-border));
+  }
+</style>
+
+<script>
+  const link = document.querySelector('.socials__link[data-email-user]');
+  if (link instanceof HTMLAnchorElement) {
+    const user = link.dataset.emailUser;
+    const domain = link.dataset.emailDomain;
+    if (user && domain) link.href = `mailto:${user}@${domain}`;
+  }
+</script>

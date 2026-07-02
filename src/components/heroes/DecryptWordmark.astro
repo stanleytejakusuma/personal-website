@@ -1,0 +1,70 @@
+---
+// Mono wordmark that "decrypts" in on load: each character scrambles through
+// random glyphs then settles left-to-right. Real text is in the DOM, so it is
+// readable with no JS and under prefers-reduced-motion.
+interface Props {
+  text?: string;
+  id?: string;
+}
+const { text = 'gregorius_stanley', id = 'blend-title' } = Astro.props;
+---
+
+<h1 class="blend-wordmark" id={id} data-decrypt data-target={text}>{text}</h1>
+
+<style>
+  .blend-wordmark {
+    margin: 0;
+    color: var(--color-fg);
+    font-family: var(--font-mono);
+    font-size: clamp(1.4rem, 6vw, 4.4rem);
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    overflow-wrap: normal;
+    white-space: nowrap;
+  }
+</style>
+
+<script>
+  const el = document.querySelector('[data-decrypt]');
+
+  if (el instanceof HTMLElement) {
+    const target = el.dataset.target || el.textContent || '';
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const glyphs = 'アカサタナハマヤラワ0123456789ABCDEF#$%&<>[]{}/=_';
+    const stable = new Set([' ', '_', '-', '.']);
+    const rand = () => glyphs[Math.floor(Math.random() * glyphs.length)];
+
+    const run = () => {
+      const startTime = performance.now();
+      const stagger = 55; // ms between characters locking
+      const scramble = 240; // ms a char scrambles before locking
+      let frame = 0;
+
+      const tick = (now: number) => {
+        const t = now - startTime;
+        let out = '';
+        for (let i = 0; i < target.length; i += 1) {
+          const ch = target[i];
+          const lockAt = i * stagger + scramble;
+          if (t >= lockAt || stable.has(ch)) out += ch;
+          else if (t >= i * stagger - scramble) out += rand();
+          else out += rand();
+        }
+        el.textContent = out;
+        if (t < target.length * stagger + scramble + 80) {
+          frame = window.requestAnimationFrame(tick);
+        } else {
+          el.textContent = target;
+        }
+      };
+
+      frame = window.requestAnimationFrame(tick);
+    };
+
+    if (!reduceMotion.matches) {
+      const requestIdle = window.requestIdleCallback || ((cb) => window.setTimeout(cb, 60));
+      requestIdle(run, { timeout: 400 });
+    }
+  }
+</script>

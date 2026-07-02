@@ -1,0 +1,61 @@
+---
+import '../styles/global.css';
+import '../styles/blend.css';
+import ThemeScript from '../components/ThemeScript.astro';
+import SEO from '../components/SEO.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_DESC } from '../consts';
+
+interface Props {
+  title?: string;
+  description?: string;
+  path?: string;
+  footer?: boolean;
+}
+
+const { title, description = SITE_DESC, path = '/', footer = true } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="theme-color" content="#0A0B0D" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#F4F4F1" media="(prefers-color-scheme: light)" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <ThemeScript />
+    <SEO title={title} description={description} path={path} />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <Nav />
+    <main id="main">
+      <slot />
+    </main>
+    {footer && <Footer />}
+  </body>
+</html>
+
+<style>
+  .skip-link {
+    position: absolute;
+    left: 0.75rem;
+    top: -3rem;
+    z-index: 20;
+    padding: 0.5rem 0.85rem;
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    background: var(--color-surface);
+    color: var(--color-fg);
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    transition: top 160ms var(--ease-out);
+  }
+
+  .skip-link:focus-visible {
+    top: 0.75rem;
+  }
+</style>

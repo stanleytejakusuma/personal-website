@@ -1,0 +1,45 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (
+  await getCollection('blog', ({ data }) => (import.meta.env.PROD ? !data.draft : true))
+).sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
+---
+
+<BaseLayout title="Writing" description="Notes and writing by Gregorius Stanley." path="/blog">
+  <section class="representative representative--narrow blog-index" aria-labelledby="blog-h">
+    <p class="mono-label">writing</p>
+    <h1 class="section-heading" id="blog-h">Notes & writing.</h1>
+    {
+      posts.length === 0 ? (
+        <p class="section-copy">
+          No posts yet — writing soon. In the meantime, find me via the links on the{' '}
+          <a class="inline-link" href="/#contact">contact</a> section.
+        </p>
+      ) : (
+        <div class="project-list" aria-label="Posts">
+          {posts.map((post) => (
+            <a class="project-row blend-row" href={`/blog/${post.id}/`}>
+              <span>
+                <span class="project-row__title">{post.data.title}</span>
+                <p class="project-row__line">{post.data.description}</p>
+              </span>
+              <span class="chip-line">
+                <span class="meta-chip">
+                  {post.data.pubDate.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}
+                </span>
+              </span>
+            </a>
+          ))}
+        </div>
+      )
+    }
+  </section>
+</BaseLayout>
+
+<style>
+  .blog-index {
+    min-height: 64vh;
+  }
+</style>

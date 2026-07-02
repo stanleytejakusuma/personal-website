@@ -1,0 +1,145 @@
+---
+// Slim REPL command-bar. Typing or clicking a command switches the active tab
+// by dispatching a `tab:set` CustomEvent the shell's tab controller listens for.
+---
+
+<div class="cmdbar" data-cmdbar>
+  <form class="cmdbar__form" data-cmd-form>
+    <span class="cmdbar__prompt" aria-hidden="true">visitor@stanley:~$</span>
+    <input
+      class="cmdbar__input"
+      data-cmd-input
+      autocomplete="off"
+      spellcheck="false"
+      inputmode="text"
+      aria-label="Type a command: about, projects, contact, help"
+      placeholder="try: projects"
+    />
+    <span class="cmdbar__cursor" aria-hidden="true"></span>
+  </form>
+  <p class="cmdbar__ack" data-cmd-ack aria-live="polite"></p>
+</div>
+
+<style>
+  .cmdbar {
+    font-family: var(--font-mono);
+    font-size: clamp(0.82rem, 1.4vw, 0.95rem);
+  }
+
+  .cmdbar__form {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    min-height: 40px;
+  }
+
+  .cmdbar__prompt {
+    color: var(--color-accent);
+    white-space: nowrap;
+  }
+
+  .cmdbar__input {
+    flex: 1;
+    min-width: 0;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    color: var(--color-fg);
+    caret-color: transparent;
+  }
+
+  .cmdbar__input::placeholder {
+    color: var(--color-muted);
+    opacity: 0.6;
+  }
+
+  .cmdbar__cursor {
+    width: 0.6em;
+    height: 1.1em;
+    background: var(--color-accent);
+    animation: cmd-blink 530ms steps(1) infinite;
+  }
+
+  .cmdbar__chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.7rem;
+  }
+
+  .cmdbar__chips button {
+    min-height: 36px;
+    padding: 0.4rem 0.7rem;
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    background: transparent;
+    color: var(--color-muted);
+    cursor: pointer;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    transition: color 160ms var(--ease-out), border-color 160ms var(--ease-out);
+  }
+
+  .cmdbar__chips button:hover,
+  .cmdbar__chips button:focus-visible {
+    color: var(--color-accent);
+    border-color: color-mix(in srgb, var(--color-accent) 60%, var(--color-border));
+  }
+
+  .cmdbar__ack {
+    min-height: 1.2em;
+    margin: 0.55rem 0 0;
+    color: var(--color-muted);
+    font-size: 0.78rem;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .cmdbar__cursor {
+      animation: none;
+    }
+  }
+
+  @keyframes cmd-blink {
+    50% {
+      opacity: 0;
+    }
+  }
+</style>
+
+<script>
+  const form = document.querySelector('[data-cmd-form]');
+  const input = document.querySelector('[data-cmd-input]');
+  const ack = document.querySelector('[data-cmd-ack]');
+  const TABS = ['about', 'projects'];
+
+  const setAck = (text: string) => {
+    if (ack instanceof HTMLElement) ack.textContent = text;
+  };
+
+  const run = (raw: string) => {
+    const cmd = raw.trim().toLowerCase();
+    if (!cmd) return;
+    if (TABS.includes(cmd)) {
+      window.dispatchEvent(new CustomEvent('tab:set', { detail: cmd }));
+      setAck(`-> ${cmd}`);
+    } else if (cmd === 'contact') {
+      setAck('reach me via the icons up top ↗');
+    } else if (cmd === 'help') {
+      setAck('commands: about, projects, contact, blog, help, clear');
+    } else if (cmd === 'clear') {
+      setAck('');
+    } else if (cmd === 'blog' || cmd === 'writing') {
+      window.location.href = '/blog';
+    } else {
+      setAck(`unknown command: ${cmd} (try "help")`);
+    }
+  };
+
+  if (form instanceof HTMLFormElement && input instanceof HTMLInputElement) {
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      run(input.value);
+      input.value = '';
+    });
+  }
+</script>

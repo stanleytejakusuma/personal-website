@@ -1,0 +1,65 @@
+/* Shared primitives for the Ink x boot.tty blend hero variants. */
+
+.hero__copy.blend-copy {
+  width: min(100% - 32px, 880px);
+  margin: 0 auto;
+}
+
+.blend-eyebrow {
+  display: block;
+  margin-bottom: 1.4rem;
+}
+
+.blend-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: clamp(1.8rem, 4vw, 2.6rem);
+}
+
+.blend-nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 0.5rem 0.85rem 0.5rem 0.7rem;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  color: var(--color-muted);
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  transition: color 180ms var(--ease-out), border-color 180ms var(--ease-out);
+}
+
+.blend-nav a::before {
+  margin-right: 0.5ch;
+  color: var(--color-accent);
+  content: '$';
+  opacity: 0.55;
+}
+
+.blend-nav a:hover,
+.blend-nav a:focus-visible {
+  color: var(--color-accent);
+  border-color: color-mix(in srgb, var(--color-accent) 55%, var(--color-border));
+}
+
+/* Project rows reuse the global .project-row primitives; this just adds the
+   terminal-flavored hover used across the blend variants. */
+.blend-row {
+  transition: color 180ms var(--ease-out);
+}
+
+.blend-row .project-row__title {
+  background: linear-gradient(currentColor, currentColor) left bottom / 0 1px no-repeat;
+  transition: background-size 220ms var(--ease-out);
+}
+
+.blend-row:hover,
+.blend-row:focus-visible {
+  color: var(--color-accent);
+}
+
+.blend-row:hover .project-row__title,
+.blend-row:focus-visible .project-row__title {
+  background-size: 100% 1px;
+}
