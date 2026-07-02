@@ -14,6 +14,6 @@ export const SOCIALS = {
   handle: 'stanleytejakusuma',
   github: 'https://github.com/stanleytejakusuma',
   linkedin: 'https://www.linkedin.com/in/stanleytejakusuma/',
-  x: 'https://x.com/stanzteja',
+  x: 'https://x.com/stanztejakusuma',
 } as const;
 
