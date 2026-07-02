@@ -27,8 +27,18 @@ let currentYear = '';
       <p class="mono-label">musings</p>
       <h2 class="section-heading" id="musings-h">Research archive.</h2>
     </div>
-    <p class="musings__count">{entries.length} entries</p>
+    <p class="musings__count" data-mcount>{entries.length} entries</p>
   </div>
+
+  <input
+    class="musings__search"
+    type="search"
+    data-msearch
+    placeholder="search the archive…"
+    aria-label="Search musings by title, tag, ticker, venue, or year"
+    autocomplete="off"
+    spellcheck="false"
+  />
 
   <div class="musings__filters" aria-label="Filter musings by sector">
     <button class="mfilter is-active" type="button" data-filter="all" aria-pressed="true">All</button>
@@ -68,6 +78,18 @@ let currentYear = '';
                 data-musing-row
                 data-year={year}
                 data-tags={entry.data.tags.join('|')}
+                data-search={[
+                  entry.data.title,
+                  ...entry.data.tags,
+                  ...(entry.data.subtags ?? []),
+                  ...(entry.data.tickers ?? []),
+                  entry.data.venue,
+                  VENUES[entry.data.venue],
+                  entry.data.research ? 'research' : '',
+                  year,
+                ]
+                  .join(' ')
+                  .toLowerCase()}
               >
                 <td class="musings__date" data-label="date">
                   <time datetime={entry.data.date.toISOString()}>{dateFormatter.format(entry.data.date)}</time>
@@ -99,29 +121,45 @@ let currentYear = '';
   const buttons = Array.from(root?.querySelectorAll<HTMLButtonElement>('[data-filter]') ?? []);
   const rows = Array.from(root?.querySelectorAll<HTMLTableRowElement>('[data-musing-row]') ?? []);
   const dividers = Array.from(root?.querySelectorAll<HTMLTableRowElement>('[data-year-divider]') ?? []);
+  const search = root?.querySelector<HTMLInputElement>('[data-msearch]');
+  const count = root?.querySelector<HTMLElement>('[data-mcount]');
+  const total = rows.length;
 
-  const setFilter = (filter: string) => {
-    buttons.forEach((button) => {
-      const active = button.dataset.filter === filter;
-      button.classList.toggle('is-active', active);
-      button.setAttribute('aria-pressed', active ? 'true' : 'false');
-    });
+  let activeFilter = 'all';
+
+  const applyFilters = () => {
+    const q = (search?.value || '').trim().toLowerCase();
+    let visible = 0;
 
     rows.forEach((row) => {
       const tags = (row.dataset.tags || '').split('|');
-      const visible = filter === 'all' || tags.includes(filter);
-      row.hidden = !visible;
+      const matchesTag = activeFilter === 'all' || tags.includes(activeFilter);
+      const matchesQuery = !q || (row.dataset.search || '').includes(q);
+      row.hidden = !(matchesTag && matchesQuery);
+      if (!row.hidden) visible++;
     });
 
     dividers.forEach((divider) => {
       const year = divider.dataset.year;
       divider.hidden = !rows.some((row) => row.dataset.year === year && !row.hidden);
     });
+
+    if (count) count.textContent = visible === total ? `${total} entries` : `${visible} / ${total} entries`;
   };
 
   buttons.forEach((button) => {
-    button.addEventListener('click', () => setFilter(button.dataset.filter || 'all'));
+    button.addEventListener('click', () => {
+      activeFilter = button.dataset.filter || 'all';
+      buttons.forEach((b) => {
+        const active = b === button;
+        b.classList.toggle('is-active', active);
+        b.setAttribute('aria-pressed', active ? 'true' : 'false');
+      });
+      applyFilters();
+    });
   });
+
+  search?.addEventListener('input', applyFilters);
 </script>
 
 <style>
@@ -147,6 +185,27 @@ let currentYear = '';
     color: var(--color-muted);
     font-family: var(--font-mono);
     font-size: 0.76rem;
+  }
+
+  .musings__search {
+    width: min(100%, 320px);
+    padding: 0.4rem 0.7rem;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    background: color-mix(in srgb, var(--color-surface) 55%, transparent);
+    color: var(--color-fg);
+    font-family: var(--font-mono);
+    /* 16px floor keeps iOS Safari from zooming the page on focus */
+    font-size: max(16px, 0.8rem);
+  }
+
+  .musings__search::placeholder {
+    color: var(--color-muted);
+  }
+
+  .musings__search:focus-visible {
+    outline: none;
+    border-color: color-mix(in srgb, var(--color-accent) 58%, var(--color-border));
   }
 
   .musings__filters {
