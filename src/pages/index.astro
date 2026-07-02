@@ -6,6 +6,7 @@ import CommandBar from '../components/CommandBar.astro';
 import About from '../components/About.astro';
 import Experience from '../components/Experience.astro';
 import FeaturedProjects from '../components/FeaturedProjects.astro';
+import Musings from '../components/Musings.astro';
 import SocialIcons from '../components/SocialIcons.astro';
 import { TAGLINE } from '../consts';
 import '../styles/tabs.css';
@@ -28,6 +29,7 @@ import '../styles/tabs.css';
         <button class="tab" role="tab" id="tab-about" data-tab="about" aria-controls="panel-about" aria-selected="true">about</button>
         <button class="tab" role="tab" id="tab-experience" data-tab="experience" aria-controls="panel-experience" aria-selected="false" tabindex="-1">experience</button>
         <button class="tab" role="tab" id="tab-projects" data-tab="projects" aria-controls="panel-projects" aria-selected="false" tabindex="-1">projects</button>
+        <button class="tab" role="tab" id="tab-musings" data-tab="musings" aria-controls="panel-musings" aria-selected="false" tabindex="-1">musings</button>
       </div>
 
       <div class="panels">
@@ -40,6 +42,9 @@ import '../styles/tabs.css';
         <div class="panel" id="panel-projects" role="tabpanel" data-panel="projects" aria-labelledby="tab-projects" tabindex="0" hidden>
           <FeaturedProjects />
         </div>
+        <div class="panel" id="panel-musings" role="tabpanel" data-panel="musings" aria-labelledby="tab-musings" tabindex="0" hidden>
+          <Musings />
+        </div>
       </div>
     </div>
   </section>
@@ -48,7 +53,7 @@ import '../styles/tabs.css';
 <script>
   const tabs = Array.from(document.querySelectorAll<HTMLElement>('[role="tab"][data-tab]'));
   const panels = Array.from(document.querySelectorAll<HTMLElement>('[role="tabpanel"][data-panel]'));
-  const VALID = ['about', 'experience', 'projects'];
+  const VALID = ['about', 'experience', 'projects', 'musings'];
 
   const render = (name: string) => {
     tabs.forEach((t) => {

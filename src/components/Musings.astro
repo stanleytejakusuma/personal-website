@@ -1,0 +1,346 @@
+---
+import { getCollection } from 'astro:content';
+
+const FILTERS = ['DeFi', 'L1/L2', 'NFT', 'GameFi', 'MEV', 'Research', 'CEX/FinTech', 'Evergreen'];
+const VENUES = {
+  wagmi: 'Wagmi',
+  boiler: 'Boiler',
+  personal: 'Personal',
+} as const;
+
+const entries = (
+  await getCollection('musings', ({ data }) => (import.meta.env.PROD ? !data.draft : true))
+).sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+
+const dateFormatter = new Intl.DateTimeFormat('en-US', {
+  month: 'short',
+  day: '2-digit',
+  year: 'numeric',
+});
+
+let currentYear = '';
+---
+
+<section class="musings" aria-labelledby="musings-h" data-musings>
+  <div class="musings__head">
+    <div>
+      <p class="mono-label">musings</p>
+      <h2 class="section-heading" id="musings-h">Research archive.</h2>
+    </div>
+    <p class="musings__count">{entries.length} entries</p>
+  </div>
+
+  <div class="musings__filters" aria-label="Filter musings by sector">
+    <button class="mfilter is-active" type="button" data-filter="all" aria-pressed="true">All</button>
+    {FILTERS.map((filter) => (
+      <button class="mfilter" type="button" data-filter={filter} aria-pressed="false">{filter}</button>
+    ))}
+  </div>
+
+  <div class="musings__table-wrap">
+    <table class="musings__table">
+      <thead>
+        <tr>
+          <th scope="col">date</th>
+          <th scope="col">title</th>
+          <th scope="col">tags</th>
+          <th scope="col">venue</th>
+        </tr>
+      </thead>
+      <tbody>
+        {entries.map((entry) => {
+          const year = String(entry.data.date.getFullYear());
+          const showYear = year !== currentYear;
+          currentYear = year;
+          const href = entry.data.external ?? `/musings/${entry.id}/`;
+          const externalAttrs = entry.data.external
+            ? { target: '_blank', rel: 'noopener' }
+            : {};
+          return (
+            <>
+              {showYear && (
+                <tr class="musings__year" data-year-divider data-year={year}>
+                  <th scope="rowgroup" colspan="4">{year}</th>
+                </tr>
+              )}
+              <tr
+                class="musings__row"
+                data-musing-row
+                data-year={year}
+                data-tags={entry.data.tags.join('|')}
+              >
+                <td class="musings__date" data-label="date">
+                  <time datetime={entry.data.date.toISOString()}>{dateFormatter.format(entry.data.date)}</time>
+                </td>
+                <td class="musings__title" data-label="title">
+                  <a href={href} {...externalAttrs}>
+                    {entry.data.title}
+                    {entry.data.external && <span aria-hidden="true">↗</span>}
+                  </a>
+                </td>
+                <td class="musings__tags" data-label="tags">
+                  {entry.data.tags.map((tag) => <span>{tag}</span>)}
+                </td>
+                <td class="musings__venue" data-label="venue">
+                  <span class={`venue venue--${entry.data.venue}`}>{VENUES[entry.data.venue]}</span>
+                  {entry.data.research && <span class="research-badge">research</span>}
+                </td>
+              </tr>
+            </>
+          );
+        })}
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<script>
+  const root = document.querySelector<HTMLElement>('[data-musings]');
+  const buttons = Array.from(root?.querySelectorAll<HTMLButtonElement>('[data-filter]') ?? []);
+  const rows = Array.from(root?.querySelectorAll<HTMLTableRowElement>('[data-musing-row]') ?? []);
+  const dividers = Array.from(root?.querySelectorAll<HTMLTableRowElement>('[data-year-divider]') ?? []);
+
+  const setFilter = (filter: string) => {
+    buttons.forEach((button) => {
+      const active = button.dataset.filter === filter;
+      button.classList.toggle('is-active', active);
+      button.setAttribute('aria-pressed', active ? 'true' : 'false');
+    });
+
+    rows.forEach((row) => {
+      const tags = (row.dataset.tags || '').split('|');
+      const visible = filter === 'all' || tags.includes(filter);
+      row.hidden = !visible;
+    });
+
+    dividers.forEach((divider) => {
+      const year = divider.dataset.year;
+      divider.hidden = !rows.some((row) => row.dataset.year === year && !row.hidden);
+    });
+  };
+
+  buttons.forEach((button) => {
+    button.addEventListener('click', () => setFilter(button.dataset.filter || 'all'));
+  });
+</script>
+
+<style>
+  .musings {
+    display: grid;
+    gap: 0.9rem;
+  }
+
+  .musings__head {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .musings .section-heading {
+    margin-bottom: 0;
+    font-size: clamp(1.6rem, 3.2vw, 2.6rem);
+  }
+
+  .musings__count {
+    margin: 0 0 0.25rem;
+    color: var(--color-muted);
+    font-family: var(--font-mono);
+    font-size: 0.76rem;
+  }
+
+  .musings__filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+  }
+
+  .mfilter {
+    min-height: 30px;
+    padding: 0.28rem 0.58rem;
+    border: 1px solid var(--color-border);
+    border-radius: 999px;
+    background: transparent;
+    color: var(--color-muted);
+    cursor: pointer;
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    transition: background-color 160ms var(--ease-out), border-color 160ms var(--ease-out),
+      color 160ms var(--ease-out);
+  }
+
+  .mfilter:hover,
+  .mfilter:focus-visible,
+  .mfilter.is-active {
+    border-color: color-mix(in srgb, var(--color-accent) 58%, var(--color-border));
+    color: var(--color-accent);
+  }
+
+  .mfilter.is-active {
+    background: color-mix(in srgb, var(--color-accent) 10%, transparent);
+  }
+
+  .musings__table-wrap {
+    overflow-x: auto;
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .musings__table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.88rem;
+  }
+
+  .musings__table th,
+  .musings__table td {
+    padding: 0.62rem 0.55rem;
+    text-align: left;
+    vertical-align: top;
+  }
+
+  .musings__table thead th {
+    color: var(--color-muted);
+    font-family: var(--font-mono);
+    font-size: 0.66rem;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+
+  .musings__row {
+    border-top: 1px solid var(--color-border);
+  }
+
+  .musings__row:hover {
+    background: color-mix(in srgb, var(--color-accent) 5%, transparent);
+  }
+
+  .musings__year th {
+    padding: 0.78rem 0.55rem 0.38rem;
+    border-top: 1px solid var(--color-border);
+    color: var(--color-accent);
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 500;
+  }
+
+  .musings__date {
+    width: 10.5rem;
+    color: var(--color-muted);
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    white-space: nowrap;
+  }
+
+  .musings__title {
+    min-width: 18rem;
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.35;
+  }
+
+  .musings__title a {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.35rem;
+  }
+
+  .musings__title a:hover,
+  .musings__title a:focus-visible {
+    color: var(--color-accent);
+  }
+
+  .musings__tags {
+    width: 18rem;
+  }
+
+  .musings__tags span,
+  .venue,
+  .research-badge {
+    display: inline-flex;
+    align-items: center;
+    min-height: 24px;
+    padding: 0.22rem 0.46rem;
+    border: 1px solid var(--color-border);
+    border-radius: 999px;
+    color: var(--color-muted);
+    font-family: var(--font-mono);
+    font-size: 0.64rem;
+    line-height: 1;
+    margin: 0 0.35rem 0.35rem 0;
+    white-space: nowrap;
+  }
+
+  .venue--boiler,
+  .research-badge {
+    color: var(--color-accent-2);
+    border-color: color-mix(in srgb, var(--color-accent-2) 45%, var(--color-border));
+  }
+
+  .venue--wagmi {
+    color: var(--color-accent);
+    border-color: color-mix(in srgb, var(--color-accent) 45%, var(--color-border));
+  }
+
+  .venue--personal {
+    color: var(--color-fg);
+  }
+
+  @media (max-width: 720px) {
+    .musings__head {
+      align-items: start;
+      flex-direction: column;
+      gap: 0.35rem;
+    }
+
+    .musings__table-wrap {
+      overflow-x: visible;
+    }
+
+    .musings__table,
+    .musings__table tbody,
+    .musings__table tr,
+    .musings__table td,
+    .musings__table th {
+      display: block;
+    }
+
+    .musings__table thead {
+      display: none;
+    }
+
+    .musings__year th {
+      padding-left: 0;
+    }
+
+    .musings__row {
+      display: grid;
+      gap: 0.38rem;
+      padding: 0.85rem 0;
+    }
+
+    .musings__table td {
+      width: auto;
+      min-width: 0;
+      padding: 0;
+    }
+
+    .musings__date::before,
+    .musings__title::before,
+    .musings__tags::before,
+    .musings__venue::before {
+      content: attr(data-label);
+      display: block;
+      margin-bottom: 0.2rem;
+      color: var(--color-muted);
+      font-family: var(--font-mono);
+      font-size: 0.6rem;
+      text-transform: uppercase;
+    }
+
+    .musings__title {
+      font-size: 1.08rem;
+    }
+  }
+</style>

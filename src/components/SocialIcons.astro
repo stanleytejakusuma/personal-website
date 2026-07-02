@@ -1,6 +1,6 @@
 ---
 import Icon from './Icon.astro';
-import { SOCIALS, EMAIL_USER, EMAIL_DOMAIN } from '../consts';
+import { SOCIALS, EMAIL_USER } from '../consts';
 
 const links = [
   { name: 'github', href: SOCIALS.github, label: 'GitHub' },
@@ -13,7 +13,9 @@ const links = [
   <a
     class="socials__link"
     data-email-user={EMAIL_USER}
-    data-email-domain={EMAIL_DOMAIN}
+    data-email-domain-a="gm"
+    data-email-domain-b="ail"
+    data-email-tld="com"
     href="#"
     rel="nofollow"
     aria-label="Email"
@@ -58,7 +60,8 @@ const links = [
   const link = document.querySelector('.socials__link[data-email-user]');
   if (link instanceof HTMLAnchorElement) {
     const user = link.dataset.emailUser;
-    const domain = link.dataset.emailDomain;
-    if (user && domain) link.href = `mailto:${user}@${domain}`;
+    const domain = `${link.dataset.emailDomainA || ''}${link.dataset.emailDomainB || ''}`;
+    const tld = link.dataset.emailTld;
+    if (user && domain && tld) link.href = `mailto:${user}@${domain}.${tld}`;
   }
 </script>

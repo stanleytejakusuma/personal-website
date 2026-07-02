@@ -12,9 +12,10 @@ interface Props {
   description?: string;
   path?: string;
   footer?: boolean;
+  ogType?: 'website' | 'article';
 }
 
-const { title, description = SITE_DESC, path = '/', footer = true } = Astro.props;
+const { title, description = SITE_DESC, path = '/', footer = true, ogType = 'website' } = Astro.props;
 ---
 
 <!doctype html>
@@ -27,7 +28,7 @@ const { title, description = SITE_DESC, path = '/', footer = true } = Astro.prop
     <meta name="theme-color" content="#F4F4F1" media="(prefers-color-scheme: light)" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <ThemeScript />
-    <SEO title={title} description={description} path={path} />
+    <SEO title={title} description={description} path={path} ogType={ogType} />
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>

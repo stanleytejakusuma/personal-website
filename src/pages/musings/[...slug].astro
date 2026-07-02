@@ -1,0 +1,193 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const VENUES = {
+  wagmi: 'Wagmi Journal',
+  boiler: 'Boiler Blockchain',
+  personal: 'Personal',
+} as const;
+
+export async function getStaticPaths() {
+  const entries = await getCollection('musings', ({ data }) =>
+    (import.meta.env.PROD ? !data.draft : true) && !data.external,
+  );
+  return entries.map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const dateLabel = entry.data.date.toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'short',
+  day: 'numeric',
+});
+const description = entry.data.description ?? 'Preserved crypto research writing by Stanley Tejakusuma.';
+---
+
+<BaseLayout title={entry.data.title} description={description} path={`/musings/${entry.id}/`} ogType="article">
+  <article class="representative musing-post" aria-labelledby="musing-h">
+    <a class="musing-post__back inline-link" href="/#musings">← musings</a>
+
+    <header class="archive-banner">
+      <span><time datetime={entry.data.date.toISOString()}>{dateLabel}</time></span>
+      <span>{VENUES[entry.data.venue]}</span>
+      <span>preserved as written</span>
+      <span>not financial advice</span>
+    </header>
+
+    <p class="mono-label">archive</p>
+    <h1 class="section-heading" id="musing-h">{entry.data.title}</h1>
+
+    <div class="musing-post__meta" aria-label="Article metadata">
+      {entry.data.tags.map((tag) => <span>{tag}</span>)}
+      {entry.data.research && <span>research</span>}
+      {entry.data.tickers?.map((ticker) => <span>${ticker}</span>)}
+      {entry.data.subtags?.map((tag) => <span>{tag}</span>)}
+    </div>
+
+    <div class="musing-post__body">
+      <Content />
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .musing-post {
+    width: min(100% - 32px, 880px);
+    padding-top: clamp(2rem, 7vh, 5rem);
+  }
+
+  .musing-post__back {
+    display: inline-flex;
+    margin-bottom: 1.1rem;
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+  }
+
+  .archive-banner {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem 0.7rem;
+    margin-bottom: clamp(1.4rem, 3vw, 2rem);
+    padding: 0.75rem 0;
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+    color: var(--color-muted);
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+  }
+
+  .archive-banner span:not(:last-child)::after {
+    content: '·';
+    margin-left: 0.7rem;
+    color: var(--color-border);
+  }
+
+  .musing-post .section-heading {
+    max-width: 12ch;
+    margin-bottom: 1rem;
+    font-size: clamp(2.2rem, 8vw, 5rem);
+  }
+
+  .musing-post__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.42rem;
+    margin-bottom: clamp(2rem, 4vw, 3rem);
+  }
+
+  .musing-post__meta span {
+    display: inline-flex;
+    min-height: 26px;
+    align-items: center;
+    padding: 0.25rem 0.5rem;
+    border: 1px solid var(--color-border);
+    border-radius: 999px;
+    color: var(--color-muted);
+    font-family: var(--font-mono);
+    font-size: 0.66rem;
+  }
+
+  .musing-post__body {
+    max-width: 76ch;
+    font-size: 1rem;
+    line-height: 1.78;
+  }
+
+  .musing-post__body :global(h1),
+  .musing-post__body :global(h2),
+  .musing-post__body :global(h3) {
+    margin: 2.4rem 0 0.8rem;
+    font-family: var(--font-display);
+    line-height: 1.15;
+  }
+
+  .musing-post__body :global(p),
+  .musing-post__body :global(ul),
+  .musing-post__body :global(ol) {
+    margin: 0 0 1rem;
+  }
+
+  .musing-post__body :global(ul),
+  .musing-post__body :global(ol) {
+    padding-left: 1.25rem;
+  }
+
+  .musing-post__body :global(a) {
+    color: var(--color-accent);
+    overflow-wrap: anywhere;
+  }
+
+  .musing-post__body :global(img) {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 1.4rem 0 0.55rem;
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    background: var(--color-surface);
+  }
+
+  .musing-post__body :global(table) {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    margin: 1.3rem 0;
+    overflow-x: auto;
+    border-collapse: collapse;
+    font-size: 0.86rem;
+  }
+
+  .musing-post__body :global(th),
+  .musing-post__body :global(td) {
+    padding: 0.45rem 0.55rem;
+    border: 1px solid var(--color-border);
+  }
+
+  .musing-post__body :global(blockquote) {
+    margin: 1.4rem 0;
+    padding-left: 1rem;
+    border-left: 2px solid var(--color-accent);
+    color: color-mix(in srgb, var(--color-fg) 78%, var(--color-muted));
+  }
+
+  .musing-post__body :global(code) {
+    font-family: var(--font-mono);
+    font-size: 0.92em;
+  }
+
+  @media (max-width: 720px) {
+    .archive-banner {
+      display: grid;
+    }
+
+    .archive-banner span::after {
+      display: none;
+    }
+
+    .musing-post .section-heading {
+      max-width: none;
+    }
+  }
+</style>

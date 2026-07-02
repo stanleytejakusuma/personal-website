@@ -5,9 +5,10 @@ interface Props {
   title?: string;
   description?: string;
   path?: string;
+  ogType?: 'website' | 'article';
 }
 
-const { title = SITE_TITLE, description = SITE_DESC, path = '/' } = Astro.props;
+const { title = SITE_TITLE, description = SITE_DESC, path = '/', ogType = 'website' } = Astro.props;
 const pageTitle = title === SITE_TITLE ? SITE_TITLE : `${title} · ${SITE_TITLE}`;
 const canonical = new URL(path, SITE_URL).href;
 const ogImage = new URL('/og.png', SITE_URL).href;
@@ -26,7 +27,7 @@ const personLd = {
 <meta name="author" content={AUTHOR} />
 <link rel="canonical" href={canonical} />
 
-<meta property="og:type" content="website" />
+<meta property="og:type" content={ogType} />
 <meta property="og:site_name" content={SITE_TITLE} />
 <meta property="og:title" content={pageTitle} />
 <meta property="og:description" content={description} />

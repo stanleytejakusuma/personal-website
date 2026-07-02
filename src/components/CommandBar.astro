@@ -12,7 +12,7 @@
       autocomplete="off"
       spellcheck="false"
       inputmode="text"
-      aria-label="Type a command: about, experience, projects, contact, blog, help, clear"
+      aria-label="Type a command: about, experience, projects, musings, contact, writing, help, clear"
       placeholder="try: projects"
     />
   </form>
@@ -64,7 +64,7 @@
   const form = document.querySelector('[data-cmd-form]');
   const input = document.querySelector('[data-cmd-input]');
   const ack = document.querySelector('[data-cmd-ack]');
-  const TABS = ['about', 'experience', 'projects'];
+  const TABS = ['about', 'experience', 'projects', 'musings'];
 
   const setAck = (text: string) => {
     if (ack instanceof HTMLElement) ack.textContent = text;
@@ -79,11 +79,12 @@
     } else if (cmd === 'contact') {
       setAck('reach me via the icons up top ↗');
     } else if (cmd === 'help') {
-      setAck('commands: about, experience, projects, contact, blog, help, clear');
+      setAck('commands: about, experience, projects, musings, contact, writing, help, clear');
     } else if (cmd === 'clear') {
       setAck('');
     } else if (cmd === 'blog' || cmd === 'writing') {
-      window.location.href = '/blog';
+      window.dispatchEvent(new CustomEvent('tab:set', { detail: 'musings' }));
+      setAck('-> musings');
     } else {
       setAck(`unknown command: ${cmd} (try "help")`);
     }
