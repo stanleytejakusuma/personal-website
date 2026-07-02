@@ -27,8 +27,10 @@
   }
 
   @media (prefers-reduced-motion: reduce) {
-    .curl-canvas {
+    .curl-canvas,
+    .curl-canvas.is-ready {
       opacity: 0.5;
+      transition: none;
     }
   }
 </style>
@@ -322,10 +324,12 @@
       },
       { passive: true },
     );
-    window.addEventListener(
-      'pointerleave',
-      () => {
-        uniforms.uPointerActive.value = 0;
+    // pointerleave never reaches window listeners (it doesn't bubble); detect
+    // the cursor leaving the viewport via pointerout with no relatedTarget.
+    document.addEventListener(
+      'pointerout',
+      (event) => {
+        if (!event.relatedTarget) uniforms.uPointerActive.value = 0;
       },
       { passive: true },
     );

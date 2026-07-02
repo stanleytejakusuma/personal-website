@@ -233,6 +233,11 @@
   border-color: color-mix(in srgb, #d39a4e 45%, var(--color-border));
 }
 
+:root[data-theme='light'] .status--in-dev {
+  color: #8a5a15;
+  border-color: color-mix(in srgb, #8a5a15 45%, var(--color-border));
+}
+
 .projects__personal {
   margin-top: clamp(1.75rem, 4vh, 2.75rem);
 }

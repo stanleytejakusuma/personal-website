@@ -7,15 +7,15 @@ const posts = (
 ).sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
 ---
 
-<BaseLayout title="Writing" description="Notes and writing by Gregorius Stanley." path="/blog">
+<BaseLayout title="Writing" description="Notes and writing by Stanley Tejakusuma." path="/blog/">
   <section class="representative representative--narrow blog-index" aria-labelledby="blog-h">
     <p class="mono-label">writing</p>
     <h1 class="section-heading" id="blog-h">Notes & writing.</h1>
     {
       posts.length === 0 ? (
         <p class="section-copy">
-          No posts yet — writing soon. In the meantime, find me via the links on the{' '}
-          <a class="inline-link" href="/#contact">contact</a> section.
+          No posts yet — writing soon. In the meantime, find me via the icons on the{' '}
+          <a class="inline-link" href="/">home page</a>.
         </p>
       ) : (
         <div class="project-list" aria-label="Posts">

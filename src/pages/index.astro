@@ -30,10 +30,10 @@ import '../styles/tabs.css';
       </div>
 
       <div class="panels">
-        <div class="panel" id="panel-about" role="tabpanel" data-panel="about" aria-labelledby="tab-about">
+        <div class="panel" id="panel-about" role="tabpanel" data-panel="about" aria-labelledby="tab-about" tabindex="0">
           <About />
         </div>
-        <div class="panel" id="panel-projects" role="tabpanel" data-panel="projects" aria-labelledby="tab-projects" hidden>
+        <div class="panel" id="panel-projects" role="tabpanel" data-panel="projects" aria-labelledby="tab-projects" tabindex="0" hidden>
           <FeaturedProjects />
         </div>
       </div>
@@ -85,7 +85,9 @@ import '../styles/tabs.css';
 
   const fromHash = () => {
     const h = location.hash.replace('#', '');
-    render(VALID.includes(h) ? h : 'about');
+    // Foreign hashes (e.g. the #main skip-link) must not reset the active tab.
+    if (h && !VALID.includes(h)) return;
+    render(h || 'about');
   };
   window.addEventListener('hashchange', fromHash);
   fromHash();

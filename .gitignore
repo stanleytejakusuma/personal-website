@@ -3,5 +3,3 @@ dist/
 .astro/
 /data/
 .DS_Store
-.claude/
-AGENTS.md

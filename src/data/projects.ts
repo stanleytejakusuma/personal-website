@@ -60,11 +60,11 @@ export const projects: Project[] = [
     name: 'solagin-live',
     tagline: 'Autonomous execution + risk',
     description:
-      'An autonomous execution-and-risk layer for a live futures signal feed. It parses incoming signals, sizes positions with ATR-adaptive stops and staged risk scaling, and enters over a TWAP window to limit slippage. The engineering is in the risk management and trade reconciliation, not the signals.',
+      'An autonomous execution-and-risk layer for a live futures signal feed. It parses incoming signals, applies adaptive risk controls, and executes with slippage-aware entry logic. The engineering is in the risk management and trade reconciliation, not the signals.',
     domain: 'Quant',
     status: 'live',
     stack: ['Python', 'asyncio', 'Binance Futures'],
-    metrics: ['ATR risk scaling', 'TWAP execution'],
+    metrics: ['risk engine', 'live reconciliation'],
     featured: true,
     group: 'work',
     order: 3,

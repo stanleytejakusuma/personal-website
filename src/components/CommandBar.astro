@@ -1,6 +1,6 @@
 ---
-// Slim REPL command-bar. Typing or clicking a command switches the active tab
-// by dispatching a `tab:set` CustomEvent the shell's tab controller listens for.
+// Slim REPL command-bar. Typing a command switches the active tab by
+// dispatching a `tab:set` CustomEvent the shell's tab controller listens for.
 ---
 
 <div class="cmdbar" data-cmdbar>
@@ -12,10 +12,9 @@
       autocomplete="off"
       spellcheck="false"
       inputmode="text"
-      aria-label="Type a command: about, projects, contact, help"
+      aria-label="Type a command: about, projects, contact, blog, help, clear"
       placeholder="try: projects"
     />
-    <span class="cmdbar__cursor" aria-hidden="true"></span>
   </form>
   <p class="cmdbar__ack" data-cmd-ack aria-live="polite"></p>
 </div>
@@ -42,48 +41,15 @@
     flex: 1;
     min-width: 0;
     border: 0;
-    outline: 0;
     background: transparent;
     color: var(--color-fg);
-    caret-color: transparent;
+    caret-color: var(--color-accent);
+    /* >=16px so iOS Safari doesn't auto-zoom on focus */
+    font-size: max(16px, 1em);
   }
 
   .cmdbar__input::placeholder {
     color: var(--color-muted);
-    opacity: 0.6;
-  }
-
-  .cmdbar__cursor {
-    width: 0.6em;
-    height: 1.1em;
-    background: var(--color-accent);
-    animation: cmd-blink 530ms steps(1) infinite;
-  }
-
-  .cmdbar__chips {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-top: 0.7rem;
-  }
-
-  .cmdbar__chips button {
-    min-height: 36px;
-    padding: 0.4rem 0.7rem;
-    border: 1px solid var(--color-border);
-    border-radius: 4px;
-    background: transparent;
-    color: var(--color-muted);
-    cursor: pointer;
-    font-family: var(--font-mono);
-    font-size: 0.8rem;
-    transition: color 160ms var(--ease-out), border-color 160ms var(--ease-out);
-  }
-
-  .cmdbar__chips button:hover,
-  .cmdbar__chips button:focus-visible {
-    color: var(--color-accent);
-    border-color: color-mix(in srgb, var(--color-accent) 60%, var(--color-border));
   }
 
   .cmdbar__ack {
@@ -91,18 +57,6 @@
     margin: 0.55rem 0 0;
     color: var(--color-muted);
     font-size: 0.78rem;
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .cmdbar__cursor {
-      animation: none;
-    }
-  }
-
-  @keyframes cmd-blink {
-    50% {
-      opacity: 0;
-    }
   }
 </style>
 
