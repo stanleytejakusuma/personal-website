@@ -4,6 +4,7 @@ import CurlField from '../components/heroes/CurlField.astro';
 import DecryptWordmark from '../components/heroes/DecryptWordmark.astro';
 import CommandBar from '../components/CommandBar.astro';
 import About from '../components/About.astro';
+import Experience from '../components/Experience.astro';
 import FeaturedProjects from '../components/FeaturedProjects.astro';
 import SocialIcons from '../components/SocialIcons.astro';
 import { TAGLINE, SOCIALS } from '../consts';
@@ -26,12 +27,16 @@ import '../styles/tabs.css';
 
       <div class="tabs" role="tablist" aria-label="Sections">
         <button class="tab" role="tab" id="tab-about" data-tab="about" aria-controls="panel-about" aria-selected="true">about</button>
+        <button class="tab" role="tab" id="tab-experience" data-tab="experience" aria-controls="panel-experience" aria-selected="false" tabindex="-1">experience</button>
         <button class="tab" role="tab" id="tab-projects" data-tab="projects" aria-controls="panel-projects" aria-selected="false" tabindex="-1">projects</button>
       </div>
 
       <div class="panels">
         <div class="panel" id="panel-about" role="tabpanel" data-panel="about" aria-labelledby="tab-about" tabindex="0">
           <About />
+        </div>
+        <div class="panel" id="panel-experience" role="tabpanel" data-panel="experience" aria-labelledby="tab-experience" tabindex="0" hidden>
+          <Experience />
         </div>
         <div class="panel" id="panel-projects" role="tabpanel" data-panel="projects" aria-labelledby="tab-projects" tabindex="0" hidden>
           <FeaturedProjects />
@@ -44,7 +49,7 @@ import '../styles/tabs.css';
 <script>
   const tabs = Array.from(document.querySelectorAll<HTMLElement>('[role="tab"][data-tab]'));
   const panels = Array.from(document.querySelectorAll<HTMLElement>('[role="tabpanel"][data-panel]'));
-  const VALID = ['about', 'projects'];
+  const VALID = ['about', 'experience', 'projects'];
 
   const render = (name: string) => {
     tabs.forEach((t) => {

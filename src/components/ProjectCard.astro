@@ -21,7 +21,6 @@ const href = project.link ?? project.repo;
   <div class="prow__detail">
     <p class="prow__desc">{project.description}</p>
     <span class="prow__chips">
-      <span class="meta-chip">{project.domain}</span>
       {project.metrics.map((metric) => <span class="meta-chip">{metric}</span>)}
     </span>
     {

@@ -1,23 +1,29 @@
 ---
 import ProjectCard from './ProjectCard.astro';
-import { workProjects, personalProjects } from '../data/projects';
+import { projectsByCategory } from '../data/projects';
 ---
 
 <div class="projects">
-  <div class="prow-list" aria-label="Featured projects">
-    {workProjects.map((project) => <ProjectCard project={project} />)}
-  </div>
-
   {
-    personalProjects.length > 0 && (
-      <div class="projects__personal">
-        <p class="mono-label">also / personal</p>
-        <div class="prow-list" aria-label="Personal projects">
-          {personalProjects.map((project) => (
+    projectsByCategory.map((group, index) => (
+      <section class="projects__group" aria-label={group.category}>
+        <p class="mono-label">{`0${index + 1} / ${group.category}`}</p>
+        <div class="prow-list">
+          {group.items.map((project) => (
             <ProjectCard project={project} />
           ))}
         </div>
-      </div>
-    )
+      </section>
+    ))
   }
 </div>
+
+<style>
+  .projects__group + .projects__group {
+    margin-top: clamp(2rem, 4.5vh, 3rem);
+  }
+
+  .projects__group .mono-label {
+    margin-bottom: 0.6rem;
+  }
+</style>
