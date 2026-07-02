@@ -1,48 +1,75 @@
 ---
-// About tab panel body: avatar + short mono bio (condensed from Stanley's copy).
+// About tab: bio (left) + self-as-a-dataset terminal cards (right).
 ---
 
 <div class="about">
-  <img
-    class="about__avatar"
-    src="/avatar.jpg"
-    width="112"
-    height="112"
-    alt="Stanley Tejakusuma avatar"
-    loading="lazy"
-    decoding="async"
-  />
-  <div class="about__bio">
-    <p>
-      Hey hey! I'm Stanley. I live and breathe data, working between the blockchain and analytics
-      space. Started out as a data scientist and it became a habit I can't shake: markets,
-      blockchains, models, even my own routines all look like datasets to me. Sometimes I break
-      things along the way, but that's part of the learning curve 😉.
-    </p>
-    <p>
-      I rarely stop at the analysis. I build the pipelines that collect the data, the models that
-      learn from it, and the tools that act upon it — and I care a ton about making them simple
-      enough to actually trust.
-    </p>
-    <p>
-      Off the clock: a Tennis or Padel court, or the nearest mountain in Java. Stay hungry, stay
-      foolish.
-    </p>
+  <div class="about__main">
+    <img
+      class="about__avatar"
+      src="/avatar.jpg"
+      width="112"
+      height="112"
+      alt="Stanley Tejakusuma avatar"
+      loading="lazy"
+      decoding="async"
+    />
+    <div class="about__bio">
+      <p>
+        Hey hey! I'm Stanley. I live and breathe data, working between the blockchain and analytics
+        space. Started out as a data scientist and it became a habit I can't shake: markets,
+        blockchains, models, even my own routines all look like datasets to me. Sometimes I break
+        things along the way, but that's part of the learning curve 😉.
+      </p>
+      <p>
+        I rarely stop at the analysis. I build the pipelines that collect the data, the models that
+        learn from it, and the tools that act upon it — and I care a ton about making them simple
+        enough to actually trust.
+      </p>
+      <p>
+        Off the clock: a Tennis or Padel court, or the nearest mountain in Java. Stay hungry, stay
+        foolish.
+      </p>
+    </div>
+  </div>
+
+  <div class="about__side">
+    <div class="tcard">
+      <p class="tcard__cmd"><span class="tcard__prompt">visitor@stanley:~$</span> cat stanley.json</p>
+      <pre class="tcard__out">{`{`}
+  <span class="k">"base"</span>: <span class="v">"Jakarta · UTC+7"</span>,
+  <span class="k">"alma_mater"</span>: <span class="v">"Purdue '24 — data science"</span>,
+  <span class="k">"daily_drivers"</span>: [<span class="v">"python"</span>, <span class="v">"sql"</span>, <span class="v">"dbt"</span>, <span class="v">"typescript"</span>],
+  <span class="k">"obsessions"</span>: [<span class="v">"on-chain data"</span>, <span class="v">"llms"</span>, <span class="v">"market microstructure"</span>],
+  <span class="k">"first_job"</span>: <span class="v">"starbucks barista ☕"</span>,
+  <span class="k">"motto"</span>: <span class="v">"stay hungry, stay foolish"</span>
+{`}`}</pre>
+    </div>
+
+    <div class="tcard">
+      <p class="tcard__cmd"><span class="tcard__prompt">visitor@stanley:~$</span> ./time_allocation --weekly</p>
+      <pre class="tcard__out">chasing_signals  <span class="bar">▓▓▓▓▓▓▓▓</span><span class="dim">░░</span>
+building_tools   <span class="bar">▓▓▓▓▓▓▓</span><span class="dim">░░░</span>
+backtesting      <span class="bar">▓▓▓▓▓</span><span class="dim">░░░░░</span>
+tennis_padel     <span class="bar">▓▓▓</span><span class="dim">░░░░░░░</span>
+mountain_air     <span class="bar">▓▓</span><span class="dim">░░░░░░░░</span>
+<span class="dim">// error bars omitted. n=1, results may not replicate.</span></pre>
+    </div>
   </div>
 </div>
 
 <style>
   .about {
-    display: flex;
-    gap: 1.5rem;
-    align-items: flex-start;
-    max-width: 72ch;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.92fr);
+    gap: clamp(1.5rem, 3.5vw, 3rem);
+    align-items: start;
   }
 
   .about__avatar {
-    flex: none;
-    width: clamp(76px, 9vw, 96px);
+    float: left;
+    width: clamp(72px, 8vw, 88px);
     height: auto;
+    margin: 0.2rem 1.25rem 0.6rem 0;
     border: 1px solid var(--color-border);
     border-radius: 12px;
   }
@@ -59,13 +86,70 @@
   }
 
   .about__bio p + p {
-    margin-top: 0.9rem;
+    margin-top: 0.85rem;
+  }
+
+  .about__side {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    min-width: 0;
+  }
+
+  .tcard {
+    padding: 0.9rem 1.05rem 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    background: color-mix(in srgb, var(--color-surface) 55%, transparent);
+    font-family: var(--font-mono);
+  }
+
+  .tcard__cmd {
+    margin: 0 0 0.6rem;
+    color: var(--color-fg);
+    font-size: 0.78rem;
+  }
+
+  .tcard__prompt {
+    color: var(--color-accent);
+  }
+
+  .tcard__out {
+    margin: 0;
+    overflow-x: auto;
+    color: color-mix(in srgb, var(--color-fg) 68%, var(--color-muted));
+    font-size: 0.74rem;
+    line-height: 1.7;
+  }
+
+  .tcard__out .k {
+    color: var(--color-accent);
+  }
+
+  .tcard__out .v {
+    color: color-mix(in srgb, var(--color-fg) 85%, var(--color-muted));
+  }
+
+  .tcard__out .bar {
+    color: var(--color-accent);
+  }
+
+  .tcard__out .dim {
+    color: var(--color-muted);
+    opacity: 0.7;
+  }
+
+  @media (max-width: 880px) {
+    .about {
+      grid-template-columns: 1fr;
+    }
   }
 
   @media (max-width: 520px) {
-    .about {
-      flex-direction: column;
-      gap: 1.1rem;
+    .about__avatar {
+      float: none;
+      display: block;
+      margin: 0 0 1.1rem;
     }
   }
 </style>
