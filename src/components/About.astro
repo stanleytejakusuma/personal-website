@@ -56,8 +56,164 @@ tennis_padel     <span class="bar">▓▓▓</span><span class="dim">░░░�
 mountain_air     <span class="bar">▓▓</span><span class="dim">░░░░░░░░</span>
 <span class="dim">// error bars omitted. n=1, results may not replicate.</span></pre>
     </div>
+
+    <div class="tcard">
+      <p class="tcard__cmd"><span class="tcard__prompt">visitor@stanley:~$</span> gh activity --recent</p>
+      <pre class="tcard__out" data-gh-activity></pre>
+    </div>
   </div>
 </div>
+
+<script>
+  type GitHubEvent = {
+    type?: string;
+    created_at?: string;
+    repo?: {
+      name?: string;
+    };
+    payload?: {
+      action?: string;
+      size?: number;
+      commits?: unknown[];
+      ref_type?: string;
+      pull_request?: {
+        merged?: boolean;
+      };
+    };
+  };
+
+  const unavailableLine = '<span class="dim">// github api unavailable right now</span>';
+
+  const escapeHtml = (value: string) =>
+    value.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;');
+
+  const relativeTime = (createdAt?: string) => {
+    const created = createdAt ? new Date(createdAt).getTime() : Number.NaN;
+
+    if (!Number.isFinite(created)) {
+      return 'now';
+    }
+
+    const minutes = Math.max(1, Math.floor((Date.now() - created) / 60000));
+
+    if (minutes < 60) {
+      return `${minutes}m`;
+    }
+
+    const hours = Math.floor(minutes / 60);
+
+    if (hours < 24) {
+      return `${hours}h`;
+    }
+
+    const days = Math.floor(hours / 24);
+
+    if (days < 7) {
+      return `${days}d`;
+    }
+
+    return `${Math.max(1, Math.floor(days / 7))}w`;
+  };
+
+  const shortRepoName = (name?: string) => name?.split('/').at(-1) ?? 'unknown';
+
+  const notableActivity = (event: GitHubEvent) => {
+    const repo = shortRepoName(event.repo?.name);
+    const repoHtml = `<span class="v">${escapeHtml(repo)}</span>`;
+
+    switch (event.type) {
+      case 'PushEvent': {
+        const commits = event.payload?.size ?? event.payload?.commits?.length ?? 0;
+
+        if (commits === 0) {
+          return `push ${repoHtml}`;
+        }
+
+        return `push ${repoHtml} (<span class="v">${commits}</span> ${commits === 1 ? 'commit' : 'commits'})`;
+      }
+      case 'PullRequestEvent':
+        if (
+          event.payload?.action === 'opened' ||
+          event.payload?.action === 'merged' ||
+          (event.payload?.action === 'closed' && event.payload.pull_request?.merged)
+        ) {
+          return `pr ${repoHtml}`;
+        }
+
+        return null;
+      case 'CreateEvent':
+        return event.payload?.ref_type === 'repository' ? `new repo ${repoHtml}` : null;
+      case 'WatchEvent':
+        return `star ${repoHtml}`;
+      case 'ReleaseEvent':
+        return `release ${repoHtml}`;
+      case 'IssuesEvent':
+        return event.payload?.action === 'opened' ? `issue ${repoHtml}` : null;
+      default:
+        return null;
+    }
+  };
+
+  const renderGithubActivity = async () => {
+    const output = document.querySelector<HTMLElement>('[data-gh-activity]');
+
+    if (!output) {
+      return;
+    }
+
+    try {
+      const response = await fetch('https://api.github.com/users/stanleytejakusuma/events/public', {
+        headers: {
+          Accept: 'application/vnd.github+json',
+        },
+      });
+
+      if (!response.ok) {
+        output.innerHTML = unavailableLine;
+        return;
+      }
+
+      const data: unknown = await response.json();
+
+      if (!Array.isArray(data)) {
+        output.innerHTML = unavailableLine;
+        return;
+      }
+
+      const lines: string[] = [];
+
+      for (const event of data as GitHubEvent[]) {
+        const activity = notableActivity(event);
+
+        if (!activity) {
+          continue;
+        }
+
+        const line = `<span class="dim">${relativeTime(event.created_at)}</span> ${activity}`;
+
+        if (line !== lines.at(-1)) {
+          lines.push(line);
+        }
+
+        if (lines.length === 5) {
+          break;
+        }
+      }
+
+      output.innerHTML = lines.length > 0 ? lines.join('\n') : unavailableLine;
+    } catch {
+      output.innerHTML = unavailableLine;
+    }
+  };
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => {
+      void renderGithubActivity();
+    });
+  } else {
+    void renderGithubActivity();
+  }
+</script>
 
 <style>
   .about {
@@ -136,6 +292,10 @@ mountain_air     <span class="bar">▓▓</span><span class="dim">░░░░�
     color: color-mix(in srgb, var(--color-fg) 68%, var(--color-muted));
     font-size: 0.74rem;
     line-height: 1.7;
+  }
+
+  .tcard__out[data-gh-activity] {
+    min-height: 8.5em;
   }
 
   .tcard__out .k {
