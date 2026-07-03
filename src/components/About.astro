@@ -15,7 +15,7 @@
     />
     <div class="about__bio">
       <p>
-        Hey hey! I'm Stanley. I <strong>live and breathe data</strong>, working between the
+        Hey hey! I'm <span class="about__name">Stanley</span>. I <strong>live and breathe data</strong>, working between the
         <strong>blockchain and analytics</strong> space. Started out as a
         <strong>data scientist</strong> and it became a habit I can't shake: markets, blockchains,
         models, even my own routines all look like datasets to me. Sometimes I break things along
@@ -259,6 +259,15 @@ mountain_air     <span class="bar">▓▓</span><span class="dim">░░░░�
   .about__bio strong {
     color: var(--color-fg);
     font-weight: 600;
+  }
+
+  .about__name {
+    color: #38bdf8;
+    font-weight: 600;
+  }
+
+  :root[data-theme='light'] .about__name {
+    color: #0369a1;
   }
 
   .about__side {
