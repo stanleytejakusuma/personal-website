@@ -1,6 +1,6 @@
 export const SITE_TITLE = 'Stanley Tejakusuma';
 export const AUTHOR = 'Stanley Tejakusuma';
-export const SITE_URL = 'https://gregoriustanley.com';
+export const SITE_URL = 'https://stanleytejakusuma.com';
 export const SITE_DESC =
   'Stanley Tejakusuma. I live and breathe data: statistics, modeling, and the tools that act on it.';
 
@@ -16,4 +16,3 @@ export const SOCIALS = {
   linkedin: 'https://www.linkedin.com/in/stanleytejakusuma/',
   x: 'https://x.com/stanztejakusuma',
 } as const;
-

@@ -2,7 +2,7 @@
 
 Personal portfolio — a tabbed one-pager. Data · statistics · modeling · the tools that act on it.
 
-Live at [gregoriustanley.com](https://gregoriustanley.com).
+Live at [stanleytejakusuma.com](https://stanleytejakusuma.com).
 
 ## Stack
 

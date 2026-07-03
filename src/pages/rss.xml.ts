@@ -13,7 +13,7 @@ const escapeXml = (value: string) =>
     .replaceAll("'", '&apos;');
 
 export const GET: APIRoute = async (context) => {
-  const site = context.site ?? new URL('https://gregoriustanley.com');
+  const site = context.site ?? new URL('https://stanleytejakusuma.com');
   const entries = (
     await getCollection('musings', ({ data }) => (import.meta.env.PROD ? !data.draft : true))
   ).sort((a, b) => b.data.date.getTime() - a.data.date.getTime());

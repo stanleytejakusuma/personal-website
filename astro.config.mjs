@@ -3,6 +3,6 @@ import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
   output: 'static',
-  site: 'https://gregoriustanley.com',
+  site: 'https://stanleytejakusuma.com',
   integrations: [sitemap()],
 });

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://gregoriustanley.com/sitemap-index.xml
+Sitemap: https://stanleytejakusuma.com/sitemap-index.xml
