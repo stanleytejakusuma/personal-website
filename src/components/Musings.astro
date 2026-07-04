@@ -347,6 +347,14 @@ let currentYear = '';
   }
 
   @media (max-width: 720px) {
+    /* The block-reflow rules below turn rows into grid/block, which would
+       override the [hidden] attribute the filter/search JS toggles. This
+       attribute-level selector (0,2,0) wins so filtered-out rows stay hidden. */
+    .musings__row[hidden],
+    .musings__year[hidden] {
+      display: none;
+    }
+
     .musings__head {
       align-items: start;
       flex-direction: column;

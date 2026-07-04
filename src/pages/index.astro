@@ -60,6 +60,8 @@ import '../styles/tabs.css';
       const active = t.dataset.tab === name;
       t.setAttribute('aria-selected', active ? 'true' : 'false');
       t.tabIndex = active ? 0 : -1;
+      // keep the active tab visible in the horizontally-scrollable mobile tab bar
+      if (active) t.scrollIntoView({ inline: 'center', block: 'nearest' });
     });
     panels.forEach((p) => {
       if (p.dataset.panel === name) p.removeAttribute('hidden');

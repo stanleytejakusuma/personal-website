@@ -316,6 +316,7 @@
   }
 
   .tabs {
+    gap: 0.4rem;
     overflow-x: auto;
     scrollbar-width: none;
   }
@@ -324,8 +325,11 @@
     display: none;
   }
 
+  /* tighten so all four tabs fit within a phone width — no overflow to clip */
   .tab {
     flex: none;
+    padding: 0.38rem 0.7rem;
+    font-size: 0.8rem;
   }
 
   .shell__top {
