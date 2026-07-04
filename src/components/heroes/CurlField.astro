@@ -255,7 +255,12 @@
         gl.disable(gl.DEPTH_TEST);
 
         const area = window.innerWidth * window.innerHeight;
-        const count = Math.max(12000, Math.min(40000, Math.floor(area / 62)));
+        // coarse pointers (phones/tablets) run a much lower particle floor so the
+        // curl-noise vertex shader stays cheap on low-end/small devices.
+        const coarse = window.matchMedia('(pointer: coarse)').matches;
+        const floor = coarse ? 4000 : 12000;
+        const cap = coarse ? 16000 : 40000;
+        const count = Math.max(floor, Math.min(cap, Math.floor(area / 62)));
         const positions = new Float32Array(count * 2);
         const seeds = new Float32Array(count);
 

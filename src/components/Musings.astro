@@ -42,7 +42,7 @@ let currentYear = '';
     spellcheck="false"
   />
 
-  <div class="musings__filters" aria-label="Filter musings by sector">
+  <div class="musings__filters" role="group" aria-label="Filter musings by sector">
     <button class="mfilter is-active" type="button" data-filter="all" aria-pressed="true">All</button>
     {FILTERS.map((filter) => (
       <button class="mfilter" type="button" data-filter={filter} aria-pressed="false">{filter}</button>
@@ -50,7 +50,7 @@ let currentYear = '';
   </div>
 
   <div class="musings__table-wrap">
-    <table class="musings__table">
+    <table class="musings__table" aria-label="Research archive">
       <thead>
         <tr>
           <th scope="col">date</th>
@@ -113,6 +113,9 @@ let currentYear = '';
             </>
           );
         })}
+        <tr class="musings__empty" data-musing-empty hidden>
+          <td colspan="4">no entries match — try a sector chip or clear the search.</td>
+        </tr>
       </tbody>
     </table>
   </div>
@@ -125,6 +128,7 @@ let currentYear = '';
   const dividers = Array.from(root?.querySelectorAll<HTMLTableRowElement>('[data-year-divider]') ?? []);
   const search = root?.querySelector<HTMLInputElement>('[data-msearch]');
   const count = root?.querySelector<HTMLElement>('[data-mcount]');
+  const empty = root?.querySelector<HTMLTableRowElement>('[data-musing-empty]');
   const total = rows.length;
 
   let activeFilter = 'all';
@@ -147,6 +151,7 @@ let currentYear = '';
     });
 
     if (count) count.textContent = visible === total ? `${total} entries` : `${visible} / ${total} entries`;
+    if (empty) empty.hidden = visible !== 0;
   };
 
   buttons.forEach((button) => {
@@ -194,6 +199,13 @@ let currentYear = '';
     color: var(--color-muted);
     font-family: var(--font-mono);
     font-size: 0.72rem;
+  }
+
+  .musings__empty td {
+    padding: 2rem 0.55rem;
+    color: var(--color-muted);
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
   }
 
   .musings__search {

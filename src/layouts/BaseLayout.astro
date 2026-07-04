@@ -14,6 +14,7 @@ interface Props {
   footer?: boolean;
   ogType?: 'website' | 'article';
   ogImage?: string;
+  publishedTime?: string;
 }
 
 const {
@@ -23,6 +24,7 @@ const {
   footer = true,
   ogType = 'website',
   ogImage,
+  publishedTime,
 } = Astro.props;
 ---
 
@@ -36,7 +38,7 @@ const {
     <meta name="theme-color" content="#F4F4F1" media="(prefers-color-scheme: light)" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <ThemeScript />
-    <SEO title={title} description={description} path={path} ogType={ogType} ogImage={ogImage} />
+    <SEO title={title} description={description} path={path} ogType={ogType} ogImage={ogImage} publishedTime={publishedTime} />
     <link rel="alternate" type="application/rss+xml" title="Stanley Tejakusuma — musings" href="/rss.xml" />
   </head>
   <body>

@@ -6,9 +6,9 @@ export const SITE_DESC =
 
 export const TAGLINE = 'data · statistics · modeling · the tools that act on it';
 
-// Email kept as parts so the page never ships a plain mailto string in markup.
+// Email user-part only; SocialIcons assembles the domain client-side so the
+// page never ships a plain mailto string in markup.
 export const EMAIL_USER = 'gstanleytejakusuma';
-export const EMAIL_DOMAIN = 'gmail.com';
 
 export const SOCIALS = {
   handle: 'stanleytejakusuma',

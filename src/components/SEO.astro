@@ -7,6 +7,7 @@ interface Props {
   path?: string;
   ogType?: 'website' | 'article';
   ogImage?: string;
+  publishedTime?: string;
 }
 
 const {
@@ -15,16 +16,28 @@ const {
   path = '/',
   ogType = 'website',
   ogImage: ogImagePath = '/og.png',
+  publishedTime,
 } = Astro.props;
 const pageTitle = title === SITE_TITLE ? SITE_TITLE : `${title} · ${SITE_TITLE}`;
 const canonical = new URL(path, SITE_URL).href;
 const ogImage = new URL(ogImagePath, SITE_URL).href;
+const twitterHandle = `@${SOCIALS.x.split('/').pop()}`;
 
 const personLd = {
   '@context': 'https://schema.org',
   '@type': 'Person',
   name: AUTHOR,
   url: SITE_URL,
+  image: new URL('/avatar.webp', SITE_URL).href,
+  jobTitle: 'Analytics Engineer',
+  description: SITE_DESC,
+  knowsAbout: [
+    'Data Science',
+    'Statistical Modeling',
+    'On-chain Analytics',
+    'DeFi',
+    'Quantitative Trading',
+  ],
   sameAs: [SOCIALS.github, SOCIALS.linkedin, SOCIALS.x],
 };
 ---
@@ -40,8 +53,14 @@ const personLd = {
 <meta property="og:description" content={description} />
 <meta property="og:url" content={canonical} />
 <meta property="og:image" content={ogImage} />
+{ogType === 'article' && publishedTime && (
+  <meta property="article:published_time" content={publishedTime} />
+)}
+{ogType === 'article' && <meta property="article:author" content={SITE_URL} />}
 
 <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content={twitterHandle} />
+<meta name="twitter:creator" content={twitterHandle} />
 <meta name="twitter:title" content={pageTitle} />
 <meta name="twitter:description" content={description} />
 <meta name="twitter:image" content={ogImage} />
