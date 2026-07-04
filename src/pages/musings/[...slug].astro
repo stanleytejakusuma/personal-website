@@ -1,6 +1,7 @@
 ---
 import { getCollection, render } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { AUTHOR, SITE_URL } from '../../consts';
 
 const VENUES = {
   wagmi: 'Wagmi Journal',
@@ -27,6 +28,24 @@ const fmtDate = (d: Date) =>
 const dateLabel = fmtDate(entry.data.date);
 const readMinutes = Math.max(1, Math.round((entry.body ?? '').split(/\s+/).length / 200));
 const description = entry.data.description ?? 'Preserved crypto research writing by Stanley Tejakusuma.';
+
+// BlogPosting structured data — datePublished sourced from the frontmatter date
+// (populated from the research-database xlsx during the archive build).
+const canonical = new URL(`/musings/${entry.id}/`, SITE_URL).href;
+const author = { '@type': 'Person', name: AUTHOR, url: SITE_URL };
+const blogPosting = {
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  headline: entry.data.title,
+  datePublished: entry.data.date.toISOString(),
+  dateModified: entry.data.date.toISOString(),
+  author,
+  publisher: author,
+  description,
+  image: new URL(`/og/musings/${entry.id}.png`, SITE_URL).href,
+  mainEntityOfPage: canonical,
+  url: canonical,
+};
 ---
 
 <BaseLayout
@@ -36,6 +55,7 @@ const description = entry.data.description ?? 'Preserved crypto research writing
   ogType="article"
   ogImage={`/og/musings/${entry.id}.png`}
 >
+  <script type="application/ld+json" set:html={JSON.stringify(blogPosting)} />
   <article class="representative musing-post" aria-labelledby="musing-h">
     <a class="musing-post__back inline-link" href="/#musings">← musings</a>
 

@@ -30,6 +30,8 @@ let currentYear = '';
     <p class="musings__count" data-mcount>{entries.length} entries</p>
   </div>
 
+  <p class="musings__note">Crypto research written 2021–2024, preserved unedited — not financial advice.</p>
+
   <input
     class="musings__search"
     type="search"
@@ -185,6 +187,13 @@ let currentYear = '';
     color: var(--color-muted);
     font-family: var(--font-mono);
     font-size: 0.76rem;
+  }
+
+  .musings__note {
+    margin: -0.2rem 0 0;
+    color: var(--color-muted);
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
   }
 
   .musings__search {
