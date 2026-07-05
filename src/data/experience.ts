@@ -13,9 +13,10 @@ export const entries: Entry[] = [
     role: 'Analytics Engineer',
     org: 'Flipside Crypto',
     bullets: [
-      'Built Snowflake + dbt ELT pipelines across 10+ chains — 150K+ MAU, 10M+ transactions.',
-      'Designed an agent-driven cost-intelligence pipeline watching $1M+ of annual compute spend.',
-      'Anchored the NEAR client relationship; shipped an Intents intelligence layer validated against $12B+ in cumulative volume.',
+      'Built Snowflake + dbt medallion ELT pipelines across 10+ chains — NEAR, Solana, Aptos, Monad, Flow, Sei, and cross-chain protocols.',
+      'Designed an agent-driven cost-intelligence pipeline for Snowflake spend: outlier detection → root-cause diagnosis → auto-drafted remediation PRs, human-gated.',
+      'Anchored the NEAR client relationship; shipped an Intents intelligence layer showing NEAR Intents acts as a cross-chain swap aggregator.',
+      'Shipped cross-EVM hot-wallet detection and a weekly external-parity audit cross-validating DEX, bridge, and lending coverage against DeFiLlama.',
     ],
   },
   {
@@ -23,8 +24,9 @@ export const entries: Entry[] = [
     role: 'Research & Delegation Lead',
     org: 'Boiler Blockchain, Purdue',
     bullets: [
-      'Led a three-person team overseeing $6M+ in governance votes across Optimism, dYdX, Stader, and Origin.',
-      'Built and taught the club’s Introduction to Blockchain certification course.',
+      'Led the delegations team overseeing $6M+ in governance votes across Optimism, dYdX, Stader Labs, and Origin — personally ran the Optimism delegation with public, transparent voting rationales.',
+      'Built and taught the “Introduction to Blockchain” certification course — top chains, DeFi, stablecoins, and DeFi vs CeFi vs TradFi — with bi-weekly forums.',
+      'Published bi-weekly research on Medium and Twitter backed by original Dune Analytics, including decomposing the Gains Network ($GNS) economic flywheel.',
     ],
   },
   {
@@ -32,7 +34,9 @@ export const entries: Entry[] = [
     role: 'Data Scientist Intern',
     org: 'Kargo Technologies',
     bullets: [
-      'Cohort retention and customer-lifetime-value models for a freight-logistics marketplace; weekly reviews with the COO.',
+      'Built automated business-line P&L trackers (financing, fulfillment, logistics) for a B2B freight marketplace — Metabase SQL piped to Sheets, then automated in Python.',
+      'Produced investor-relations analytics: GTV, disbursement, and NPL metrics, route-level profitability, and comparable-company benchmarking against 8 public comps.',
+      'Reported directly to the COO and finance team; researched cohort-retention and customer-lifetime-value models.',
     ],
   },
   {
@@ -40,7 +44,9 @@ export const entries: Entry[] = [
     role: 'Research Writer',
     org: 'Wagmi Journal',
     bullets: [
-      'Bi-weekly crypto research for angel investors — my first Dune Analytics dashboards and on-chain deep dives.',
+      'My first crypto role — self-taught Dune Analytics on the job to pair data with the writing. Bi-weekly research theses across DeFi, NFTs, DAOs, and regulation for angel investors.',
+      'Built my first Dune queries (incl. a DeFi Pulse Index $DPI holder tracker) and a Python + Binance price-action screener.',
+      'Much of that research lives on in the musings archive here.',
     ],
   },
   {
@@ -48,7 +54,8 @@ export const entries: Entry[] = [
     role: 'Data Scientist',
     org: 'The Data Mine, Purdue',
     bullets: [
-      'Cut electricity-usage prediction times by 24% for the Midcontinent Independent System Operator.',
+      'Cut electricity-usage prediction time across the Midwest and South by 24% for the Midcontinent ISO (MISO).',
+      'Applied random forests and feature importance to model electricity-fluctuation edge cases.',
     ],
   },
   {
