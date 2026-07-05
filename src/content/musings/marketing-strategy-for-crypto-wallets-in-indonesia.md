@@ -29,13 +29,13 @@ Takeaway: do note that each geographical city has its own pros and cons, complem
 
 We are going to take a top-down approach to explore Indonesia’s mobile phone culture. The **number of people that have a mobile phone** in Indonesia for the year 2020 reached a high of **183.68M**. Statista forecasted that **by the year 2026 there will be 238.79M** of people that have a mobile phone.
 
-<img src="/musings/marketing-strategy-for-crypto-wallets-in-indonesia/image-02.webp" style="width:2.51563in;height:2.0125in" />
+<img src="/musings/marketing-strategy-for-crypto-wallets-in-indonesia/image-02.webp" width="510" height="409" loading="lazy" decoding="async" />
 
 Number of Smartphone Users from 2017 to 2020 with forecast until 2026 (source: [<u>here</u>](https://www.statista.com/statistics/266729/smartphone-users-in-indonesia/))
 
 Now, classifying these numbers of smartphone users by age, around **60% smartphone users in Indonesia are between the ages of 16-24.**
 
-<img src="/musings/marketing-strategy-for-crypto-wallets-in-indonesia/image-06.webp" style="width:2.6972in;height:3.78646in" />
+<img src="/musings/marketing-strategy-for-crypto-wallets-in-indonesia/image-06.webp" width="1200" height="1685" loading="lazy" decoding="async" />
 
 Number of users by ages 16 to 24 (source: [<u>here</u>](https://blog.gwi.com/chart-of-the-day/60-of-indonesia-s-mobile-only-users-aged-16-24/))
 
@@ -45,19 +45,19 @@ The result is derived from the formula $`Penetration\ Rate\  = \ \frac{#\ of\ pe
 
 In this case, penetration rate indicates the % of people that adopt smartphones compared to the total population. Data from Statista points out that in the year 2020, the **penetration rate from Indonesia has reached 67.15% and is expecting growth to 82.45% by the year 2026.**
 
-<img src="/musings/marketing-strategy-for-crypto-wallets-in-indonesia/image-05.webp" style="width:2.92675in;height:2.48125in" />
+<img src="/musings/marketing-strategy-for-crypto-wallets-in-indonesia/image-05.webp" width="519" height="440" loading="lazy" decoding="async" />
 
 Penetration Rate (source: [<u>here</u>](https://www.statista.com/statistics/321485/smartphone-user-penetration-in-indonesia/))
 
 Deeper into the smartphone culture in Indonesia reveals that most Indonesians use **Samsung (21.94%), Oppo (21.28%), Xiaomi (19.83%)**, Vivo (12.27%), and Apple (8.89%). This indicates that most Indonesians currently have **Android-based smartphones instead of iOS**.
 
-<img src="/musings/marketing-strategy-for-crypto-wallets-in-indonesia/image-03.webp" style="width:4.04167in;height:3.08104in" />
+<img src="/musings/marketing-strategy-for-crypto-wallets-in-indonesia/image-03.webp" width="712" height="1244" loading="lazy" decoding="async" />
 
 Market Share of Leading Mobile Vendors July 2021 (source: [<u>here</u>](https://www.statista.com/statistics/937100/indonesia-market-share-of-leading-mobile-brands/))
 
 Another deep dive into the smartphone by vendor share in Indonesia indicates that the most people using Android-based phones are around the age of 26-30 with the brand Samsung. iOS users are dwarfed with most people around the age 18-30 using it.
 
-<img src="/musings/marketing-strategy-for-crypto-wallets-in-indonesia/image-04.webp" style="width:2.79688in;height:3.21832in" />
+<img src="/musings/marketing-strategy-for-crypto-wallets-in-indonesia/image-04.webp" width="324" height="374" loading="lazy" decoding="async" />
 
 Smartphone User Share by Brand and Age (source: [<u>here</u>](https://www.emarketer.com/Article/Breaking-Down-Indonesian-Smartphone-Habits-by-Age/1014225))
 
@@ -77,7 +77,7 @@ Takeaway: The top social media app to do marketing is actually TikTok, followed 
 
 This metric will be covered between traditional banking systems and FinTech systems. An article indicates that Indonesia is the **APAC’s most valuable untapped money market – around 66% Indonesians do not own a bank account**. 20-30% of Indonesians use mobile banking (source [<u>here</u>](https://www.thinkwithgoogle.com/intl/en-apac/future-of-marketing/emerging-technology/all-eyes-e-money-race-reach-180m-unbanked-indonesians/) [<u>here</u>](https://www.ifc.org/wps/wcm/connect/16cc33cf-f3d5-44bc-b439-ead8991cbcc4/Mobile%2BBanking%2BFinal%2BReport.pdf?MOD=AJPERES&CVID=j1FGbYr#:~:text=With%20only%2050%2D60%20million,the%20provision%20of%20%E2%80%93%20financial%20services.)). The image below shows the distribution of people owning a bank account by age.
 
-<img src="/musings/marketing-strategy-for-crypto-wallets-in-indonesia/image-01.webp" style="width:3.22292in;height:2.75173in" />
+<img src="/musings/marketing-strategy-for-crypto-wallets-in-indonesia/image-01.webp" width="513" height="438" loading="lazy" decoding="async" />
 
 Share of Adults Owning an Account at Financial Institution (source: [<u>here</u>](https://www.statista.com/statistics/941528/indonesia-financial-institution-account-ownership-rate-by-age-group/))
 

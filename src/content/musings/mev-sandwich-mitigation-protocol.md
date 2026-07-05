@@ -57,11 +57,11 @@ MEV's manifestations are diverse, ranging from DEX arbitrage and liquidation pro
 
 The MEV landscape underwent significant transformation in 2021, marked by a surge in MEV extraction and consequent gas price escalation. The introduction of Flashbots has curtailed the influence of generalized frontrunners, leading to a reduction in gas prices. The impending transition to PoS and the implementation of Ethereum scaling solutions are poised to further reshape the MEV ecosystem. In the PoS context, unchecked MEV could hasten validator centralization and give rise to permissioned mempools. Initiatives like Proposer-Builder Separation (PBS) and the builder API have been proposed to counteract these potential challenges.
 
-<img src="/musings/mev-sandwich-mitigation-protocol/image-01.webp" style="width:3.5625in;height:1.81944in" />
+<img src="/musings/mev-sandwich-mitigation-protocol/image-01.webp" width="1200" height="614" loading="lazy" decoding="async" />
 
 Figure 1: MEV Dashboard Pre-Merge (source: [<u>flashbots.net</u>](https://explore.flashbots.net/))
 
-<img src="/musings/mev-sandwich-mitigation-protocol/image-03.webp" style="width:3.5625in;height:1.45833in" />
+<img src="/musings/mev-sandwich-mitigation-protocol/image-03.webp" width="1200" height="491" loading="lazy" decoding="async" />
 
 Figure 2: MEV (REV) Dashboard Pre-Merge (source: [<u>flashbots.net</u>](https://transparency.flashbots.net/))
 
@@ -87,11 +87,11 @@ The concept of MEV and its manifestations, such as Sandwich Attacks, have been e
 
 To better comprehend the landscape of this attack, we have sourced data from *eigenphi*, which gathers its insights from on-chain raw data through *erigon* (previously known as *Turbo-Geth*). Their findings are then crossed-referenced with *Flashbot*’s *mev-inspect-py*.
 
-<img src="/musings/mev-sandwich-mitigation-protocol/image-04.webp" style="width:3.5625in;height:1.36111in" />
+<img src="/musings/mev-sandwich-mitigation-protocol/image-04.webp" width="1200" height="456" loading="lazy" decoding="async" />
 
 Figure 3: MEV Attacks Distributions by Profit (source: [<u>eigenphi.io</u>](https://eigenphi.io/))
 
-<img src="/musings/mev-sandwich-mitigation-protocol/image-05.webp" style="width:3.5625in;height:1.34722in" />
+<img src="/musings/mev-sandwich-mitigation-protocol/image-05.webp" width="1200" height="454" loading="lazy" decoding="async" />
 
 Figure 4: MEV Attack Distribution by Volume (source: [<u>eigenphi.io</u>](https://eigenphi.io/))
 
@@ -159,7 +159,7 @@ Do malicious bots initiate both frontrunning and backrunning orders simultaneous
 
 The beforeSwap hook seems promising in determining the vulnerability of a transaction to a sandwich attack. What criteria are being evaluated to ascertain this vulnerability? Is a mere transaction counter adequate for this purpose?
 
-<img src="/musings/mev-sandwich-mitigation-protocol/image-06.webp" style="width:2.49436in;height:7.99375in" />
+<img src="/musings/mev-sandwich-mitigation-protocol/image-06.webp" width="560" height="2048" loading="lazy" decoding="async" />
 
 Figure X: Attack Detection Flow
 
@@ -173,13 +173,13 @@ For the implementation of UniSwap’s V4 Hooks to correspond to the previously i
 
 The afterInitialize hook is triggered immediately after the addition /deployment of a liquidity pool.
 
-<img src="/musings/mev-sandwich-mitigation-protocol/image-07.webp" style="width:2.51292in;height:1.3167in" />
+<img src="/musings/mev-sandwich-mitigation-protocol/image-07.webp" width="844" height="440" loading="lazy" decoding="async" />
 
 In order to set up the transaction counter workflow, the afterInitialize hook is used to set the TX_COUNT variable to an initial value of 0.
 
 2.  **afterSwap Uniswap V4 Hook**
 
-The afterSwap hook is triggered upon the completion of a swap.<img src="/musings/mev-sandwich-mitigation-protocol/image-08.webp" style="width:2.59258in;height:1.41758in" />
+The afterSwap hook is triggered upon the completion of a swap.<img src="/musings/mev-sandwich-mitigation-protocol/image-08.webp" width="832" height="454" loading="lazy" decoding="async" />
 
 Hence, it is used to ensure that TX_COUNT is incremented upon the completion of a swap transaction - thus ensuring that the variable corresponds to the number of completed transactions - to allow for the determination of execution order.
 
@@ -187,15 +187,15 @@ Hence, it is used to ensure that TX_COUNT is incremented upon the completion of 
 
 When a swap request is sent, the beforeSwap hook is triggered with set parameters and calldata. Within this hook lies the beginning of the sandwich attack detection mechanism.
 
-Within the calldata of the sent transaction, the intended position of execution is also sent across by the swap request. This parameter is decoded by copying into memory and decoded to uint form (see swap_tx_count variable in the snippet below). Typically, this should be TX_COUNT +1 if normal transaction order is executed. However, in the case of a front-run, where normal transaction order has been manipulated, the value of swap_tx_count will be lesser than TX_COUNT because the front-run would have cut ahead of the intended order. Hence, at any point where the inequality TX_COUNT \> swap_tx_count is true, an event is emitted to trigger a back-end check through a OpenZeppelin Defender. Once the back end analyzes other factors characteristic of a Sandwich attack through deeper analysis of the mempool for aback-run transaction, total paid gas price, and timestamps, the appropriate action is taken to revert the back-run transaction prior to execution.<img src="/musings/mev-sandwich-mitigation-protocol/image-09.webp" style="width:3.61762in;height:2.57041in" />
+Within the calldata of the sent transaction, the intended position of execution is also sent across by the swap request. This parameter is decoded by copying into memory and decoded to uint form (see swap_tx_count variable in the snippet below). Typically, this should be TX_COUNT +1 if normal transaction order is executed. However, in the case of a front-run, where normal transaction order has been manipulated, the value of swap_tx_count will be lesser than TX_COUNT because the front-run would have cut ahead of the intended order. Hence, at any point where the inequality TX_COUNT \> swap_tx_count is true, an event is emitted to trigger a back-end check through a OpenZeppelin Defender. Once the back end analyzes other factors characteristic of a Sandwich attack through deeper analysis of the mempool for aback-run transaction, total paid gas price, and timestamps, the appropriate action is taken to revert the back-run transaction prior to execution.<img src="/musings/mev-sandwich-mitigation-protocol/image-09.webp" width="1200" height="852" loading="lazy" decoding="async" />
 
 **8 FRONTEND CONSIDERATIONS**
 
-<img src="/musings/mev-sandwich-mitigation-protocol/image-10.webp" style="width:3.5625in;height:1.95833in" />
+<img src="/musings/mev-sandwich-mitigation-protocol/image-10.webp" width="1200" height="661" loading="lazy" decoding="async" />
 
 Figure X: Acknowledgement checkbox left unchecked. User unable to confirm transaction.
 
-<img src="/musings/mev-sandwich-mitigation-protocol/image-02.webp" style="width:3.5625in;height:1.95833in" />
+<img src="/musings/mev-sandwich-mitigation-protocol/image-02.webp" width="1200" height="658" loading="lazy" decoding="async" />
 
 Figure X: Acknowledge checkbox checked. Users are able to confirm transactions.
 

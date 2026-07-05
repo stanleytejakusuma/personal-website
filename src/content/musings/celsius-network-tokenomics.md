@@ -30,31 +30,31 @@ The token of Celsius Network is used to be integrated with smart contract functi
 
 Released in June 2018, the Celsius Network’s native token CEL facilitates the earnings, reward, and the ecosystem. As a utility token, CEL could be compared to the likes of BNB, ETH, BAT, and more. The ICO successfully raised $50 million in crowdsales and presale with releasing 325 million tokens. The token distribution since the Token Genesis Event (TGE) is as follows: 50% goes to public token sales (crowdsale and presale), 27% goes to treasury, 19% for the team, 2% for the partners, and 2% for advisors of Celsius Network. 50 million of the total supply would go into the smart contract. 20 million would be allocated to the project’s treasury, which would only be released when the token price has reached 5x and 10x from crowdsale – $1.50 and $3.00 respectively. The treasury is used to provide liquidity, provide collateral, and expansion purposes.
 
-<img src="/musings/celsius-network-tokenomics/image-05.webp" style="width:3.82262in;height:2.44734in" />
+<img src="/musings/celsius-network-tokenomics/image-05.webp" width="1200" height="768" loading="lazy" decoding="async" />
 
 *Token Distribution TGE*
 
 The Celsius Network employs a unique token burning mechanism that would both benefit the ecosystem and users. Based on the AMA in early October, CEL announced that they would purchase 110% of the token required each week. 100% would be distributed to the depositors as profit and 10% would be burned for good.
 
-<img src="/musings/celsius-network-tokenomics/image-01.webp" style="width:5.09755in;height:2.21007in" />
+<img src="/musings/celsius-network-tokenomics/image-01.webp" width="1200" height="521" loading="lazy" decoding="async" />
 
 *Top 5 Token Holders Wallet*
 
 Similar to E = mc<sup>2</sup> (E: Ethereum, m: members of Celsius, c: Celsius credit/deposits), as more people join the network and actively deposit, the more everyone reaps the reward. The utility of the CEL token mainly revolves around discount and network benefits. Earners/depositors would be able to earn up to 25% more rewards if the payout is in CEL. Borrowers paying in CEL token would receive a discount up to 25% for interest payments, same goes for institutions. Both the rewards and discounts would be decided by tiers based on the amount of CEL token held in the wallet.
 
-> <img src="/musings/celsius-network-tokenomics/image-02.webp" style="width:5.23777in;height:1.74882in" />
+> <img src="/musings/celsius-network-tokenomics/image-02.webp" width="1200" height="403" loading="lazy" decoding="async" />
 
 *Celsius Network Tiers*
 
 On a revenue stream standpoint, Celsius presents a flow that is particularly unique than any other DeFi lending-borrowing platforms. The company essentially merges the depositors and shareholders into one entity. 80% of the total revenue made would be distributed to depositor interest payments and 20% for the network's business operation (growth, team, debt payments, etc). In simple terms, retailers or institutional-alike that lend money would also receive profits from the company. Furthermore, the Celsius Network operates an almost never-ending economic flywheel: users buy CEL token → CEL holders earn yield from interest payments → lender CEL balance would increase → collect interest payments from borrower → repeat.
 
-<img src="/musings/celsius-network-tokenomics/image-04.webp" style="width:5.06746in;height:2.85538in" />
+<img src="/musings/celsius-network-tokenomics/image-04.webp" width="640" height="360" loading="lazy" decoding="async" />
 
 *Celsius Network Stream*
 
 The chart below shows the Number of Depositors (Red), Price of CEL (Blue), and Market Cap (Green). This could indicate that the number of depositors does not have that much of an impact on the price or market capitalization of CEL itself. Another explanation for this, most of the depositors in the network are retailers with low amounts of deposits value to the network. This expresses that institutional money needs to be circulated more in the network.
 
-<img src="/musings/celsius-network-tokenomics/image-03.webp" style="width:4.28125in;height:2.84375in" />
+<img src="/musings/celsius-network-tokenomics/image-03.webp" width="411" height="273" loading="lazy" decoding="async" />
 
 *Depositor (Red) vs Price of CEL (Blue) vs Market Cap (Green)*
 

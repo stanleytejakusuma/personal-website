@@ -18,7 +18,7 @@ Ever imagined being able to open leverage positions directly from your wallet?
 
 Here comes @GMX_IO! Starting as Gambit Financial, the project enables the decentralized trading of perpetual futures on $BTC, $ETH, $LINK, and $UNI for up to 30x leverage on @arbitrum and @BinanceChain without slippage.
 
-<img src="/musings/gmx-thread/image-02.webp" style="width:1.12926in;height:1.12926in" />
+<img src="/musings/gmx-thread/image-02.webp" width="400" height="400" loading="lazy" decoding="async" />
 
 GMX Overview
 
@@ -40,19 +40,19 @@ The following information are taken from [<u>https://medium.com/@vikram.arun/gmx
 
 Perps are the main source of liquidity and trading activity in crypto with volume for BTC and ETH 10x over spot. GMX distributed ALL trading fees to $GMX and $GLP stakers. This creates an economic flywheel to increase liquidity, margin trading volume, and fees.
 
-<img src="/musings/gmx-thread/image-09.webp" style="width:3.03958in;height:1.94358in" />
+<img src="/musings/gmx-thread/image-09.webp" width="685" height="438" loading="lazy" decoding="async" />
 
 Comparing decentralized to centralized perps, such as @binance Futures, @FTX_Official, and @krakenfx, CEX do $2T+/month while decentralized platforms is minisculed, merely doing $100B/month.
 
-<img src="/musings/gmx-thread/image-12.webp" style="width:3.06205in;height:1.68315in" />
+<img src="/musings/gmx-thread/image-12.webp" width="869" height="477" loading="lazy" decoding="async" />
 
 In the medium post, @vik_runa annualized the platform’s generated fees using the most recent week as a run date with 50% paid to GLP holders in ETH, 30% to GMX stakers, and 20% for price floor fund.
 
-<img src="/musings/gmx-thread/image-04.webp" style="width:2.75625in;height:1.49739in" />
+<img src="/musings/gmx-thread/image-04.webp" width="935" height="508" loading="lazy" decoding="async" />
 
 Additionally, Vikram did a valuation on the price of $GMX itself through the total perps volume and GMX share within the eventual DeFi volume using multiples as a framework.
 
-<img src="/musings/gmx-thread/image-13.webp" style="width:2.37135in;height:2.16458in" />
+<img src="/musings/gmx-thread/image-13.webp" width="367" height="335" loading="lazy" decoding="async" />
 
 Tokenomics
 
@@ -72,7 +72,7 @@ The $GMX token has a floor price fund in $ETH and $GLP from GMX/ETH liquidity pa
 
 Total supply of $GMX is currently unknown since it depends on the number of tokens that get vested and marketing/partnerships. Forecasted max supply, though, is 13.25M with the following distribution. Tokens for teams are distributed linearly over 2 years.
 
-<img src="/musings/gmx-thread/image-10.webp" style="width:3.55625in;height:2.19721in" />
+<img src="/musings/gmx-thread/image-10.webp" width="594" height="367" loading="lazy" decoding="async" />
 
 Note: more could be minted through governance if it is required for new projects.
 
@@ -84,25 +84,25 @@ The total AUM for GMX is $227M, consisting of stake GMX in all chains $154.89M a
 
 Total fees accrues are $6.6M with the $5B in total volume. The floor price fund is $4M. These are the tokens currently supported by the protocol.
 
-<img src="/musings/gmx-thread/image-07.webp" style="width:2.91896in;height:1.98807in" />
+<img src="/musings/gmx-thread/image-07.webp" width="899" height="613" loading="lazy" decoding="async" />
 
 Following the #RussiaUkraine situation, the current total open interest is down from the previous block, $7.4M previously was $8.8M.
 
-<img src="/musings/gmx-thread/image-08.webp" style="width:3.83094in;height:1.94617in" />
+<img src="/musings/gmx-thread/image-08.webp" width="901" height="459" loading="lazy" decoding="async" />
 
-<img src="/musings/gmx-thread/image-11.webp" style="width:4.28125in;height:2.13376in" />
+<img src="/musings/gmx-thread/image-11.webp" width="889" height="442" loading="lazy" decoding="async" />
 
 Both the number of unique users and new users follows a general linear uptrend. Indicating that decentralized derivatives platform is a currently growing DeFi alpha.
 
-<img src="/musings/gmx-thread/image-06.webp" style="width:4.28212in;height:2.16851in" />
+<img src="/musings/gmx-thread/image-06.webp" width="889" height="451" loading="lazy" decoding="async" />
 
-<img src="/musings/gmx-thread/image-01.webp" style="width:4.17037in;height:2.11192in" />
+<img src="/musings/gmx-thread/image-01.webp" width="881" height="447" loading="lazy" decoding="async" />
 
 GMX is currently a rising star in social media with extremely high growth. Conversely, the Github repository has been through a period of high commits, though that is not the case now. (data from icoholder.com)
 
-<img src="/musings/gmx-thread/image-03.webp" style="width:4.10625in;height:1.47404in" />
+<img src="/musings/gmx-thread/image-03.webp" width="637" height="229" loading="lazy" decoding="async" />
 
-<img src="/musings/gmx-thread/image-05.webp" style="width:3.91458in;height:1.52234in" />
+<img src="/musings/gmx-thread/image-05.webp" width="522" height="203" loading="lazy" decoding="async" />
 
 Roadmap:
 

@@ -17,7 +17,7 @@ tickers:
 
 Felt the growing urge to workout but don’t have the incentive to lock in the deal yet?
 
-@StepApp\_ inspires you to build and live a healthy lifestyle through the help of $FITFI token. <img src="/musings/step-app/image-03.webp" style="width:2.66458in;height:2.74017in" />
+@StepApp\_ inspires you to build and live a healthy lifestyle through the help of $FITFI token. <img src="/musings/step-app/image-03.webp" width="423" height="435" loading="lazy" decoding="async" />
 
 Founded on January 2022:
 
@@ -39,9 +39,9 @@ At launch, Step was hit with a major bottleneck, $GMT $GENE. Solving this issue,
 
 Into the app itself, Step is creating a huge metaverse to walk, jog, run, socialize, play, and earn. It is the embodiment of physical experiences in the metaverse – the peak of crypto adoption. 👀
 
-<img src="/musings/step-app/image-04.webp" style="width:1.55625in;height:0.98044in" />
+<img src="/musings/step-app/image-04.webp" width="634" height="398" loading="lazy" decoding="async" />
 
-UI/UX of the app is vibrant in immersive, social, and competitive experience. <img src="/musings/step-app/image-01.webp" style="width:2.16982in;height:1.12932in" />
+UI/UX of the app is vibrant in immersive, social, and competitive experience. <img src="/musings/step-app/image-01.webp" width="837" height="437" loading="lazy" decoding="async" />
 
 Step is hosting an early sign-up to earn SNEAKs (here’s how):
 
@@ -67,7 +67,7 @@ Usage: Governance
 
 Distribution: Total Supply (5M) Mining/M2E (30%) Staking Liquidity (20%) Team (15%) Marketing (15%) Public Sale (14%) Partners (6%)
 
-<img src="/musings/step-app/image-02.webp" style="width:2.00697in;height:1.43125in" />
+<img src="/musings/step-app/image-02.webp" width="900" height="642" loading="lazy" decoding="async" />
 
 $KCAL
 

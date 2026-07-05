@@ -19,7 +19,7 @@ Following the on-going $CRV war, the DeFi space is only looking for more rise in
 
 Alchemix ($ALCX) is a DeFi platform for interest-bearing stablecoins that users can acquire for no cost in exchange for locking collateral. The protocol provides highly flexible instant loans that repay themselves over time.
 
-<img src="/musings/alchemix-thread/image-02.webp" style="width:4.14792in;height:1.17364in" />
+<img src="/musings/alchemix-thread/image-02.webp" width="516" height="146" loading="lazy" decoding="async" />
 
 Platform Overview:
 
@@ -35,7 +35,7 @@ In its core, vaults are the heart of Alchemix. The general mechanisms are as fol
 
 The general flowchart of mechanism in Alchemix is as follows
 
-<img src="/musings/alchemix-thread/image-03.webp" style="width:4.03646in;height:2.74272in" />
+<img src="/musings/alchemix-thread/image-03.webp" width="1200" height="814" loading="lazy" decoding="async" />
 
 Security-wise, the platform has gone through an audit by @CertiKTech for the v1. The audit for v2 has been accomplished, however it has not yet been released to the public. [<u>https://www.certik.com/projects/alchemix</u>](https://www.certik.com/projects/alchemix)
 
@@ -91,7 +91,7 @@ Transmuter
 
 The primary pegging mechanism for $ALCX synthetic tokens. As explained above, harvested yield would instantly flow to the transmuter ensuring 1:1 redemption alUSD for DAI. As yield comes in, it will credit users DAI proportional to the amount staked.
 
-<img src="/musings/alchemix-thread/image-05.webp" style="width:4.14063in;height:2.96612in" />
+<img src="/musings/alchemix-thread/image-05.webp" width="1200" height="860" loading="lazy" decoding="async" />
 
 As of April 4, 2021, the transmuter was upgraded and deployed capital into $YFI yvDAI vault. Yield harvested is passed to vault contracts and boost yields of $DAI depositors. This loop compounds the yield to repay loans faster. 5M DAI buffer is used to save users gas.
 
@@ -99,7 +99,7 @@ Tokenomics
 
 $ALCX is the token granting governance rights. No guarantee of value, per se. ALCX does not have a hard-cap. Token distribution: DAO 15%(premined) + 5% and 80% can be obtained by staking certain tokens.
 
-<img src="/musings/alchemix-thread/image-01.webp" style="width:3.16146in;height:1.75805in" />
+<img src="/musings/alchemix-thread/image-01.webp" width="1061" height="589" loading="lazy" decoding="async" />
 
 The distribution is ensured so no one from the dev team would have enough tokens to exploit the DAO.
 
@@ -117,6 +117,6 @@ Initially starting as a developer multisig with signaling through snapshot. DAO 
 
 Looking forward, around this month or March 2022, ALCX is looking to upgrade its network into the v2 state. According to the podcast, v2 transitions Alchemix to a multi-chain platform – providing a plethora of chains – one of the mentioned chains is $FTM.
 
-<img src="/musings/alchemix-thread/image-04.webp" style="width:3.90104in;height:2.90077in" />
+<img src="/musings/alchemix-thread/image-04.webp" width="1200" height="892" loading="lazy" decoding="async" />
 
 Audit for $ALCX v2 has gone through and the protocol partners with Runtime Verification to improve reliability, security, and preciseness. [<u>https://alchemixfi.medium.com/alchemix-v2-audit-completed-in-partnership-with-runtime-verification-ef3b4ab9b387</u>](https://alchemixfi.medium.com/alchemix-v2-audit-completed-in-partnership-with-runtime-verification-ef3b4ab9b387)

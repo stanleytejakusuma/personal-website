@@ -18,7 +18,7 @@ The predominant DAOs behind innovative projects hold a crucial role in shaping t
 
 Here, the mainstream DAO tool, @SquadsProtocol has a sole purpose as a social hub for DAOs to collaborate and coordinate through a layer 1 blockchain – $SOL.
 
-<img src="/musings/squads-protocol-thread/image-02.webp" style="width:6.5in;height:2.77778in" />
+<img src="/musings/squads-protocol-thread/image-02.webp" width="930" height="397" loading="lazy" decoding="async" />
 
 The protocol focuses on clean and simple UI/UX with scalability and predictable fees in SOlana. While allowing democratization in the DAO framework and mass adoption, setting up a DAO in the protocol is as easy and intuitive as creating a group chat.
 
@@ -48,7 +48,7 @@ Within the protocol, each squad has a built-in vault which allows deposit/send n
 
 To realize these goals, Squads partners with @RaydiumProtocol. The partnership allows Squads to swap tokens seamlessly through accessing Raydium’s liquidity pool.
 
-<img src="/musings/squads-protocol-thread/image-01.webp" style="width:2.63856in;height:1.65333in" />
+<img src="/musings/squads-protocol-thread/image-01.webp" width="800" height="500" loading="lazy" decoding="async" />
 
 As a social hub, Squads amplifies its social features by partnering with @cardinal_labs. This partnership allows squad members to link their Twitter identifier to their $SOL address.
 

@@ -15,7 +15,7 @@ Following the king of NFT – @thecryptopunks and the rise of the NFT marketplac
 
 So, here comes @ParasHQ! The NFT marketplace for $NEAR blockchain with the DoomSlug technology and human-readable addresses. Paras exclusively sells limited-edition NFT trading card collections – an ever-expanding world created by each artist.
 
-<img src="/musings/paras/image-01.webp" style="width:3.91146in;height:2.2002in" />
+<img src="/musings/paras/image-01.webp" width="1200" height="675" loading="lazy" decoding="async" />
 
 Taking a deeper curated approach, Paras offers low-cost and fast transaction atop $NEAR and increases the collection value by including background story or lore since visuals as it adds unique value/perspective.
 
@@ -53,7 +53,7 @@ $PARAS Tokenomics
 
 The total token supply is 100 million, without information on hard cap or soft cap. Tokens allocated to the team are vested linearly over 36 months, whereas for investors vested over different periods of time. The airdrop and reserved token are managed by the core-team.
 
-<img src="/musings/paras/image-02.webp" style="width:3.98438in;height:2.24121in" />
+<img src="/musings/paras/image-02.webp" width="960" height="540" loading="lazy" decoding="async" />
 
 The main use case for $PARAS are exclusive deals and events – limited edition goods, raffles, creator events, etc and DAO governance.
 

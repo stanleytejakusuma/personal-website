@@ -14,7 +14,7 @@ subtags:
 
 Terra blockchain as we may know is the ecosystem that brings DeFi to the mass public with stablecoins being the sole building blocks of the network. Here comes @EdgeProtocol! Dubbed as the ‘Airbnb for banking’ in being the first community-driven lending market on $LUNA.
 
-<img src="/musings/edge-protocol-thread/image-06.webp" style="width:3.773in;height:1.8865in" />
+<img src="/musings/edge-protocol-thread/image-06.webp" width="1200" height="600" loading="lazy" decoding="async" />
 
 Edge Protocol is a money-market-as-a-service (MMaaS) provider on $LUNA serving as both a community-based pool creation and a portal offering retail users access to various lending pools.
 
@@ -60,7 +60,7 @@ Pool creators have freedom to customize the fee collected in their pool: market 
 
 The protocol divides the phase of pool creation into three phases, we are currently inside the first phase – protocol-owned money markets.
 
-<img src="/musings/edge-protocol-thread/image-05.webp" style="width:3.75211in;height:1.96625in" />
+<img src="/musings/edge-protocol-thread/image-05.webp" width="1200" height="628" loading="lazy" decoding="async" />
 
 Delving into the @EdgeProtocol, the project’s states currently on beta launch called Dawn of Edge. Its first functionality will offer earning interest, borrow, leveraged long position, and open short position.
 
@@ -72,7 +72,7 @@ Details below are for the genesis pool only
 
 Each asset has its own interest rate model determined by safeness and volatility. The safe and less volatile assets will have high collateral and borrowing factors.
 
-<img src="/musings/edge-protocol-thread/image-07.webp" style="width:3.39063in;height:1.49427in" />
+<img src="/musings/edge-protocol-thread/image-07.webp" width="1200" height="529" loading="lazy" decoding="async" />
 
 As a **lender** earning APY, the lending rate follows the formula Borrowing Rate \* (1 - Insurance Fund Fee) \* asset’s utilization rate.
 
@@ -82,11 +82,11 @@ Insurance Fund (IF) Fee is the revenue model that @EdgeProtocol employs. The fee
 
 All interest rates are determined by a function of utilization rate (percentage of that asset borrowed against asset supplied). Dawn of Edge utilizes the Jump rate model, which is most efficient at a higher utilization rate.
 
-<img src="/musings/edge-protocol-thread/image-02.webp" style="width:3.21552in;height:1.94271in" />
+<img src="/musings/edge-protocol-thread/image-02.webp" width="1200" height="725" loading="lazy" decoding="async" />
 
-<img src="/musings/edge-protocol-thread/image-01.webp" style="width:2.91146in;height:1.72564in" />
+<img src="/musings/edge-protocol-thread/image-01.webp" width="1200" height="711" loading="lazy" decoding="async" />
 
-<img src="/musings/edge-protocol-thread/image-04.webp" style="width:2.82589in;height:1.70278in" />
+<img src="/musings/edge-protocol-thread/image-04.webp" width="1200" height="723" loading="lazy" decoding="async" />
 
 Price discovery of every respective assets are determined by their ecosystem:
 
@@ -108,7 +108,7 @@ Following are the parameters that are vital in the protocol:
 
 Risk Ratio – determines the position health
 
-<img src="/musings/edge-protocol-thread/image-03.webp" style="width:4.25521in;height:0.36142in" />
+<img src="/musings/edge-protocol-thread/image-03.webp" width="1200" height="104" loading="lazy" decoding="async" />
 
 Collateral Factor – borrowing power from supplying an asset
 

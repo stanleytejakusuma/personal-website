@@ -21,11 +21,11 @@ In 2020, Voyager acquired a licensed European exchange and entity registered in 
 
 VGX 2.0 brings more benefits to the users and the network in general. It still maintains a presence in Ethereum by being an ERC-20 token. Most of the benefits are in the form of reward and incentive from the loyalty program. Furthermore, the token employs a burning mechanism through 25% VGX burnt withdrawal fees on the app.
 
-<img src="/musings/voyager-tokenomics/image-04.webp" style="width:4.95821in;height:3.8875in" />
+<img src="/musings/voyager-tokenomics/image-04.webp" width="651" height="510" loading="lazy" decoding="async" />
 
 *Voyager Loyalty Program*
 
-<img src="/musings/voyager-tokenomics/image-03.webp" style="width:2.95276in;height:2.27362in" /><img src="/musings/voyager-tokenomics/image-01.webp" style="width:2.95276in;height:1.10096in" />
+<img src="/musings/voyager-tokenomics/image-03.webp" width="559" height="430" loading="lazy" decoding="async" /><img src="/musings/voyager-tokenomics/image-01.webp" width="840" height="312" loading="lazy" decoding="async" />
 
 *Crypto and Stock Price Correlation*
 
@@ -35,7 +35,7 @@ $`y\  = \ 13.18853129865218\  + \ 0.846\beta`$
 
 Staking-wise, Voyager’s staking performance does not have that huge impact on the price. Reflecting towards staking’s true purpose, users crowding to stake does not imply the price is going up, but it could be inferred that the network is more fortified than before. However, there are some anomalies here in the data. During VGX price ups and downs, there could be seen more activity in staking, which could be both unstake or stake. Especially during the network phase changes from VGX 1.0 to 2.0 (marked in red circle).
 
-<img src="/musings/voyager-tokenomics/image-02.webp" style="width:3.51042in;height:2.29264in" /><img src="/musings/voyager-tokenomics/image-05.webp" style="width:0.76458in;height:0.62689in" />
+<img src="/musings/voyager-tokenomics/image-02.webp" width="383" height="248" loading="lazy" decoding="async" /><img src="/musings/voyager-tokenomics/image-05.webp" width="1" height="1" loading="lazy" decoding="async" />
 
 *Daily Staking Frequency compared to Daily Price*
 

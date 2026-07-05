@@ -49,7 +49,7 @@ Launched on: Open Beta November/December 2021
 
     3.  Defeated Nefties would be lost forever.
 
-> <img src="/musings/solana-metaverse-ecosystem/image-05.webp" style="width:4.32501in;height:2.41852in" />
+> <img src="/musings/solana-metaverse-ecosystem/image-05.webp" width="1200" height="675" loading="lazy" decoding="async" />
 
 - In September, 10,000 NFT avatars called Aurorians were minted to indicate the early adopters of Aurory. Those holding these Aurorians are a part of the DAOrory (Decentralized Autonomous Organization). Their webpage has 55,000 unique visitors and 350,000 requests.
 
@@ -75,7 +75,7 @@ Launched on: Open Beta November/December 2021
 
 > 19 years of production experience in companies such as Gameloft, EA and Ubisoft. Background in production and business. Shipped several titles: AC Valhalla, Far Cry 6, Far Cry Primal, etc
 
-<img src="/musings/solana-metaverse-ecosystem/image-06.webp" style="width:3.35364in;height:2.74479in" />
+<img src="/musings/solana-metaverse-ecosystem/image-06.webp" width="1200" height="980" loading="lazy" decoding="async" />
 
 - Social Standing:
 
@@ -135,7 +135,7 @@ Launched on: October 2021 (with following updates)
 
 6.  Another feature is character customization.
 
-> <img src="/musings/solana-metaverse-ecosystem/image-01.webp" style="width:3.83854in;height:2.1112in" />
+> <img src="/musings/solana-metaverse-ecosystem/image-01.webp" width="1200" height="661" loading="lazy" decoding="async" />
 
 - Star Atlas utilizes two tokens: ATLAS as medium of exchange and POLIS for governance token (DAO).
 
@@ -207,7 +207,7 @@ Launched on: Open Beta December 2021
 
   - There will be two version of the game: DeFi Land v1 would includes basic functionality of DeFi (Swaps, Liquidity Providing, Stake & Yield Farming, Governance, etc) and DeFi Land v2 which includes game-changing features (Lending & Borrowing, Indices, NFT marketplace, Predictions & Betting, etc)
 
-> <img src="/musings/solana-metaverse-ecosystem/image-04.webp" style="width:4.27239in;height:1.41752in" />
+> <img src="/musings/solana-metaverse-ecosystem/image-04.webp" width="1200" height="400" loading="lazy" decoding="async" />
 
 - DeFi Land released 586,335,000 DFL (5.86% of total supply) to be traded on exchanges. More on https://defiland.medium.com/dfl-tokenomics-d42262ea8b6c.
 
@@ -307,7 +307,7 @@ Launched on: October 2021 (with following updates)
 
   - On reaching level 45 and level 60, players would receive a quest to pick a class and mastery of that class respectively.
 
-> <img src="/musings/solana-metaverse-ecosystem/image-07.webp" style="width:4.94271in;height:2.75051in" />
+> <img src="/musings/solana-metaverse-ecosystem/image-07.webp" width="1136" height="632" loading="lazy" decoding="async" />
 
 - Rewards:
 
@@ -395,7 +395,7 @@ Launched on: December 2021
 
   - Combat will be fast-paced and focused. Players could dodge and strike in real-time.
 
-> <img src="/musings/solana-metaverse-ecosystem/image-03.webp" style="width:3.09896in;height:1.90863in" />
+> <img src="/musings/solana-metaverse-ecosystem/image-03.webp" width="1200" height="750" loading="lazy" decoding="async" />
 
 - In-game assets include heroes (with classes), Zeds (pokemon-like creatures), and equipment (weapons and armors).
 
@@ -471,7 +471,7 @@ Launched on: December 2021
 
 - Investors
 
-<img src="/musings/solana-metaverse-ecosystem/image-08.webp" style="width:5.95701in;height:5.3928in" />
+<img src="/musings/solana-metaverse-ecosystem/image-08.webp" width="1200" height="1084" loading="lazy" decoding="async" />
 
 # **Open Era**
 
@@ -487,7 +487,7 @@ Launched on: Unknown
 
 - Below is an example of the gameplay
 
-<img src="/musings/solana-metaverse-ecosystem/image-02.webp" style="width:5.32702in;height:2.86704in" />
+<img src="/musings/solana-metaverse-ecosystem/image-02.webp" width="1200" height="646" loading="lazy" decoding="async" />
 
 - On November 17, Open Era announced a collaboration with LittleRocksNFT
 

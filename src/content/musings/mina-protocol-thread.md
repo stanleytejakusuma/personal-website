@@ -15,7 +15,7 @@ Any blockchain has the problem of sizing. Imagine one blockchain that has a cons
 
 $MINA’s, previously Coda Protocol, proposition is to build the privacy and security layer of web3 by producing the lightest blockchain.
 
-<img src="/musings/mina-protocol-thread/image-06.webp" style="width:3.69079in;height:2.05832in" />
+<img src="/musings/mina-protocol-thread/image-06.webp" width="899" height="502" loading="lazy" decoding="async" />
 
 (source: [<u>here</u>](https://medium.com/minaprotocol/introducing-mina-protocol-d8b3a8e8b2bc))
 
@@ -145,19 +145,19 @@ MINA continues to build more and more mind-blowing applications, such as logging
 
 $MINA is the native token of MINA protocol without a supply cap and it is inflationary. The total distributed token at launch is 1B (will be fully unlocked after 8 years).
 
-<img src="/musings/mina-protocol-thread/image-01.webp" style="width:3.53646in;height:2.73735in" />
+<img src="/musings/mina-protocol-thread/image-01.webp" width="1024" height="791" loading="lazy" decoding="async" />
 
-<img src="/musings/mina-protocol-thread/image-02.webp" style="width:3.44534in;height:2.36315in" />
+<img src="/musings/mina-protocol-thread/image-02.webp" width="1024" height="702" loading="lazy" decoding="async" />
 
-<img src="/musings/mina-protocol-thread/image-07.webp" style="width:3.51207in;height:1.84609in" />
+<img src="/musings/mina-protocol-thread/image-07.webp" width="1200" height="630" loading="lazy" decoding="async" />
 
 (source: [<u>here</u>](https://minaprotocol.com/blog/mina-token-distribution-and-supply))
 
 During TGE, the community has the most amount of token allocation. However, after all the planned supply has been released, most allocations goes to block rewards.
 
-<img src="/musings/mina-protocol-thread/image-04.webp" style="width:3.34028in;height:1.73438in" />
+<img src="/musings/mina-protocol-thread/image-04.webp" width="1200" height="623" loading="lazy" decoding="async" />
 
-<img src="/musings/mina-protocol-thread/image-03.webp" style="width:3.31771in;height:1.72266in" />
+<img src="/musings/mina-protocol-thread/image-03.webp" width="1200" height="623" loading="lazy" decoding="async" />
 
 (source: same as above)
 
@@ -177,6 +177,6 @@ MINA’s TPS could merely reach 22 TPS whereas DOT could achieve ~166.66 TPS!
 
 Security-wise, MINA has relatively similar amount of block producers with DOT (155 and 297 respectively)
 
-<img src="/musings/mina-protocol-thread/image-05.webp" style="width:2.35566in;height:0.96265in" />
+<img src="/musings/mina-protocol-thread/image-05.webp" width="943" height="385" loading="lazy" decoding="async" />
 
 imo MINA wins over DOT in terms of block size and access convenience, though in other features it still needs improvement

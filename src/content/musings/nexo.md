@@ -26,7 +26,7 @@ Launched in March 2018, the NEXO platform’s native token $NEXO facilitates div
 
 The other portion of the token distribution would be subject to vesting (image below). Total supply of NEXO is 1,000,000,000 and circulating supply is 560,000,000.
 
-<img src="/musings/nexo/image-01.webp" style="width:4.41236in;height:2.03804in" />
+<img src="/musings/nexo/image-01.webp" width="763" height="350" loading="lazy" decoding="async" />
 
 *Token Distribution Table*
 
@@ -36,13 +36,13 @@ The loyalty is a tier-based program that further provides incentive to the platf
 
 NEXO is an ecosystem by itself that provides an exchange and wallet, both synergizing its needs. Acquiring NEXO is not that much of a hassle compared to its direct competitor Celsius. Furthermore, users owning NEXO would be eligible to receive the first SEC-compliant dividend. 30% of the revenue would be paid in ETH through the NEXO wallet. Given the fast-paced nature of the crypto space, NEXO’s dividend payout would be on a monthly basis. The general structure could be simplified in an economic flywheel as shown below.
 
-<img src="/musings/nexo/image-04.webp" style="width:3.56739in;height:2.77349in" />
+<img src="/musings/nexo/image-04.webp" width="1200" height="931" loading="lazy" decoding="async" />
 
 *NEXO Economic Flywheel*
 
 Though the platform promises monthly dividend payout, there is only historical data for four dividends payout. The third dividend payout was distributed on August 15, 2020 and the fourth dividend payout was distributed on June 16, 2021; $6,127,981.39 and $20,428,359.89 respectively.
 
-<img src="/musings/nexo/image-03.webp" style="width:2.95276in;height:2.10067in" /><img src="/musings/nexo/image-02.webp" style="width:2.95276in;height:2.05006in" />
+<img src="/musings/nexo/image-03.webp" width="391" height="278" loading="lazy" decoding="async" /><img src="/musings/nexo/image-02.webp" width="401" height="278" loading="lazy" decoding="async" />
 
 *Dividend to Market Performance*
 

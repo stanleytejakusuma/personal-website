@@ -45,7 +45,7 @@ subtags:
 
 6.  Transacting sacrifice is recommended on non-custodial wallets as the target token would be sent there.
 
-7.  <img src="/musings/pulsex/image-01.webp" style="width:3.10938in;height:1.9915in" />
+7.  <img src="/musings/pulsex/image-01.webp" width="773" height="685" loading="lazy" decoding="async" />
 
 - PulseChain raised $670,007,371 during the sacrifice phase, of which there are 5 addresses that sacrificed more than $10 million.
 

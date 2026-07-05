@@ -18,11 +18,11 @@ Imagine $ETH and $ATOM combined into one single permissionless L1 blockchain…
 
 Comes @kava_platform! Featuring an optimized co-chain architecture that is way scalable and decentralized.
 
-<img src="/musings/kava-network-thread/image-04.webp" style="width:3.15003in;height:1.67093in" />
+<img src="/musings/kava-network-thread/image-04.webp" width="1200" height="636" loading="lazy" decoding="async" />
 
 With the co-chain architecture, Kava unites ETH’s speed and ATOM’s interoperability powered by the Tendermint Consensus engine!
 
-<img src="/musings/kava-network-thread/image-02.webp" style="width:3.19874in;height:3.01875in" />
+<img src="/musings/kava-network-thread/image-02.webp" width="622" height="587" loading="lazy" decoding="async" />
 
 Advantages:
 
@@ -52,7 +52,7 @@ Kava’s network architecture revolves around the **co-chain**!
 
 Think of it like this, ETH and ATOM act as two hemispheres of the brain and KAVA is the central part of it.
 
-<img src="/musings/kava-network-thread/image-05.webp" style="width:4.57111in;height:2.17567in" />
+<img src="/musings/kava-network-thread/image-05.webp" width="700" height="334" loading="lazy" decoding="async" />
 
 Tendermint Consensus engine, relying on BFT, powers the bridge (Translator Module) between co-chains governed by the DAO
 
@@ -64,7 +64,7 @@ $SWP is the token for Kava’s swap
 
 $USDX the stablecoin on the ecosystem softly pegged to USD, only minted when a Kava CDP is opened (similar @MakerDAO $DAI)
 
-<img src="/musings/kava-network-thread/image-03.webp" style="width:3.37292in;height:1.68646in" />
+<img src="/musings/kava-network-thread/image-03.webp" width="1200" height="599" loading="lazy" decoding="async" />
 
 [<u>source</u>](https://medium.com/kava-labs/kava-protocol-101-ce3beb0fa8b8)
 
@@ -88,7 +88,7 @@ Inflation: 34.23%/annum
 
 KAVA’s most dominant use case is the staking rewards! Staking $KAVA and supplying $AKT will earn all the rewards in the picture below.
 
-<img src="/musings/kava-network-thread/image-01.webp" style="width:3.10625in;height:1.59793in" />
+<img src="/musings/kava-network-thread/image-01.webp" width="923" height="476" loading="lazy" decoding="async" />
 
 State of Kava
 
@@ -104,7 +104,7 @@ TVL to MCap: 82.32%
 
 TVL dominance is led by $KAVA (61.21%), $HARD (32.63%), $SWP (6.16%)
 
-<img src="/musings/kava-network-thread/image-06.webp" style="width:2.63125in;height:1.78054in" />
+<img src="/musings/kava-network-thread/image-06.webp" width="532" height="360" loading="lazy" decoding="async" />
 
 Another metric worth taking a look for is **Penetration Rate**. Here, Kava’s TVL is compared with $ETH + $ATOM TVL
 

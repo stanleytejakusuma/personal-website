@@ -18,7 +18,7 @@ Cosmos is well-known for its “Internet of Blockchains” vision, combining ind
 
 THORChain ($RUNE) aims to solve this by providing Cosmos a decentralized cross-chain liquidity protocol based on **Tendermint** & **Cosmos-SDK** and utilizing **Threshold Signature Schemes** (TSS).
 
-<img src="/musings/thorchain/image-01.webp" style="width:4.22439in;height:2.1065in" />
+<img src="/musings/thorchain/image-01.webp" width="900" height="450" loading="lazy" decoding="async" />
 
 (source: THORChain blog)
 
@@ -62,13 +62,13 @@ THORChain fee schedule:
 
 - Network fee: fixed but intended to be dynamic
 
-<img src="/musings/thorchain/image-06.webp" style="width:2.50457in;height:0.94323in" />
+<img src="/musings/thorchain/image-06.webp" width="944" height="354" loading="lazy" decoding="async" />
 
 (source: [<u>here</u>](https://docs.thorchain.org/how-it-works/fees))
 
 THORChain’s price discovery revolves around pool design and external arbitrageurs.
 
-<img src="/musings/thorchain/image-05.webp" style="width:3.59896in;height:0.71518in" />
+<img src="/musings/thorchain/image-05.webp" width="656" height="130" loading="lazy" decoding="async" />
 
 (source: [<u>here</u>](https://docs.thorchain.org/how-it-works/technology))
 
@@ -86,7 +86,7 @@ Each node/validator has a ‘Bifröst’ service that connects to each chain. On
 
 The transaction becomes pending and sent to the observer to await consensus. Each node serves as a relayer to the observer and holds small information.
 
-<img src="/musings/thorchain/image-07.webp" style="width:2.34896in;height:1.44141in" />
+<img src="/musings/thorchain/image-07.webp" width="1200" height="735" loading="lazy" decoding="async" />
 
 (source: [<u>here</u>](https://docs.thorchain.org/how-it-works/technology))
 
@@ -94,7 +94,7 @@ The State Machine then finalizes the tx and performs logic: ordering, computing 
 
 Bifröst Chain Client then signs the tx, loads it to the THORChain, and finally broadcasts it to the respective chain.
 
-<img src="/musings/thorchain/image-02.webp" style="width:2.41353in;height:1.54713in" />
+<img src="/musings/thorchain/image-02.webp" width="1200" height="770" loading="lazy" decoding="async" />
 
 (source: [<u>here</u>](https://docs.thorchain.org/how-it-works/technology))
 
@@ -106,7 +106,7 @@ LP earns reward based on the demand for that pool – higher demand, higher rewa
 
 The $RUNE token interconnects all liquidity pools, that’s why THORChain’s pools are called Continuous Liquidity Pools. As a result, the swap output is as in the image below.
 
-<img src="/musings/thorchain/image-03.webp" style="width:2.60422in;height:3.14955in" />
+<img src="/musings/thorchain/image-03.webp" width="468" height="568" loading="lazy" decoding="async" />
 
 (source: [<u>here</u>](https://docs.thorchain.org/roles/swapping))
 
@@ -116,7 +116,7 @@ Now, to the thing we’ve all been waiting for – $RUNE Tokenomics!
 
 RUNE has a role of being a settlement asset, security mechanism, governance, and incentives. Its max supply is 500 million.
 
-<img src="/musings/thorchain/image-08.webp" style="width:4.20199in;height:2.51177in" />
+<img src="/musings/thorchain/image-08.webp" width="1168" height="698" loading="lazy" decoding="async" />
 
 In addition to the roles, RUNE acts as the currency for Proof-of-Bond. RUNE’s price itself has a deterministic value based on the liquidity within the network.
 
@@ -124,7 +124,7 @@ The design requires bonding nodes to post 3x more RUNE.
 
 The image below explains wallets that support $RUNE
 
-<img src="/musings/thorchain/image-04.webp" style="width:3.10625in;height:1.65562in" />
+<img src="/musings/thorchain/image-04.webp" width="1200" height="638" loading="lazy" decoding="async" />
 
 More information on the financial model of RUNE could be accessed at [<u>https://docs.thorchain.org/thorchain-finance/continuous-liquidity-pools</u>](https://docs.thorchain.org/thorchain-finance/continuous-liquidity-pools)
 

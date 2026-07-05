@@ -19,7 +19,7 @@ As the DeFi industry is on a continuous growth, following its exponential TVL gr
 
 Enter Osmosis! The advanced AMM protocol built using @cosmos SDK that allows developers to design, build, and deploy their own customized AMM.
 
-<img src="/musings/osmosis-thread/image-04.webp" style="width:3.58333in;height:1.14583in" />
+<img src="/musings/osmosis-thread/image-04.webp" width="344" height="110" loading="lazy" decoding="async" />
 
 In larger perspective, Osmosis is an **independent chain** in the Cosmos ecosystem. It does rely on Cosmos’s blockchain but has its own validators, and leverages Cosmos’ Inter-Blockchain Communication protocol.
 
@@ -71,23 +71,23 @@ The initial supply of OSMO is 100 million which is split evenly between Fairdrop
 
 Under the initial token model, new tokens would be released based on a “thirdening” schedule – similar to $BTC halving. The token issuance is decreased by half every four years with each release being daily (epoch is daily). Summing up to 76% inflation rate cut by ⅓ per year.
 
-<img src="/musings/osmosis-thread/image-02.webp" style="width:3.30625in;height:2.20417in" />
+<img src="/musings/osmosis-thread/image-02.webp" width="1200" height="800" loading="lazy" decoding="async" />
 
 At the end of the process, $OSMO would reach a maximum supply of 1 billion. Newly released tokens would be distributed as follows: Staking Rewards – 25%, Developer Vesting – 25%, Liquidity Mining Incentives – 45%, and Community Pool – 5%.
 
-<img src="/musings/osmosis-thread/image-01.webp" style="width:3.77292in;height:2.1525in" />
+<img src="/musings/osmosis-thread/image-01.webp" width="1200" height="686" loading="lazy" decoding="async" />
 
 The fairdrop would be distributed through the following function based on the snapshot taken during February 18, 2021 in Cosmos. The amount each address receives is proportional to the square root of its $ATOM balance with a special 2.5x multiplier for staked atoms.
 
-<img src="/musings/osmosis-thread/image-03.webp" style="width:6.5in;height:0.72222in" />
+<img src="/musings/osmosis-thread/image-03.webp" width="936" height="104" loading="lazy" decoding="async" />
 
 One of the currently implemented incentives is for the liquidity mining. 45% of daily issuance goes to Bonded Liquidity Gauges which is distributing liquidity incentives to LP tokens that have been bonded for a certain period of time.
 
 Currently, the TVL in $OSMO is $1.54B, in comparison $AAVE is $19.35B, $CRV is $19.04B, and $MKR is $15.65B.
 
-<img src="/musings/osmosis-thread/image-05.webp" style="width:2.98125in;height:1.54318in" />
+<img src="/musings/osmosis-thread/image-05.webp" width="1200" height="621" loading="lazy" decoding="async" />
 
-<img src="/musings/osmosis-thread/image-06.webp" style="width:2.97823in;height:1.52252in" />
+<img src="/musings/osmosis-thread/image-06.webp" width="1200" height="612" loading="lazy" decoding="async" />
 
 There are 600+ incentivized pools with the highest liquidity being $ATOM/$OSMO $518M and the APR is 77.19%.
 

@@ -15,7 +15,7 @@ Look out for the $WAVES! It’s going up!!! (sorry for the pun)
 
 WAVES is the platform to build open source dApps focusing on community-based user friendly apps! The project offers a fast, low cost, and eco-friendly.
 
-<img src="/musings/waves-thread/image-03.webp" style="width:4.13125in;height:0.85406in" />
+<img src="/musings/waves-thread/image-03.webp" width="1200" height="250" loading="lazy" decoding="async" />
 
 This thread is going to deep dive into the project and try to dissect the price soar lately.
 
@@ -79,7 +79,7 @@ To the asset that powers the network itself – $WAVES!
 
 The token began as a fixed-cap token with 100M max supply. All the tokens are in circulation. $WAVES has a main use case as the native token for the protocol.
 
-<img src="/musings/waves-thread/image-02.webp" style="width:2.09792in;height:1.95624in" />
+<img src="/musings/waves-thread/image-02.webp" width="385" height="359" loading="lazy" decoding="async" />
 
 Around 20M tokens are issued as the block rewards. The initial block reward has been set to 6 WAVES, every 100k blocks miners could decrease or increase the block reward by 0.5 WAVES.
 
@@ -99,7 +99,7 @@ State of Network:
 
 - 80% staked
 
-<img src="/musings/waves-thread/image-01.webp" style="width:6.5in;height:2.66667in" />
+<img src="/musings/waves-thread/image-01.webp" width="900" height="369" loading="lazy" decoding="async" />
 
 TVL dominance is led by @neutrino_protocol – WAVES’ algorithmic stablecoin ($USDN), followed by @Viresfinance_ES, and @Waves_Exchange.
 

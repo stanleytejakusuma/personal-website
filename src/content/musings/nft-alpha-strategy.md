@@ -16,7 +16,7 @@ The subset data (see appendix) is taken from 300 collections that have the highe
 
 Taking a broad overview of the market, NFTs could fall into several categories: Primitives, Historical ‘Legend’, Art, Functionality, Ecosystem, DLC, Avatar, Marketing, Social Movement, Limited, and Meme. Furthermore, most of these NFTs have two things in common: Roadmap and Goal in mind. Be it as lucrative a roadmap it could be or a far-fetched goal, these NFT founders create the mindset ‘You’re still early. No FOMO.’
 
-<img src="/musings/nft-alpha-strategy/image-01.webp" style="width:3.75625in;height:2.29195in" />
+<img src="/musings/nft-alpha-strategy/image-01.webp" width="594" height="363" loading="lazy" decoding="async" />
 
 *Distribution of top NFT collections*
 
@@ -42,4 +42,4 @@ TODO IMPLEMENT
 
 Appendix
 
-<img src="/musings/nft-alpha-strategy/image-02.webp" style="width:4.06802in;height:3.68338in" />
+<img src="/musings/nft-alpha-strategy/image-02.webp" width="758" height="687" loading="lazy" decoding="async" />

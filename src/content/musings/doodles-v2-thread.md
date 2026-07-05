@@ -39,7 +39,7 @@ Blockfi Thread
 
 Some say that BlockFi will undergo a liquidity crisis by the end of 2022 as they have lost a substantial amount of money.
 
-<img src="/musings/doodles-v2-thread/image-07.webp" style="width:6.26772in;height:3.45833in" />
+<img src="/musings/doodles-v2-thread/image-07.webp" width="905" height="500" loading="lazy" decoding="async" />
 
 (source: @otteroooo)
 
@@ -47,7 +47,7 @@ Some say that BlockFi will undergo a liquidity crisis by the end of 2022 as they
 
 On June 16, 2000 BTC & 5000 ETH flow out from the BlockFi wallet, just in a day alone.
 
-<img src="/musings/doodles-v2-thread/image-02.webp" style="width:4.00758in;height:1.35606in" />
+<img src="/musings/doodles-v2-thread/image-02.webp" width="529" height="179" loading="lazy" decoding="async" />
 
 [<u>https://twitter.com/BigTimeCali/status/1537424371672723459</u>](https://twitter.com/BigTimeCali/status/1537424371672723459)
 
@@ -66,7 +66,7 @@ Lend and gamble business model only works when the bet is right, when it’s wro
 
 Here is where BlockFi comes in response on having any exposure to 3AC:
 
-<img src="/musings/doodles-v2-thread/image-05.webp" style="width:3.90909in;height:1.19697in" />
+<img src="/musings/doodles-v2-thread/image-05.webp" width="516" height="158" loading="lazy" decoding="async" />
 
 6/
 
@@ -80,9 +80,9 @@ A user named @NFTherder leaked a document on June 20, 2022 claiming that @BlockF
 
 Out of the $285 million, $221 million was lost during the massive 2021 bull run when BTC railed up to $69k. So if the docs are accurate, BlockFi might go down like Celsius.
 
-<img src="/musings/doodles-v2-thread/image-06.webp" style="width:2.50921in;height:2.37627in" />
+<img src="/musings/doodles-v2-thread/image-06.webp" width="664" height="630" loading="lazy" decoding="async" />
 
-<img src="/musings/doodles-v2-thread/image-01.webp" style="width:2.53646in;height:2.34503in" />
+<img src="/musings/doodles-v2-thread/image-01.webp" width="1018" height="941" loading="lazy" decoding="async" />
 
 9/
 
@@ -90,13 +90,13 @@ Just this year, BlockFi failed to register the offers and sales of the retail cr
 
 Point here is, the settlement for SEC was $100,000,000.
 
-<img src="/musings/doodles-v2-thread/image-04.webp" style="width:3.17188in;height:1.89762in" />
+<img src="/musings/doodles-v2-thread/image-04.webp" width="679" height="408" loading="lazy" decoding="async" />
 
 10/
 
 On June 15, 2022 BlockFi cleared another settlement payment of $943,000 to lowa but people find it interesting because they are paying this amount in instalment. You only pay instalment when you have no money in hand a.k.a liquidity crisis.
 
-<img src="/musings/doodles-v2-thread/image-03.webp" style="width:4.28646in;height:2.91223in" />
+<img src="/musings/doodles-v2-thread/image-03.webp" width="680" height="462" loading="lazy" decoding="async" />
 
 11/
 

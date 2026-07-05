@@ -15,7 +15,7 @@ With REN Protocol being the bridge to blockchains, so does the need of a front U
 
 @catalogfi comes into play by being the metaversal exchange for $REN! The introduction of Catalog defines a secure cross-chain DEX with CEX-like features to easily swap assets across blockchains.
 
-<img src="/musings/catalog/image-01.webp" style="width:2.94916in;height:1.5502in" />
+<img src="/musings/catalog/image-01.webp" width="1200" height="630" loading="lazy" decoding="async" />
 
 (image from medium post)
 

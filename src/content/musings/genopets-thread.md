@@ -17,7 +17,7 @@ This Move-to-Earn game not only rewards you with capital value, but also you cou
 
 @genopets is a free-to-play built on $SOL that could earn you crypto and train your own dragon as you venture through daily activities! Built by winners of @EOSWorldwide global hackathon in 2018 and invested by notable funds.
 
-<img src="/musings/genopets-thread/image-04.webp" style="width:1.65309in;height:2.62723in" />
+<img src="/musings/genopets-thread/image-04.webp" width="626" height="994" loading="lazy" decoding="async" />
 
 (image: whitepaper)
 
@@ -53,13 +53,13 @@ Fundings ($8.3M)
 
 Your avatar would be in the form of a dragon-like creature – Genopets. These pets would increase in value as you invest time and physical effort to augment its features. p.s. you can mint a pet for free!
 
-<img src="/musings/genopets-thread/image-02.webp" style="width:3.82541in;height:1.86979in" />
+<img src="/musings/genopets-thread/image-02.webp" width="850" height="416" loading="lazy" decoding="async" />
 
 (source: whitepaper)
 
 At its core, you will meet with several tokens on the way to train your dragon – $GENE, $KI, $XP
 
-<img src="/musings/genopets-thread/image-01.webp" style="width:0.99337in;height:3.02604in" />
+<img src="/musings/genopets-thread/image-01.webp" width="346" height="1054" loading="lazy" decoding="async" />
 
 (source: whitepaper)
 
@@ -103,7 +103,7 @@ Other items to note:
 
 If you grow tired of grinding and want to accelerate the value of your pet, purchasing a habitat to join the paid side of Genopet’s economic flywheel with added benefits!
 
-<img src="/musings/genopets-thread/image-03.webp" style="width:2.14724in;height:2.49479in" />
+<img src="/musings/genopets-thread/image-03.webp" width="911" height="1059" loading="lazy" decoding="async" />
 
 Adding to the Pay-to-Earn side of Genopets, after the “Road to KI” update, you could also start earning KI tokens.
 

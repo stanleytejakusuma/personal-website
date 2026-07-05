@@ -13,11 +13,11 @@ tickers:
 
 Hmm… Interesting!
 
-<img src="/musings/zilliqa-thread/image-02.webp" style="width:2.72292in;height:1.65819in" />
+<img src="/musings/zilliqa-thread/image-02.webp" width="1200" height="732" loading="lazy" decoding="async" />
 
 The chart above shows the price action of $ZIL. @zilliqa is one of the alts competing to grow their own ecosystem of dApps. Look into the 🧵 and we’ll deep dive into the protocol more!
 
-<img src="/musings/zilliqa-thread/image-01.webp" style="width:4.42708in;height:1.23958in" />
+<img src="/musings/zilliqa-thread/image-01.webp" width="425" height="119" loading="lazy" decoding="async" />
 
 $ZIL offers low cost, high scalability, eco-friendliness, dev-friendly, and backed by research in its ecosystem. To achieve these promises, ZIL is the first blockchain to implement the **sharding** technique.
 
@@ -51,7 +51,7 @@ To further ensure security, ZIL operates both PoS and PoW.
 
 Below are the requirements to host a node running PoW.
 
-<img src="/musings/zilliqa-thread/image-03.webp" style="width:2.54695in;height:1.9525in" />
+<img src="/musings/zilliqa-thread/image-03.webp" width="527" height="404" loading="lazy" decoding="async" />
 
 (source: [<u>here</u>](https://www.zilliqa.com/mining))
 
