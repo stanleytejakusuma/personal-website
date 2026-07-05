@@ -115,11 +115,11 @@ export const projects: Project[] = [
   {
     name: 'atlas',
     description:
-      'An end-to-end fine-tuning pipeline: QLoRA SFT plus DPO, quantized to GGUF and served via Ollama. A 32B model tuned to run on a single consumer GPU, with a staged evaluation gate that each checkpoint has to clear before it ships.',
+      'A self-hosted, sovereign LLM: fine-tuning an open model on my own knowledge-graph corpus so an assistant that actually knows my context runs entirely on local hardware. Staged evaluation gates each checkpoint before it ships — and the recipe is still evolving.',
     category: 'ai & agents',
     status: 'in-dev',
     stack: ['Python', 'Unsloth', 'TRL', 'Ollama'],
-    metrics: ['32B model', 'QLoRA + DPO'],
+    metrics: ['self-hosted LLM', 'QLoRA fine-tune'],
     order: 7,
   },
   {
