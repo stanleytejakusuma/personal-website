@@ -95,7 +95,7 @@ VGX is mainly a utility token for the exchange itself, currently the use cases a
 
 > With the second whitepaper, Voyager introduces a loyalty system with benefits based on the quantity of VGX held in the account.
 >
-> <img src="/musings/voyager/image-01.webp" width="642" height="495" loading="lazy" decoding="async" />
+<img src="/musings/voyager/image-01.webp" width="642" height="495" loading="lazy" decoding="async" />
 >
 > *Figure 2. Loyalty Program Schedule (whitepaper v2.0)*
 

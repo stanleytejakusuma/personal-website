@@ -42,7 +42,7 @@ The Celsius Network employs a unique token burning mechanism that would both ben
 
 Similar to E = mc<sup>2</sup> (E: Ethereum, m: members of Celsius, c: Celsius credit/deposits), as more people join the network and actively deposit, the more everyone reaps the reward. The utility of the CEL token mainly revolves around discount and network benefits. Earners/depositors would be able to earn up to 25% more rewards if the payout is in CEL. Borrowers paying in CEL token would receive a discount up to 25% for interest payments, same goes for institutions. Both the rewards and discounts would be decided by tiers based on the amount of CEL token held in the wallet.
 
-> <img src="/musings/celsius-network-tokenomics/image-02.webp" width="1200" height="403" loading="lazy" decoding="async" />
+<img src="/musings/celsius-network-tokenomics/image-02.webp" width="1200" height="403" loading="lazy" decoding="async" />
 
 *Celsius Network Tiers*
 

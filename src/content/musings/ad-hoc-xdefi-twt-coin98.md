@@ -132,7 +132,7 @@ tickers:
 
 - The wallet itself when expanded in a browser tab has the historical data view of the portfolio and an Ethereum gas fee tracker.
 
-> <img src="/musings/ad-hoc-xdefi-twt-coin98/image-01.webp" width="1200" height="635" loading="lazy" decoding="async" />
+<img src="/musings/ad-hoc-xdefi-twt-coin98/image-01.webp" width="1200" height="635" loading="lazy" decoding="async" />
 
 - The wallet has a reward system – X-Point. Users could earn by doing certain tasks or referral codes and exchange them for COIN98 tokens.
 

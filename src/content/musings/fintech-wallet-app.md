@@ -46,7 +46,7 @@ Source of Revenue:
 
 - Premium and Metal accounts (subscription based)
 
-> <img src="/musings/fintech-wallet-app/image-02.webp" width="919" height="270" loading="lazy" decoding="async" />
+<img src="/musings/fintech-wallet-app/image-02.webp" width="919" height="270" loading="lazy" decoding="async" />
 
 - Commission from merchants (small fees when using Revolut card)
 
@@ -146,7 +146,7 @@ Features:
 
 - Depositing funds require no additional fees except through Paysafe
 
-> <img src="/musings/fintech-wallet-app/image-03.webp" width="894" height="663" loading="lazy" decoding="async" />
+<img src="/musings/fintech-wallet-app/image-03.webp" width="894" height="663" loading="lazy" decoding="async" />
 
 - More information on fees [<u>here</u>](https://www.skrill.com/en-us/siteinformation/fees/?homepage_tab=send-money#deposit).
 
@@ -154,7 +154,7 @@ Crypto:
 
 - Fees for crypto depends on the value of transactions
 
-> <img src="/musings/fintech-wallet-app/image-01.webp" width="477" height="239" loading="lazy" decoding="async" />
+<img src="/musings/fintech-wallet-app/image-01.webp" width="477" height="239" loading="lazy" decoding="async" />
 
 - Supported tokens: BTC, ETH, LTC, BCH
 
