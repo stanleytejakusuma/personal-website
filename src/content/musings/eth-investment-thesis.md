@@ -4,6 +4,7 @@ description: Ethereum (ETH) represents the largest single innovation within the 
   space and the blockchain industry ever since Bitcoin in 2009. Since the launch in
   2015,...
 date: '2022-01-31'
+featured: true
 venue: wagmi
 tags:
 - L1/L2

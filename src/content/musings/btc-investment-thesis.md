@@ -4,6 +4,7 @@ description: Bitcoin as an asset or as a digital currency? Satoshi Nakamoto, a p
   pseudonym, the creator of Bitcoin published the whitepaper on October 31, 2008,
   created the genesis...
 date: '2022-01-31'
+featured: true
 venue: wagmi
 tags:
 - L1/L2

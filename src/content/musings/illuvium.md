@@ -4,6 +4,7 @@ description: Introduction In a world of its own, Illuvium started to announce it
   game in early January 2021. An open-world game filled with vast terrain and dangerous
   beasts in a land of...
 date: '2022-06-23'
+featured: true
 venue: wagmi
 tags:
 - GameFi

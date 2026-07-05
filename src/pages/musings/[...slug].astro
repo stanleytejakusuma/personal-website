@@ -57,6 +57,7 @@ const blogPosting = {
   publishedTime={entry.data.date.toISOString()}
 >
   <script type="application/ld+json" set:html={JSON.stringify(blogPosting)} />
+  <div class="reading-progress" aria-hidden="true"><span data-reading-progress></span></div>
   <article class="representative musing-post" aria-labelledby="musing-h">
     <a class="musing-post__back inline-link" href="/#musings">← musings</a>
 
@@ -101,9 +102,38 @@ const blogPosting = {
       </nav>
     )}
   </article>
+
+  <script>
+    const bar = document.querySelector<HTMLElement>('[data-reading-progress]');
+    if (bar) {
+      const doc = document.documentElement;
+      const update = () => {
+        const max = doc.scrollHeight - doc.clientHeight;
+        bar.style.width = max > 0 ? `${(doc.scrollTop / max) * 100}%` : '0%';
+      };
+      document.addEventListener('scroll', update, { passive: true });
+      update();
+    }
+  </script>
 </BaseLayout>
 
 <style>
+  .reading-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    z-index: 30;
+  }
+
+  .reading-progress span {
+    display: block;
+    width: 0;
+    height: 100%;
+    background: var(--color-accent);
+  }
+
   .musing-post {
     width: min(100% - 32px, 880px);
     padding-top: clamp(2rem, 7vh, 5rem);

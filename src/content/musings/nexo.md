@@ -4,6 +4,7 @@ description: "NEXO is an ecosystem that provides lending and borrowing\
   \ in the crypto space through Ethereum chain. It has its own exchange, wallet, and\
   \ token \u2013 all..."
 date: '2022-01-24'
+featured: true
 venue: wagmi
 tags:
 - DeFi

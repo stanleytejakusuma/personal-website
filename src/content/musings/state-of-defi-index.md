@@ -4,6 +4,7 @@ description: "The recent crypto market downturn has led to extensive detrimental
   \ on blockchain market health \u2013 specifically on Decentralized Finance. A long-standing\
   \ DeFi primitive,..."
 date: '2022-06-06'
+featured: true
 venue: wagmi
 tags:
 - DeFi

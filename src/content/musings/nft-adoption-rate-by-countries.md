@@ -4,6 +4,7 @@ description: "Who doesn\u2019t know the term NFT? Following the growth of the no
   \ digital art, as proven by the $10B+ market cap, NFTs are starting to become a\
   \ mainstream collectible..."
 date: '2022-03-21'
+featured: true
 venue: wagmi
 tags:
 - NFT

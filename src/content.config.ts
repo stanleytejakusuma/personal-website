@@ -12,6 +12,7 @@ const musings = defineCollection({
     subtags: z.array(z.string()).optional(),
     tickers: z.array(z.string()).optional(),
     research: z.boolean().default(false),
+    featured: z.boolean().default(false),
     external: z.string().url().optional(),
     draft: z.boolean().default(false),
   }),
