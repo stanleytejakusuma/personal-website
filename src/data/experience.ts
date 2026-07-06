@@ -8,6 +8,9 @@ export interface Entry {
   // /resume renders education under its own heading (ATS parsing); the
   // experience tab keeps the single unified timeline.
   kind?: 'education';
+  // Public artifact for this entry — rendered as a small link on the
+  // experience tab only (the print resume stays link-free per entry).
+  repo?: string;
 }
 
 export const entries: Entry[] = [
@@ -60,6 +63,7 @@ export const entries: Entry[] = [
       'Built electricity-usage prediction models covering the Midwest and South for the Midcontinent ISO (MISO).',
       'Applied random forests and feature importance to model electricity-fluctuation edge cases.',
     ],
+    repo: 'https://github.com/stanleytejakusuma/MISO_DM',
   },
   {
     dates: '2021',

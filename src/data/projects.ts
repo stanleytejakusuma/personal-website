@@ -48,6 +48,16 @@ export const projects: Project[] = [
     order: 2,
   },
   {
+    name: 'telegram-archiver',
+    description:
+      'A self-hosted pipeline that archives the Telegram channels I follow into TimescaleDB — incremental sync, freshness watchdogs, and a search API over years of message history. Built because scroll-back is not a database.',
+    category: 'data & analytics',
+    status: 'live',
+    stack: ['Python', 'Telethon', 'TimescaleDB'],
+    metrics: ['self-hosted', 'searchable history'],
+    order: 3,
+  },
+  {
     name: 'probabilistic-stdev-bands',
     description:
       'A TradingView indicator that models price dispersion with probabilistic standard-deviation bands, giving a statistical read on volatility and likely ranges instead of fixed levels.',
@@ -56,7 +66,7 @@ export const projects: Project[] = [
     stack: ['Pine Script', 'statistics'],
     metrics: ['open source'],
     repo: 'https://github.com/stanleytejakusuma/probabilistic-stdev-bands',
-    order: 3,
+    order: 4,
   },
 
   // markets & systems

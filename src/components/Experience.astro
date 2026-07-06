@@ -18,6 +18,11 @@ import { entries } from '../data/experience';
               <li>{line}</li>
             ))}
           </ul>
+          {entry.repo && (
+            <p class="xp__repo">
+              <a href={entry.repo} target="_blank" rel="noopener">view repo ↗</a>
+            </p>
+          )}
         </div>
       </article>
     ))
@@ -36,6 +41,15 @@ import { entries } from '../data/experience';
   }
 
   .xp__resume a {
+    color: var(--color-accent);
+  }
+
+  .xp__repo {
+    margin: 0.45rem 0 0;
+    font-size: 0.74rem;
+  }
+
+  .xp__repo a {
     color: var(--color-accent);
   }
 
