@@ -38,16 +38,6 @@ export const CATEGORY_ORDER: Category[] = [
 export const projects: Project[] = [
   // data & analytics
   {
-    name: 'Flipside on-chain analytics',
-    description:
-      'A library of 128 dbt data models spanning 10+ blockchains (Solana, Ethereum, Bitcoin, Aptos, NEAR, Sei, and more) on Snowflake. Curated, tested transformations that turn raw chain data into queryable analytics, exposed through an endpoint for downstream tools.',
-    category: 'data & analytics',
-    status: 'archived',
-    stack: ['dbt', 'Snowflake', 'SQL'],
-    metrics: ['128 dbt models', '10+ blockchains'],
-    order: 1,
-  },
-  {
     name: 'citadel-finance',
     description:
       'A self-hosted personal-finance stack: a dashboard for net worth and runway with an interactive spend-sensitivity slider, a REST API with audit logging, and frictionless ingestion via a Telegram bot and iOS Shortcuts. Built end to end in two days, then trimmed to what real use proved necessary.',
