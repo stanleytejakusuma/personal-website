@@ -20,11 +20,15 @@ const walk = (dir) => {
 walk(DIST);
 
 const hashes = new Set();
-const scriptRe = /<script([^>]*)>([\s\S]*?)<\/script>/g;
+// Attribute region tolerates '>' inside quoted values; a naive [^>]* would
+// truncate the tag there and hash a garbage body.
+const scriptRe = /<script\b((?:[^>"']|"[^"]*"|'[^']*')*)>([\s\S]*?)<\/script>/g;
 for (const file of htmlFiles) {
   const html = readFileSync(file, 'utf8');
   for (const [, attrs, body] of html.matchAll(scriptRe)) {
-    if (/\bsrc=/.test(attrs)) continue; // external — covered by origin allowlist
+    // Real src attribute only — \bsrc= would also match data-src= (the word
+    // boundary sits between '-' and 's') and silently skip an inline script.
+    if (/(^|\s)src\s*=/.test(attrs)) continue; // external — covered by origin allowlist
     if (/type="application\/(ld\+json|json)"/.test(attrs)) continue; // inert data block
     if (!body.trim()) continue;
     hashes.add(`'sha256-${createHash('sha256').update(body).digest('base64')}'`);

@@ -18,8 +18,12 @@ const {
   ogImage: ogImagePath = '/og.png',
   publishedTime,
 } = Astro.props;
-const pageTitle = title === SITE_TITLE ? SITE_TITLE : `${title} · ${SITE_TITLE}`;
-const canonical = new URL(path, SITE_URL).href;
+// Skip the suffix when the title already leads with the site name — avoids
+// "Stanley Tejakusuma resume · Stanley Tejakusuma" in tabs, unfurls, and the
+// browser's default print-to-PDF filename.
+const pageTitle = title.startsWith(SITE_TITLE) ? title : `${title} · ${SITE_TITLE}`;
+// Pages serves trailing-slash URLs; a slashless canonical 308-redirects.
+const canonical = new URL(path.endsWith('/') ? path : `${path}/`, SITE_URL).href;
 const ogImage = new URL(ogImagePath, SITE_URL).href;
 const twitterHandle = `@${SOCIALS.x.split('/').pop()}`;
 

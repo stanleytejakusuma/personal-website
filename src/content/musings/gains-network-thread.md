@@ -3,7 +3,7 @@ title: Gains Network Thread
 description: "0/ Let\u2019s take a break from the $BNB $FTT drama and look at @GainsNetwork\
   \ that reached an ATH volume of $300M! $GNS is a decentralized leveraged trading\
   \ protocol that enables..."
-date: '2022-06-01'
+date: '2022-11-09'
 featured: true
 venue: wagmi
 tags:
@@ -86,7 +86,6 @@ In short, 32.5% of fees from all orders will go to stakers.
 
 10/ To further enhance user's reward, $GNS employs utility NFTs without any locking mechanism currently.
 
-%%pic of NFT schedule from here https://gains-network.gitbook.io/docs-home/liquidity-farming-pools/gns-staking%%
 
 11/ $DAI Vault
 

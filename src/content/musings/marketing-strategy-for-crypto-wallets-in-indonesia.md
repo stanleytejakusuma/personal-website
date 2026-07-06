@@ -29,7 +29,7 @@ Takeaway: do note that each geographical city has its own pros and cons, complem
 
 We are going to take a top-down approach to explore Indonesia’s mobile phone culture. The **number of people that have a mobile phone** in Indonesia for the year 2020 reached a high of **183.68M**. Statista forecasted that **by the year 2026 there will be 238.79M** of people that have a mobile phone.
 
-<img alt="" src="/musings/marketing-strategy-for-crypto-wallets-in-indonesia/image-02.webp" width="510" height="409" loading="eager" fetchpriority="high" decoding="async" />
+<img alt="" src="/musings/marketing-strategy-for-crypto-wallets-in-indonesia/image-02.webp" width="510" height="409" loading="lazy" decoding="async" />
 
 Number of Smartphone Users from 2017 to 2020 with forecast until 2026 (source: [<u>here</u>](https://www.statista.com/statistics/266729/smartphone-users-in-indonesia/))
 

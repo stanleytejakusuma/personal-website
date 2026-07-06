@@ -46,7 +46,7 @@ The ecosystem has only seen exponential growth ever since the Matic team rebrand
 
 As of writing, Polygon has reached a block height of 23,379,126 with 2.7 seconds finality. The block height is slightly higher than that of Ethereum 13,947,040 with 13 seconds finality and Bitcoin 717,332 with 10 minutes finality. Provided that Polygon bundles transactions and a scaling solution for Ethereum, the number of block heights is reasonable enough. Transaction-wise, however, Polygon is slightly lower than Ethereum with 1.27 billion compared to 1.4 billion total number of transactions. Polygon wins over Ethereum in transactions per seconds, 43.4 TPS compared to 10 TPS. Despite high throughput, Polygon has an immensely lower gas fees compared to Ethereum.
 
-<img alt="" src="/musings/polygon-and-helium/image-10.webp" width="1137" height="281" loading="eager" fetchpriority="high" decoding="async" />
+<img alt="" src="/musings/polygon-and-helium/image-10.webp" width="1137" height="281" loading="lazy" decoding="async" />
 
 *Ethereum and Polygon Transaction Fees*
 

@@ -191,7 +191,13 @@ let currentYear = '';
     });
   });
 
-  search?.addEventListener('input', applyFilters);
+  // Debounced: keeps the role="status" live region from announcing on every
+  // keystroke, and skips redundant re-filters mid-word.
+  let searchTimer: number | undefined;
+  search?.addEventListener('input', () => {
+    window.clearTimeout(searchTimer);
+    searchTimer = window.setTimeout(applyFilters, 250);
+  });
 
   // pull the full-text index the first time the visitor engages search, then
   // re-run so any query already typed now also matches article bodies.

@@ -16,7 +16,7 @@ Based on research held by [<u>Statista</u>](https://www.statista.com/topics/8513
 
 Another survey from [<u>Statista</u>](https://www.statista.com/statistics/1278047/global-nft-adoption-by-country/) (published on Jan 20, 2022). Most of the respondents from well-developed countries, such as the US, UK, Canada, and Germany, were less likely to buy or have NFTs in 2021 compared to other adults in the world. The results indicate that NFTs are especially popular in Southeast Asia and Latin America. Do note, however, that the ranking of a certain country might drastically change given a period of time, since most governments could either sanctions or tax NFT at any time.
 
-<img alt="" src="/musings/nft-adoption-rate-by-countries/image-06.webp" width="1200" height="863" loading="eager" fetchpriority="high" decoding="async" />’
+<img alt="" src="/musings/nft-adoption-rate-by-countries/image-06.webp" width="1200" height="863" loading="lazy" decoding="async" />’
 
 NFT Adoption by Countries (Statista.com)
 

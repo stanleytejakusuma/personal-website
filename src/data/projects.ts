@@ -178,6 +178,16 @@ export const projects: Project[] = [
 
   // probability & games
   {
+    name: 'antebot',
+    description:
+      'A betting-strategy lab: 79 scripted strategies across dice, blackjack, roulette, baccarat, and more — Martingale to D’Alembert and beyond — built to measure precisely how every progression system meets the house edge. Negative EV, empirically confirmed. The orchestration, bankroll simulation, and variance tracking outlived the thesis.',
+    category: 'probability & games',
+    status: 'archived',
+    stack: ['JavaScript', 'Node', 'statistics'],
+    metrics: ['79 strategies', '-EV, proven'],
+    order: 14,
+  },
+  {
     name: 'card-counter',
     description:
       'A full-stack decision engine: Hi-Lo counting, basic strategy with index deviations, and Kelly bet sizing, on a pure-logic core with zero framework dependencies. Applied probability you can drill with.',

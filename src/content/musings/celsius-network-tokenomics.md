@@ -30,7 +30,7 @@ The token of Celsius Network is used to be integrated with smart contract functi
 
 Released in June 2018, the Celsius Network’s native token CEL facilitates the earnings, reward, and the ecosystem. As a utility token, CEL could be compared to the likes of BNB, ETH, BAT, and more. The ICO successfully raised $50 million in crowdsales and presale with releasing 325 million tokens. The token distribution since the Token Genesis Event (TGE) is as follows: 50% goes to public token sales (crowdsale and presale), 27% goes to treasury, 19% for the team, 2% for the partners, and 2% for advisors of Celsius Network. 50 million of the total supply would go into the smart contract. 20 million would be allocated to the project’s treasury, which would only be released when the token price has reached 5x and 10x from crowdsale – $1.50 and $3.00 respectively. The treasury is used to provide liquidity, provide collateral, and expansion purposes.
 
-<img alt="" src="/musings/celsius-network-tokenomics/image-05.webp" width="1200" height="768" loading="eager" fetchpriority="high" decoding="async" />
+<img alt="" src="/musings/celsius-network-tokenomics/image-05.webp" width="1200" height="768" loading="lazy" decoding="async" />
 
 *Token Distribution TGE*
 

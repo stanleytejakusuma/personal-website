@@ -22,7 +22,7 @@ Blockchains have been plagued with the scalability issue since the beginning. Th
 
 Solana solves this issue by presenting a new concept of consensus mechanism – synergizing Proof-of-History (PoH) and Proof-of-Stake (PoS). Proof-of-History primarily embeds timestamps in the blockchain metadata, by itself it is not a consensus mechanism per se an add-on protocol. However, this simple feature would enable validators to completely neglect verifying the sequence of events compared to Ethereum blockchain’s Proof-of-Work where validators need to communicate with each other to decide which transaction begins first. When the respective clocks across all decentralized networks are completely synchronized, transactions take less time to verify since the individual nodes do not have to dedicate processing power towards verifying slight differences in timestamps. Though Solana still uses Bitcoin’s native proofing algorithm – SHA256, this addon allows the network to optimize for speed thereby increasing throughput and feasible for scalability.
 
-<img alt="" src="/musings/solana-and-avalanche/image-01.webp" width="360" height="429" loading="eager" fetchpriority="high" decoding="async" />
+<img alt="" src="/musings/solana-and-avalanche/image-01.webp" width="360" height="429" loading="lazy" decoding="async" />
 
 *Proof of History Timestamps*
 

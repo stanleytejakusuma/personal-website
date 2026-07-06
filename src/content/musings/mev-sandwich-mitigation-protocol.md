@@ -42,7 +42,7 @@ However, the transparency of the Ethereum network, particularly its mempool, has
 
 Previously, orchestrating a successful sandwich attack required precise timing. However, tools such as flashbots have reduced the complexity of these attacks, enabling them with increased efficiency. Despite the evidence highlighting the prevalence of such attacks, many DEX platforms have not made significant adjustments. For instance, platforms like Uniswap and SushiSwap often recommend fixed slippage tolerances without considering the specificities of individual trades. This paper aims to explore these challenges in depth and put forth a solution to address the risks associated with sandwich attacks in the DeFi space.
 
-**2 MAXMINAL EXTRACTABLE VALUE**
+**2 MAXIMAL EXTRACTABLE VALUE**
 
 Maximal Extractable Value (MEV) represents the potential profit that validators can derive from the strategic ordering of transactions within a block, beyond the standard block rewards and gas fees. While MEV is inherent to the design of Ethereum and other blockchain systems, its implications extend beyond mere profit extraction. It poses significant challenges to the security and integrity of the consensus layer of blockchain systems.
 
@@ -58,7 +58,7 @@ MEV's manifestations are diverse, ranging from DEX arbitrage and liquidation pro
 
 The MEV landscape underwent significant transformation in 2021, marked by a surge in MEV extraction and consequent gas price escalation. The introduction of Flashbots has curtailed the influence of generalized frontrunners, leading to a reduction in gas prices. The impending transition to PoS and the implementation of Ethereum scaling solutions are poised to further reshape the MEV ecosystem. In the PoS context, unchecked MEV could hasten validator centralization and give rise to permissioned mempools. Initiatives like Proposer-Builder Separation (PBS) and the builder API have been proposed to counteract these potential challenges.
 
-<img alt="" src="/musings/mev-sandwich-mitigation-protocol/image-01.webp" width="1200" height="614" loading="eager" fetchpriority="high" decoding="async" />
+<img alt="" src="/musings/mev-sandwich-mitigation-protocol/image-01.webp" width="1200" height="614" loading="lazy" decoding="async" />
 
 Figure 1: MEV Dashboard Pre-Merge (source: [<u>flashbots.net</u>](https://explore.flashbots.net/))
 
@@ -80,7 +80,6 @@ Consider a user, Joe, who wishes to swap ETH for USDC on a decentralized exchang
 
 2.  Back-run Joe's Transaction: After Joe's transaction is processed, the Searcher immediately sells the asset, capitalizing on the inflated price and securing a profit.
 
-\*\*\*diagram/flow chart for the process of sandwich attacks\*\*\*
 
 While arbitrage and liquidation strategies can be viewed as natural outcomes of market inefficiencies, Sandwich Attacks are largely seen as predatory and value-extractive. They exploit users' lack of awareness and can lead to significant financial losses. Moreover, these attacks contribute to network congestion, volatile gas prices, and a degraded user experience.
 

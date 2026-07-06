@@ -35,7 +35,7 @@ const education = entries.filter((e) => e.kind === 'education');
       >email</a>
     </div>
 
-    <p class="resume__skills"><span>skills</span> python · sql · dbt · typescript</p>
+    <p class="resume__skills"><span>skills</span> python · sql · snowflake · dbt · typescript</p>
 
     <section class="resume__section" aria-labelledby="experience-h">
       <h2 id="experience-h">experience</h2>
@@ -340,7 +340,10 @@ const education = entries.filter((e) => e.kind === 'education');
 
     .resume__entry {
       break-inside: avoid;
-      grid-template-columns: 1.05in minmax(0, 1fr);
+      /* Wide enough for "OCT 2024 – MAY 2026" on one line — a wrapped range
+         splits the end date into the next line of the PDF text layer and
+         breaks ATS tenure parsing. */
+      grid-template-columns: 1.4in minmax(0, 1fr);
       gap: 0.16in;
       padding: 0.08in 0;
       border-top: 1px solid #aaa;

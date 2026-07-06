@@ -26,7 +26,7 @@ Bitcoin as a digital currency tackles two underlying challenges associated with 
 
 From a supply/token economics perspective, Bitcoin is both inflationary and deflationary. The total amount of BTC tokens is 21 million fixed. Inflationary since each Bitcoin needs to be mined and not created, per se. Deflationary since within a certain time frame there will be halvings – an event where Bitcoin rewards to miners are halved from the period before. The following data are taken from [<u>http://bitcoinhalvingdates.com/</u>](http://bitcoinhalvingdates.com/). Initially, Bitcoin rewards 50 BTC per block, currently the rewards are 6.25 BTC from the latest halving in 2020. Nakamoto’s design presents an inflationary rate to the system – 1.5% inflation per year, lower than USD’s 6.81% per annum.
 
-<img alt="" src="/musings/btc-investment-thesis/image-01.webp" width="1200" height="699" loading="eager" fetchpriority="high" decoding="async" />
+<img alt="" src="/musings/btc-investment-thesis/image-01.webp" width="1200" height="699" loading="lazy" decoding="async" />
 
 Bitcoin’s Halving (source: [<u>http://bitcoinhalvingdates.com/</u>](http://bitcoinhalvingdates.com/))
 

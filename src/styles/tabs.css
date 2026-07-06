@@ -79,6 +79,7 @@
 
 .shell__status-cta {
   color: var(--color-accent);
+  white-space: nowrap;
 }
 
 /* tab bar */

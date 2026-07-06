@@ -106,6 +106,8 @@
       setAck(trimmed.slice(5).trim());
     } else if (cmd === 'whoami') {
       setAck('visitor (stanley is the one with the keyboard)');
+    } else if (cmd === 'credits') {
+      setAck('layout lineage: forgash.io — the tabbed-terminal idea. theme, code, and bad opinions: all mine.');
     } else {
       setAck(`unknown command: ${cmd} (try "help")`);
     }

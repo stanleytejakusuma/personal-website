@@ -39,7 +39,7 @@ Blockfi Thread
 
 Some say that BlockFi will undergo a liquidity crisis by the end of 2022 as they have lost a substantial amount of money.
 
-<img alt="" src="/musings/doodles-v2-thread/image-07.webp" width="905" height="500" loading="eager" fetchpriority="high" decoding="async" />
+<img alt="" src="/musings/doodles-v2-thread/image-07.webp" width="905" height="500" loading="lazy" decoding="async" />
 
 (source: @otteroooo)
 

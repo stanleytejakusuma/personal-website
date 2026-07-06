@@ -32,7 +32,7 @@ Polygon is often bucketed into a layer 1 or smart contract basket due to the fac
 
 The chain has seen exponential growth as it offers cheaper fees for DeFi users and its EVM-compatible structure makes it easy for ETH-based projects to adopt. This means that capital can flow to Polygon much easier compared to other layer 1 non-EVM compatible chains such as Solana.
 
-<img alt="" src="/musings/polygon/image-04.webp" width="1200" height="1100" loading="eager" fetchpriority="high" decoding="async" />
+<img alt="" src="/musings/polygon/image-04.webp" width="1200" height="1100" loading="lazy" decoding="async" />
 
 That said, Polygon’s recent fiasco regarding code changes, centralization issues, and vulnerability issues have caused the number of transactions conducted on the chain to drop by more than 50% compared to its peak. Additionally, this timing coincides with the launch of many Ethereum layer 2 scaling solutions such as Optimism and Arbitrum, adding competition to the ecosystem that Polygon is trying to play in.
 
