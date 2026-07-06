@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { AUTHOR, SOCIALS, SITE_URL, TAGLINE } from '../consts';
+import { AUTHOR, EMAIL_USER, SOCIALS, SITE_URL, TAGLINE } from '../consts';
 import { entries } from '../data/experience';
 
 const siteHost = new URL(SITE_URL).hostname;
@@ -13,14 +13,24 @@ const siteHost = new URL(SITE_URL).hostname;
         <p class="resume__prompt">resume.txt</p>
         <h1 id="resume-h">{AUTHOR}</h1>
         <p class="resume__tagline">{TAGLINE}</p>
+        <p class="resume__location">Jakarta · UTC+7 / California · UTC−7</p>
       </div>
       <button class="resume__print" type="button" onclick="window.print()">print / save as pdf</button>
     </header>
 
     <div class="resume__links" aria-label="Profile links">
       <a href={SITE_URL}>{siteHost}</a>
-      <a href={SOCIALS.github}>GitHub</a>
-      <a href={SOCIALS.linkedin}>LinkedIn</a>
+      <a class="resume__ext" href={SOCIALS.github}>GitHub</a>
+      <a class="resume__ext" href={SOCIALS.linkedin}>LinkedIn</a>
+      <a
+        class="resume__email"
+        data-email-user={EMAIL_USER}
+        data-email-domain-a="gm"
+        data-email-domain-b="ail"
+        data-email-tld="com"
+        href="#"
+        rel="nofollow"
+      >email</a>
     </div>
 
     <p class="resume__skills"><span>skills</span> python · sql · dbt · typescript</p>
@@ -88,6 +98,12 @@ const siteHost = new URL(SITE_URL).hostname;
     color: var(--color-muted);
     font-size: 0.9rem;
     line-height: 1.7;
+  }
+
+  .resume__location {
+    margin: 0.35rem 0 0;
+    color: var(--color-muted);
+    font-size: 0.8rem;
   }
 
   .resume__print {
@@ -264,11 +280,24 @@ const siteHost = new URL(SITE_URL).hostname;
     }
 
     .resume__tagline,
+    .resume__location,
     .resume__links,
     .resume__skills {
       margin-top: 0.08in;
       font-size: 8.5pt;
       line-height: 1.35;
+    }
+
+    /* On paper, anchor text alone is a dead end: expose the GitHub/LinkedIn
+       destinations, drop the screen-only "/" separators. The site link's text
+       is already the domain and the email link's text becomes the address. */
+    .resume__links a:not(:last-child)::after {
+      content: '';
+    }
+
+    .resume__links a.resume__ext::after {
+      margin-left: 0;
+      content: ' <' attr(href) '>';
     }
 
     .resume__section {
@@ -308,3 +337,17 @@ const siteHost = new URL(SITE_URL).hostname;
     }
   }
 </style>
+
+<script>
+  const link = document.querySelector('.resume__email');
+  if (link instanceof HTMLAnchorElement) {
+    const user = link.dataset.emailUser;
+    const domain = `${link.dataset.emailDomainA || ''}${link.dataset.emailDomainB || ''}`;
+    const tld = link.dataset.emailTld;
+    if (user && domain && tld) {
+      const address = `${user}@${domain}.${tld}`;
+      link.href = `mailto:${address}`;
+      link.textContent = address;
+    }
+  }
+</script>

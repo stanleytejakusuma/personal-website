@@ -13,6 +13,10 @@ for (const file of readdirSync(musingsDir)) {
   if (m) lastmodBySlug[file.replace(/\.md$/, '')] = new Date(m[1]).toISOString();
 }
 
+// Homepage and /resume change with the codebase, not with content frontmatter:
+// stamp them with the build time so the sitemap freshness signal tracks deploys.
+const buildTime = new Date().toISOString();
+
 export default defineConfig({
   output: 'static',
   site: 'https://stanleytejakusuma.com',
@@ -21,6 +25,7 @@ export default defineConfig({
       serialize(item) {
         const slug = item.url.match(/\/musings\/([^/]+)\/?$/);
         if (slug && lastmodBySlug[slug[1]]) item.lastmod = lastmodBySlug[slug[1]];
+        else if (item.url === 'https://stanleytejakusuma.com/' || item.url.endsWith('/resume/')) item.lastmod = buildTime;
         return item;
       },
     }),

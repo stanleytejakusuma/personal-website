@@ -4,6 +4,7 @@ import { entries } from '../data/experience';
 ---
 
 <div class="xp">
+  <p class="xp__resume"><a href="/resume/">full resume →</a></p>
   {
     entries.map((entry) => (
       <article class="xp__entry">
@@ -27,6 +28,15 @@ import { entries } from '../data/experience';
   .xp {
     max-width: 72ch;
     font-family: var(--font-mono);
+  }
+
+  .xp__resume {
+    margin: 0 0 0.8rem;
+    font-size: 0.78rem;
+  }
+
+  .xp__resume a {
+    color: var(--color-accent);
   }
 
   .xp__entry {

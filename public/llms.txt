@@ -1,0 +1,12 @@
+# Stanley Tejakusuma
+
+> Personal site of Stanley Tejakusuma — data, statistics, modeling, and the tools that act on them. Open to data & quant roles.
+
+## Pages
+
+- [Home](https://stanleytejakusuma.com/): tabbed one-pager — about, experience, projects, and the musings research archive
+- [Resume](https://stanleytejakusuma.com/resume/): printable resume with full work history and contact links
+- [Musings archive](https://stanleytejakusuma.com/#musings): 65 crypto and data research write-ups (2021–2024), each served at /musings/<slug>/
+- [RSS feed](https://stanleytejakusuma.com/rss.xml): every musing with dates and links
+- [Sitemap](https://stanleytejakusuma.com/sitemap-index.xml)
+- [GitHub](https://github.com/stanleytejakusuma): open-source projects

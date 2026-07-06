@@ -10,6 +10,7 @@ const links = [
 ---
 
 <div class="socials" role="group" aria-label="Contact and social links">
+  <a class="socials__link socials__link--resume" href="/resume/">resume</a>
   <a
     class="socials__link"
     data-email-user={EMAIL_USER}
@@ -53,6 +54,13 @@ const links = [
   .socials__link:focus-visible {
     color: var(--color-accent);
     border-color: color-mix(in srgb, var(--color-accent) 55%, var(--color-border));
+  }
+
+  .socials__link--resume {
+    width: auto;
+    padding: 0 0.6rem;
+    font-family: var(--font-mono);
+    font-size: 0.74rem;
   }
 </style>
 
