@@ -143,14 +143,14 @@ export const projects: Project[] = [
     order: 9,
   },
   {
-    name: 'oura-mcp',
+    name: 'ring-mcp',
     description:
       'An MCP server that gives any agent access to your Oura Ring data — sleep, readiness, and activity as clean tools over the official v2 API. Bring your own token; built so an assistant can reason about your recovery, not just chart it.',
     category: 'ai & agents',
     status: 'open-source',
     stack: ['TypeScript', 'MCP', 'Oura API'],
     metrics: ['3 tools', 'open source'],
-    repo: 'https://github.com/stanleytejakusuma/oura-mcp',
+    repo: 'https://github.com/stanleytejakusuma/ring-mcp',
     order: 10,
   },
 
