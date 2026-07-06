@@ -21,7 +21,7 @@ tickers:
 
 4/ Within Octopus Network, each appchain has the power to decide its own economic model including the amount of tokens the appchain is willing to pay validators for security. In simple terms, Octopus is a free market where appchains could lease out security needs.
 
-<img src="/musings/octopus-network-thread/image-04.webp" width="1200" height="673" loading="lazy" decoding="async" />
+<img alt="" src="/musings/octopus-network-thread/image-04.webp" width="1200" height="673" loading="eager" fetchpriority="high" decoding="async" />
 
 5/ At its core is the Octopus Relay – a set of smart-contract running on the $NEAR blockchain that implements the security leasing market. Octopus is on the **demand** side of the market. Pays ‘rent’ in native tokens to lease security from $OCT holders.
 
@@ -31,15 +31,15 @@ tickers:
 
 8/ The architectural design of Octopus – combined with the processing power of $NEAR protocol – motivates the hosting of appchains, however all apps are subject to a selection by $OCT holders.
 
-<img src="/musings/octopus-network-thread/image-02.webp" width="1200" height="603" loading="lazy" decoding="async" />
+<img alt="" src="/musings/octopus-network-thread/image-02.webp" width="1200" height="603" loading="lazy" decoding="async" />
 
 9/ As explained before, $OCT is Octopus Network’s native token. Its simplified use cases include: used as collateral to guarantee security (staking), governance of network, endorsing appchain by upvoting them in the candidates queue.
 
-10/ <img src="/musings/octopus-network-thread/image-01.webp" width="1200" height="680" loading="lazy" decoding="async" />
+10/ <img alt="" src="/musings/octopus-network-thread/image-01.webp" width="1200" height="680" loading="lazy" decoding="async" />
 
 11/ Tokenomics: $OCT has a total fixed supply of 100 million. In total, 41% of OCT would be distributed for the investors. 30% would be allocated to the foundation as incentives for upcoming community contributors. 24% for team reward. 5% for marketing in social media.
 
-<img src="/musings/octopus-network-thread/image-03.webp" width="1200" height="704" loading="lazy" decoding="async" />
+<img alt="" src="/musings/octopus-network-thread/image-03.webp" width="1200" height="704" loading="lazy" decoding="async" />
 
 12/ Currently, there are only two appchains running on the network: *myriad* and *debionetwork*. *deip* is registered on the network awaiting imminent audit. The total staked amount of OCT is 4,269,758 with a block height of 58,718,322. The network is still awaiting to see more implementation and deployment.
 

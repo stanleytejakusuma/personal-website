@@ -5,7 +5,7 @@ import { getCollection } from 'astro:content';
 // bodies keyed by slug. Musings.astro lazy-fetches this on first search focus,
 // so the homepage stays lean and only searchers pay the (gzipped ~80KB) load.
 export const GET: APIRoute = async () => {
-  const entries = await getCollection('musings', ({ data }) => !data.draft && !data.external);
+  const entries = await getCollection('musings', ({ data }) => (import.meta.env.PROD ? !data.draft : true) && !data.external);
   const index = entries.map((e) => ({
     id: e.id,
     text: (e.body ?? '')

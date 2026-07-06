@@ -24,7 +24,7 @@ To this end, the team has stated in their medium post [<u>here</u>](https://medi
 
 Regarding valuing the NFT itself, the project partners with $LINK to build a custom price oracle that will feed the vault’s floor price in ETH. The initial integration will feed Chainlink to quantify the Time-Weighted Average Price (TWAP) of both sales and floor prices to output a blended price. This oracle currently only supports Cryptopunks and excludes wash-sales, outliers, and will be periodically written on-chain.
 
-<img src="/musings/nft-lending-platforms/image-01.webp" width="1200" height="450" loading="lazy" decoding="async" />
+<img alt="" src="/musings/nft-lending-platforms/image-01.webp" width="1200" height="450" loading="eager" fetchpriority="high" decoding="async" />
 
 As stated above, $JPEG is a valueless token that has a sole purpose of governance. The DAO will receive 35% of TGE token allocation.
 

@@ -22,9 +22,9 @@ Helium (HNT) is a protocol that enables the deployment and management of wireles
 
 Due to its growth in the past 18 months, Helium Network is currently one of the largest tokens by market capitalization, breaking the top 50 as of January 1st, 2022. Its free gloat is ~40-50%, with a market cap of $4 billion and an FDV of $9 billion. It gains significant traction starting January 1st, 2021, as can be seen from the price chart and the google search trend below.
 
-<img src="/musings/helium/image-01.webp" width="802" height="465" loading="lazy" decoding="async" />
+<img alt="" src="/musings/helium/image-01.webp" width="802" height="465" loading="eager" fetchpriority="high" decoding="async" />
 
-<img src="/musings/helium/image-03.webp" width="1119" height="296" loading="lazy" decoding="async" />
+<img alt="" src="/musings/helium/image-03.webp" width="1119" height="296" loading="lazy" decoding="async" />
 
 ### <u>Team & Shareholders</u>
 
@@ -64,7 +64,7 @@ New blocks are produced every 1-minute with rewards being distributed roughly ev
 
 At its core, the mechanics of the HNT token is similar to other projects out there. The goal is to create a positive feedback loop as the number of hotspots increases around the world, bringing awareness and expanding the utility of HNT. A complementary mechanism is the utilization of Data Credits that will burn HNT, reducing its supply and theoretically increasing its future price. Any device that is connected to and is actively using a Helium network hotspot must spend Data Credits to pay and maintain access to the network. The value of Data Credits is fixed at $0.00001 USD. New Data Credits are minted by burning HNT, creating a mechanism that will burn HNT as real-life use case demands for HNT increase.
 
-The black swan event is if the HNT price drops significantly, as the positive feedback loop presented below becomes a negative loop instead. Fortunately, the energy cost to mine Helium is [<u>very low</u>](https://www.businessinsider.com/how-to-mine-helium-tokens-maximum-profitability-hotspot-frank-mong-2021-10) (5 watts), which indicates that miners most likely won’t turn off their machines if they treat their Helium mining gig as additional income.<img src="/musings/helium/image-02.webp" width="1200" height="674" loading="lazy" decoding="async" />
+The black swan event is if the HNT price drops significantly, as the positive feedback loop presented below becomes a negative loop instead. Fortunately, the energy cost to mine Helium is [<u>very low</u>](https://www.businessinsider.com/how-to-mine-helium-tokens-maximum-profitability-hotspot-frank-mong-2021-10) (5 watts), which indicates that miners most likely won’t turn off their machines if they treat their Helium mining gig as additional income.<img alt="" src="/musings/helium/image-02.webp" width="1200" height="674" loading="lazy" decoding="async" />
 
 **Updated Multicoin’s Model**
 

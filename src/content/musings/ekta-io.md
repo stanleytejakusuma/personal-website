@@ -59,7 +59,6 @@ Usage: Development of Ekta ecosystem, liquidity for NFT marketplace & hybrid CEX
 
 7.  Sven Milder (CIO): Serial exit startup entrepreneur, investor, venture builder, and real-estate dev. Founder of Pitch House.
 
-Note: most, if not all, of the team members are not native Indonesians
 
 - Partners
 

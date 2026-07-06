@@ -40,7 +40,7 @@ research: true
 
 - Be that as it may, the general principle is that a user can transact as long as they have the capability to pay.
 
-<img src="/musings/enablement-of-mev-and-the-morals-of-extracting/image-04.webp" width="1200" height="446" loading="lazy" decoding="async" />
+<img alt="" src="/musings/enablement-of-mev-and-the-morals-of-extracting/image-04.webp" width="1200" height="446" loading="eager" fetchpriority="high" decoding="async" />
 
 - The concept of fairness falls short within a smart-contract-enabled system.
 
@@ -68,7 +68,7 @@ research: true
 
       - Proposer Feed: Proposer publishes pending or recently ordered tx.\
         \
-        <img src="/musings/enablement-of-mev-and-the-morals-of-extracting/image-03.webp" width="1200" height="543" loading="lazy" decoding="async" />
+        <img alt="" src="/musings/enablement-of-mev-and-the-morals-of-extracting/image-03.webp" width="1200" height="543" loading="lazy" decoding="async" />
 
     - The majority of users send their tx to the gossip protocol.
 
@@ -101,11 +101,11 @@ research: true
 
     - Author mentioned an issue with Cardano back in 2021.
 
-  - <img src="/musings/enablement-of-mev-and-the-morals-of-extracting/image-02.webp" width="1200" height="571" loading="lazy" decoding="async" />
+  - <img alt="" src="/musings/enablement-of-mev-and-the-morals-of-extracting/image-02.webp" width="1200" height="571" loading="lazy" decoding="async" />
 
   - **Exploitation Strategies**: Investigating various strategies employed to exploit MEV opportunities.
 
-- <img src="/musings/enablement-of-mev-and-the-morals-of-extracting/image-01.webp" width="960" height="540" loading="lazy" decoding="async" />\
+- <img alt="" src="/musings/enablement-of-mev-and-the-morals-of-extracting/image-01.webp" width="960" height="540" loading="lazy" decoding="async" />\
   \
   \<aside\> 💡 Due to the public nature of user transactions and shared database state, the searcher can simulate pending tx to have full insight into future database states.\
   \
@@ -127,7 +127,7 @@ research: true
 
       - **Latency Games**: searcher must send their tx before all other.
 
-- <img src="/musings/enablement-of-mev-and-the-morals-of-extracting/image-05.webp" width="1200" height="600" loading="lazy" decoding="async" />\
+- <img alt="" src="/musings/enablement-of-mev-and-the-morals-of-extracting/image-05.webp" width="1200" height="600" loading="lazy" decoding="async" />\
   [<u>An example of PGA</u>](https://mirror.xyz/totlsota.eth/Vy8-41kYphcFt40rh8SpFsDojwlwGBGkWCafqD4nTak) as searchers constantly broadcast new tx with a higher fee.
 
   - If a single searcher finds an MEV opportunity, then it’s highly likely that other searcher finds it as well.
@@ -188,7 +188,7 @@ research: true
 
     - Another perspective to evaluate the morality of MEV is to review the impact/influence that a searcher’s transaction bundle can exert on user’s transaction:
 
-  - <img src="/musings/enablement-of-mev-and-the-morals-of-extracting/image-06.webp" width="1200" height="161" loading="lazy" decoding="async" />
+  - <img alt="" src="/musings/enablement-of-mev-and-the-morals-of-extracting/image-06.webp" width="1200" height="161" loading="lazy" decoding="async" />
 
     - Front-Running:
 

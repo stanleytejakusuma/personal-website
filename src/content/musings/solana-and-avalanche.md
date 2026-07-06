@@ -22,7 +22,7 @@ Blockchains have been plagued with the scalability issue since the beginning. Th
 
 Solana solves this issue by presenting a new concept of consensus mechanism – synergizing Proof-of-History (PoH) and Proof-of-Stake (PoS). Proof-of-History primarily embeds timestamps in the blockchain metadata, by itself it is not a consensus mechanism per se an add-on protocol. However, this simple feature would enable validators to completely neglect verifying the sequence of events compared to Ethereum blockchain’s Proof-of-Work where validators need to communicate with each other to decide which transaction begins first. When the respective clocks across all decentralized networks are completely synchronized, transactions take less time to verify since the individual nodes do not have to dedicate processing power towards verifying slight differences in timestamps. Though Solana still uses Bitcoin’s native proofing algorithm – SHA256, this addon allows the network to optimize for speed thereby increasing throughput and feasible for scalability.
 
-<img src="/musings/solana-and-avalanche/image-01.webp" width="360" height="429" loading="lazy" decoding="async" />
+<img alt="" src="/musings/solana-and-avalanche/image-01.webp" width="360" height="429" loading="eager" fetchpriority="high" decoding="async" />
 
 *Proof of History Timestamps*
 
@@ -40,7 +40,7 @@ Diving into the sizable amount of block height, Solana total transactions to dat
 
 Contrary to Ethereum, however, Solana has 7,943,323 total number of unique addresses. This could indicate that the network is more centralized compared to Ethereum. The wealth distribution is as follows (i.e. 0-10: top 10 wealthiest account).
 
-<img src="/musings/solana-and-avalanche/image-04.webp" width="690" height="768" loading="lazy" decoding="async" />
+<img alt="" src="/musings/solana-and-avalanche/image-04.webp" width="690" height="768" loading="lazy" decoding="async" />
 
 *Solana Token Wealth Distribution Addresses*
 
@@ -48,7 +48,7 @@ Security-wise, Solana has a lower number of validators (1400), 76% of the total 
 
 The Total Value Locked (TVL) in Solana reached $12.23 billion with 13.69% dominance from Raydium, Solana’s AMM for DeFi, followed by 12.3% dominance from the network’s Decentralized Exchange – Serum. Comparing Solana’s development to other blockchain, the TVL percentage for Solana is much lower than that of Ethereum, respectively 20% and 67%. The rise of Solana’s TVL began in early September 2021, presumably caused by the token price increase and Marinade Finance, a liquid staking pool built on the network.
 
-<img src="/musings/solana-and-avalanche/image-07.webp" width="1200" height="562" loading="lazy" decoding="async" />
+<img alt="" src="/musings/solana-and-avalanche/image-07.webp" width="1200" height="562" loading="lazy" decoding="async" />
 
 *Total Value Locked Growth*
 
@@ -93,7 +93,7 @@ Avalanche (AVAX) is a high-performance, scalable, and customizable project devel
 
 Practical Byzantine Fault consensus, or in other words classical consensus, was the consensus mechanism that we used predominantly before the era of decentralization. The general idea was that it is a permissioned network where all parties must know each other and create conclusions based on several input data. The main deficiency was it is not scalable. Then, the Nakamoto consensus came in during 2009, introducing Proof-of-Work – a decentralized and trustless consensus protocol based on an algorithm where validators do not know each other. Finally, Avalanche Consensus Mechanism was formulated in 2019 with the notion of a leaderless network that is highly scalable, mainly based on Directed Acyclic Graphs (DAG).
 
-<img src="/musings/solana-and-avalanche/image-02.webp" width="252" height="346" loading="lazy" decoding="async" />
+<img alt="" src="/musings/solana-and-avalanche/image-02.webp" width="252" height="346" loading="lazy" decoding="async" />
 
 *Example of Directed Acyclic Graph*
 
@@ -115,7 +115,7 @@ The Avalanche network currently has several blockchains: the 3 main chains (X, C
 
 Since genesis, the total value bridged using Avalanche has reached $6 billion. The total transactions in both the X and C chain are 54,221,776 (3,241,458 C-chain and 50,980,318 X-chain) less than that of Ethereum. However, the average TPS for both blockchains is 5.85 seconds with a finality of 0.76 seconds. This is uncommon since usually finality time is longer than the average TPS. Take Ethereum as an example, the blockchain has ~13 TPS with 1 minute finality time. A reasonable explanation could be that Avalanche could process blocks exponentially faster with the help of DAG. Furthermore, the data below proves that the more nodes participating in the network means that the more gossip happens, hence the TPS could increase as well.
 
-<img src="/musings/solana-and-avalanche/image-05.webp" width="944" height="504" loading="lazy" decoding="async" /><img src="/musings/solana-and-avalanche/image-03.webp" width="926" height="500" loading="lazy" decoding="async" />
+<img alt="" src="/musings/solana-and-avalanche/image-05.webp" width="944" height="504" loading="lazy" decoding="async" /><img alt="" src="/musings/solana-and-avalanche/image-03.webp" width="926" height="500" loading="lazy" decoding="async" />
 
 *Average TPS and Network Usage*
 
@@ -139,7 +139,7 @@ The project received funding first from IOSG Ventures in seed round back in Janu
 
 Avalanche minted 720 million AVAX capped-supply deflationary token. Several key properties of the token include: no ‘rich-get-richer’ scheme since Avalanche is leaderless, validators are incentivized to stay online and operate correctly as their rewards are based on Proof-of-Uptime and Proof-of-Correctness, fees are burned. AVAX token also has use cases in governance future development voting. Initially, Avalanche minted 360 million tokens at the genesis block with the other 360 million being minted based on the [<u>equation in the whitepaper</u>](https://assets.website-files.com/5d80307810123f5ffbb34d6e/6008d7bc56430d6b8792b8d1_Avalanche%20Native%20Token%20Dynamics.pdf). Furthermore, 180 million tokens are sold for an incentive program to bring Curve and AAVE to the network. Currently, there are 207.86 million tokens not time locked and 152.15 time locked based on the circulating supply.
 
-<img src="/musings/solana-and-avalanche/image-06.webp" width="1200" height="531" loading="lazy" decoding="async" />
+<img alt="" src="/musings/solana-and-avalanche/image-06.webp" width="1200" height="531" loading="lazy" decoding="async" />
 
 *360 million AVAX supply distribution*
 

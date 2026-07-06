@@ -16,19 +16,19 @@ Based on research held by [<u>Statista</u>](https://www.statista.com/topics/8513
 
 Another survey from [<u>Statista</u>](https://www.statista.com/statistics/1278047/global-nft-adoption-by-country/) (published on Jan 20, 2022). Most of the respondents from well-developed countries, such as the US, UK, Canada, and Germany, were less likely to buy or have NFTs in 2021 compared to other adults in the world. The results indicate that NFTs are especially popular in Southeast Asia and Latin America. Do note, however, that the ranking of a certain country might drastically change given a period of time, since most governments could either sanctions or tax NFT at any time.
 
-<img src="/musings/nft-adoption-rate-by-countries/image-06.webp" width="1200" height="863" loading="lazy" decoding="async" />’
+<img alt="" src="/musings/nft-adoption-rate-by-countries/image-06.webp" width="1200" height="863" loading="eager" fetchpriority="high" decoding="async" />’
 
 NFT Adoption by Countries (Statista.com)
 
 A survey from [<u>civicscience</u>](https://civicscience.com/are-nfts-the-next-wave-of-collectors-items-most-still-unsure-what-they-are/) indicates that most of the people who buy NFTs are from a young age (18 to 24) and continue decreasing as the age increases. 15% of the young adults have invested in NFT while the other 18% are interested and the other 69% are not interested.
 
-<img src="/musings/nft-adoption-rate-by-countries/image-04.webp" width="680" height="315" loading="lazy" decoding="async" />
+<img alt="" src="/musings/nft-adoption-rate-by-countries/image-04.webp" width="680" height="315" loading="lazy" decoding="async" />
 
 Age Demographic Distribution of NFT Buyers (civicscience.com)
 
 Another result from the survey shows that most of the buyers from NFT are from people that have an income of less than $25,000. Interestingly enough, the survey also pinpoints that the number of buyers from people with more than $150,000 income is also the same as the former.
 
-<img src="/musings/nft-adoption-rate-by-countries/image-02.webp" width="681" height="330" loading="lazy" decoding="async" />
+<img alt="" src="/musings/nft-adoption-rate-by-countries/image-02.webp" width="681" height="330" loading="lazy" decoding="async" />
 
 Income Demographic Distribution of NFT Buyers (civicscience.com)
 
@@ -42,7 +42,7 @@ Diving further deeper into the statistics based on country, the Sample Penetrati
 
 Another interesting statistic is the relationship between NFT awareness and ownership globally. The data is taken from [<u>finder.com</u>](https://www.finder.com/nft-statistics).
 
-<img src="/musings/nft-adoption-rate-by-countries/image-03.webp" width="803" height="372" loading="lazy" decoding="async" />
+<img alt="" src="/musings/nft-adoption-rate-by-countries/image-03.webp" width="803" height="372" loading="lazy" decoding="async" />
 
 Correlation Between NFT Awareness and Ownership (finder.com)
 
@@ -50,6 +50,6 @@ The chart above indicates that NFT ownership has a strong correlation with NFT a
 
 Another metric to determine potential NFT adoption over time by country is from Google Search Trends. The general trend illustrates that the term NFT has a steady rising trend with a plummet lately. The most searched terms came from Asia: China, Singapore, Hong Kong, Philippines, and Taiwan.
 
-<img src="/musings/nft-adoption-rate-by-countries/image-01.webp" width="869" height="382" loading="lazy" decoding="async" /><img src="/musings/nft-adoption-rate-by-countries/image-05.webp" width="444" height="262" loading="lazy" decoding="async" />
+<img alt="" src="/musings/nft-adoption-rate-by-countries/image-01.webp" width="869" height="382" loading="lazy" decoding="async" /><img alt="" src="/musings/nft-adoption-rate-by-countries/image-05.webp" width="444" height="262" loading="lazy" decoding="async" />
 
 Google Search Trend “NFT” (data from Jan 5, 2020 to Mar 24, 2022)

@@ -18,7 +18,7 @@ Ethereum (ETH) represents the largest single innovation within the cryptocurrenc
 
 Ethereum in itself provides minimal benefits, however when viewed as an ecosystem of itself, it could have a tremendous impact on the global financial system. Akin to Bitcoin, Ethereum 1.0 leverages the predominant Proof-of-Work (PoW) consensus mechanism. Ethereum stands out as the cryptoasset with the most pragmatic roadmap because of its developers’ intention to roll out a new version of the blockchain – Ethereum 2.0. With this new ecosystem design, the network will migrate to Proof-of-Stake (PoS) mechanism in 2022, thereby reducing the environmental impact from PoW and reaching transaction speed up to 10,000 per second.
 
-<img src="/musings/eth-investment-thesis/image-01.webp" width="1200" height="1348" loading="lazy" decoding="async" />
+<img alt="" src="/musings/eth-investment-thesis/image-01.webp" width="1200" height="1348" loading="eager" fetchpriority="high" decoding="async" />
 
 Proof-of-Work vs. Proof-of-Stake (source: blockgeeks.com)
 
@@ -28,7 +28,7 @@ Introduced as an ERC-20, Smart Contract is Ethereum’s key innovation. These co
 
 Ethereum dApps are applications (products or services) that run on the Ethereum network, users need a digital ‘wallet’ to access them. Several examples of this include finance options, arts and collectibles, gaming, and technology. DeFi on the other hand is a global and open alternative to the current financial system. Leveraging smart contracts to trade cryptoassets through Decentralized Exchanges (peer-to-peer), sending money around the globe, accessing stable currencies, borrowing funds with/without collateral, and managing portfolios.
 
-<img src="/musings/eth-investment-thesis/image-08.webp" width="1200" height="592" loading="lazy" decoding="async" />
+<img alt="" src="/musings/eth-investment-thesis/image-08.webp" width="1200" height="592" loading="lazy" decoding="async" />
 
 DeFi vs. Traditional Finance (source: De Zilveren Rijder paper)
 
@@ -46,7 +46,7 @@ Following the roadmap, Ethereum has introduced an upgrade proposal Ethereum Impr
 
 The largest application built on top of Ethereum is the DeFi ecosystem. The market value for all DeFi projects in 2021 was $18bn in 2021 which grew to up to $116.3bn in early 2022. Total transaction fees (gas fees) of Ethereum reached an annualized revenue of $1.1bn in 2021, spiking due to on-chain trading on Decentralized Exchanges.
 
-<img src="/musings/eth-investment-thesis/image-07.webp" width="1200" height="657" loading="lazy" decoding="async" />
+<img alt="" src="/musings/eth-investment-thesis/image-07.webp" width="1200" height="657" loading="lazy" decoding="async" />
 
 Annualized Gas Fee 2021 (source: Etienne medium.com)
 
@@ -54,7 +54,7 @@ Do note that valuing Ethereum itself could not be treated as a common company as
 
 Ethereum has predetermined issuance schedules far into the future based on the ongoing economic situation. When changes are made to supply, it could be modeled into the future to derive ETH’s fair value. This is not present with fiat currencies where issuance is subject to the government. The model for Ethereum was built from DataAlways based on an initial set of analysis by Nikhil Shamapant. This model assumes there are a set of ~10 million stakers dividing rewards, of which would sell all Ether rewards once received.
 
-<img src="/musings/eth-investment-thesis/image-03.webp" width="640" height="114" loading="lazy" decoding="async" /><img src="/musings/eth-investment-thesis/image-02.webp" width="640" height="320" loading="lazy" decoding="async" />
+<img alt="" src="/musings/eth-investment-thesis/image-03.webp" width="640" height="114" loading="lazy" decoding="async" /><img alt="" src="/musings/eth-investment-thesis/image-02.webp" width="640" height="320" loading="lazy" decoding="async" />
 
 Ethereum valuation based on supply (source: Seeking Alpha)
 
@@ -62,18 +62,18 @@ The global crypto market cap is generally at ~$2.0T. Global value of all stocks 
 
 From a revenue perspective, Ethereum’s main income is from the transaction fees (gas fees). Grayscale models the data through total daily transaction fees collected as a measure of demand. Gas fees are the total amount paid for executing transactions on the Ethereum network. Another way of viewing is to consider that gas fees are the equivalent to sales in Ethereum’s case. The illustration below depicts the relationship with a “Price to Sales” ratio – lower means the network generates high revenue relative to Ethereum’s market cap – undervalued.
 
-<img src="/musings/eth-investment-thesis/image-06.webp" width="954" height="606" loading="lazy" decoding="async" />
+<img alt="" src="/musings/eth-investment-thesis/image-06.webp" width="954" height="606" loading="lazy" decoding="async" />
 
 ETH to Price to Sales ratio (source: Grayscale)
 
 Following Ethereum's main revenue from transaction fees, 21shares modeled the multiples compared to other current blockchain networks. The revenues from the protocol are indicators of organic demand in the network and a sign into the blockchain’s economy. Similar to the Price-to-Sales model before by Grayscale, lower means undervalued.
 
-<img src="/musings/eth-investment-thesis/image-05.webp" width="650" height="536" loading="lazy" decoding="async" /><img src="/musings/eth-investment-thesis/image-04.webp" width="640" height="568" loading="lazy" decoding="async" />
+<img alt="" src="/musings/eth-investment-thesis/image-05.webp" width="650" height="536" loading="lazy" decoding="async" /><img alt="" src="/musings/eth-investment-thesis/image-04.webp" width="640" height="568" loading="lazy" decoding="async" />
 
 Ethereum multiples Price-to-Revenue (source: 21shares)
 
 With Ethereum 2.0 in the horizon, it would begin an impactful force towards the cryptoasset ecosystem. The chart below predicts the outcome of interest-bearing yield rewards from staking.
 
-<img src="/musings/eth-investment-thesis/image-09.webp" width="1200" height="776" loading="lazy" decoding="async" />
+<img alt="" src="/musings/eth-investment-thesis/image-09.webp" width="1200" height="776" loading="lazy" decoding="async" />
 
 Ethereum 2.0 Yield APY (source: 21shares)

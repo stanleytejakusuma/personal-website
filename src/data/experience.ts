@@ -5,6 +5,9 @@ export interface Entry {
   role: string;
   org: string;
   bullets: string[];
+  // /resume renders education under its own heading (ATS parsing); the
+  // experience tab keeps the single unified timeline.
+  kind?: 'education';
 }
 
 export const entries: Entry[] = [
@@ -70,6 +73,7 @@ export const entries: Entry[] = [
     dates: 'Aug 2020 – May 2024',
     role: 'B.S. Data Science',
     org: 'Purdue University',
+    kind: 'education',
     bullets: [
       'Business economics minor. Boiler Blockchain, boxing club, Dean’s List.',
     ],

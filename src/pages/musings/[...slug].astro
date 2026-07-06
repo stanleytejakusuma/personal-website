@@ -56,7 +56,7 @@ const blogPosting = {
   ogImage={`/og/musings/${entry.id}.png`}
   publishedTime={entry.data.date.toISOString()}
 >
-  <script type="application/ld+json" set:html={JSON.stringify(blogPosting)} />
+  <script type="application/ld+json" set:html={JSON.stringify(blogPosting).replace(/</g, '\\u003c')} />
   <div class="reading-progress" aria-hidden="true"><span data-reading-progress></span></div>
   <article class="representative musing-post" aria-labelledby="musing-h">
     <a class="musing-post__back inline-link" href="/#musings">← musings</a>

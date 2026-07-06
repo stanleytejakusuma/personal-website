@@ -28,7 +28,7 @@ Take a look at @GearboxProtocol!!! Gearbox allows anyone to use leverage on sele
 
 4.  Be sure to manage the account below liquidation threshold
 
-<img src="/musings/gearbox-protocol/image-01.webp" width="846" height="311" loading="lazy" decoding="async" />
+<img alt="" src="/musings/gearbox-protocol/image-01.webp" width="846" height="311" loading="eager" fetchpriority="high" decoding="async" />
 
 (source: [<u>here</u>](https://gearbox.fi/))
 
@@ -56,7 +56,7 @@ Feature offerings:
 
 Now, we start diving into Composable Leverage 2.0. Traditional leverage system is merely long or short. With Gearbox, users are not limited between two options. They could stake, yield farm, or any DeFi primitives on the selected contract list (below). Possibilities are endless!
 
-<img src="/musings/gearbox-protocol/image-07.webp" width="1200" height="602" loading="lazy" decoding="async" />
+<img alt="" src="/musings/gearbox-protocol/image-07.webp" width="1200" height="602" loading="lazy" decoding="async" />
 
 (source: [<u>here</u>](https://docs.gearbox.finance/leverage-2.0-is-composable))
 
@@ -82,7 +82,7 @@ Gearbox Protocol Participant:
 
 The Credit Account binds both lenders and borrowers. Specifically, the account is an isolated smart contract holding user’s and borrowed funds. Your funds are self-custodial in the account.
 
-<img src="/musings/gearbox-protocol/image-03.webp" width="1200" height="411" loading="lazy" decoding="async" />
+<img alt="" src="/musings/gearbox-protocol/image-03.webp" width="1200" height="411" loading="lazy" decoding="async" />
 
 (source: [<u>here</u>](https://docs.gearbox.finance/overview/how-it-works))
 
@@ -92,13 +92,13 @@ Liquidation
 
 User’s Credit Account is the collateral. Gearbox uses a risk model that continuously assesses Quality to Value for a credit account. It follows the formula below.
 
-<img src="/musings/gearbox-protocol/image-05.webp" width="1200" height="671" loading="lazy" decoding="async" />
+<img alt="" src="/musings/gearbox-protocol/image-05.webp" width="1200" height="671" loading="lazy" decoding="async" />
 
 (source: [<u>here</u>](https://docs.gearbox.finance/overview/liquidations))
 
-<img src="/musings/gearbox-protocol/image-06.webp" width="416" height="126" loading="lazy" decoding="async" />
+<img alt="" src="/musings/gearbox-protocol/image-06.webp" width="416" height="126" loading="lazy" decoding="async" />
 
-<img src="/musings/gearbox-protocol/image-02.webp" width="482" height="181" loading="lazy" decoding="async" />
+<img alt="" src="/musings/gearbox-protocol/image-02.webp" width="482" height="181" loading="lazy" decoding="async" />
 
 The treasury accrues fees from the LP tokens and becomes a part of the LP. This part of the treasury, in the event of liquidation, covers the losses and burns part of their LP tokens – restoring dTokens rate.
 
@@ -114,7 +114,7 @@ $GEAR is an ERC-20 utility token that has an initial purpose of governance. The 
 
 Gearbox implements a system of Reverse Voting Escrow ($CRV counterpart) – locked tokens have lower voting power than liquid ones.
 
-<img src="/musings/gearbox-protocol/image-04.webp" width="1200" height="803" loading="lazy" decoding="async" />
+<img alt="" src="/musings/gearbox-protocol/image-04.webp" width="1200" height="803" loading="lazy" decoding="async" />
 
 (source: [<u>here</u>](https://docs.gearbox.finance/gear-token/gear-overview))
 

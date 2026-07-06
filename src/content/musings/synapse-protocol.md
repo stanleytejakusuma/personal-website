@@ -23,7 +23,7 @@ August 29, 2021
 
 Frictionless transaction and interoperability between cross-chain layer protocols in any
 
-<img src="/musings/synapse-protocol/image-03.webp" width="36" height="36" loading="lazy" decoding="async" />
+<img alt="" src="/musings/synapse-protocol/image-03.webp" width="36" height="36" loading="eager" fetchpriority="high" decoding="async" />
 
 blockchain – Synapse Protocol. Previously called Nerve Finance with the native token NRV, the project was rebranded into Synapse Protocol, expanding its goal from being a stableswap based on Binance Smart Chain into a cross-chain token swap. The Synapse Protocol consists of two core notions: Synapse Network and Synapse Cross-chain Automated Market Maker (AMM). The multi-chain network has existed for quite some time, though the only problem is the connection between those chains.
 
@@ -39,7 +39,7 @@ Synapse AMM would also dynamically price all of token from supported blockchain 
 
 The Synapse Protocol ecosystem provides a solution called stableswap which improves the predominantly Uniswap’s AMM model. Stableswap pools are optimized for assets that are intended to have price remain stable relative to each other. To achieve this, the pools can contain more than two assets, unlike traditional Uniswap pools. Furthermore, Synapse has two types of nUSD pools that are unique to the ecosystem. The first one is “nexus” pool on Ethereum and others on Avalanche, BSC, and Polygon. The nexus pool consists of a basic stableswap pool:
 
-<img src="/musings/synapse-protocol/image-03.webp" width="36" height="36" loading="lazy" decoding="async" />
+<img alt="" src="/musings/synapse-protocol/image-03.webp" width="36" height="36" loading="lazy" decoding="async" />
 
 nUSD, USDT, USDC, DAI. Whereas the other pools are metapools (one of the token is an LP from another pool), which consists of nUSD and USD-LP based on their blockchains.
 
@@ -69,7 +69,7 @@ The Synapse Protocol’s stableswap AMM has been audited by CertiK, OpenZeppelin
 
 The Synapse Protocol is categorized as a cross-chain AMM decentralized exchange. This subsector of the DEX field has the potential to skyrocket as there is still only several DEXs that supports cross-chain bridge AMM, such as O3swap, AnySwap, GravityDEX, Sifchain, Coinswap, and Synapse Protocol. AnySwap is similar to Synapse, it was from a BSC ecosystem. However, it differs only in ecosystem. Synapse currently covers Ethereum, BSC, Avalanche, Polygon, and Fantom, whereas AnySwap has 17 ecosystems covered. However, Synapse has a larger market cap than AnySwap. In terms of total value bridged:
 
-<img src="/musings/synapse-protocol/image-03.webp" width="36" height="36" loading="lazy" decoding="async" /><img src="/musings/synapse-protocol/image-01.webp" width="468" height="85" loading="lazy" decoding="async" /><img src="/musings/synapse-protocol/image-02.webp" width="468" height="298" loading="lazy" decoding="async" />
+<img alt="" src="/musings/synapse-protocol/image-03.webp" width="36" height="36" loading="lazy" decoding="async" /><img alt="" src="/musings/synapse-protocol/image-01.webp" width="468" height="85" loading="lazy" decoding="async" /><img alt="" src="/musings/synapse-protocol/image-02.webp" width="468" height="298" loading="lazy" decoding="async" />
 
 <u>Personal Opinions</u>
 

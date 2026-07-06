@@ -15,6 +15,8 @@ const musings = defineCollection({
     featured: z.boolean().default(false),
     external: z.string().url().optional(),
     draft: z.boolean().default(false),
+  }).refine((d) => !(d.featured && d.external), {
+    message: 'featured cannot be combined with external — the ★ strip only links internal routes, so the flag would be silently ignored',
   }),
 });
 

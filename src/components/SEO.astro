@@ -65,4 +65,4 @@ const personLd = {
 <meta name="twitter:description" content={description} />
 <meta name="twitter:image" content={ogImage} />
 
-<script type="application/ld+json" set:html={JSON.stringify(personLd)} />
+<script type="application/ld+json" set:html={JSON.stringify(personLd).replace(/</g, '\\u003c')} />

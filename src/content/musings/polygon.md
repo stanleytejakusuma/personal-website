@@ -32,15 +32,15 @@ Polygon is often bucketed into a layer 1 or smart contract basket due to the fac
 
 The chain has seen exponential growth as it offers cheaper fees for DeFi users and its EVM-compatible structure makes it easy for ETH-based projects to adopt. This means that capital can flow to Polygon much easier compared to other layer 1 non-EVM compatible chains such as Solana.
 
-<img src="/musings/polygon/image-04.webp" width="1200" height="1100" loading="lazy" decoding="async" />
+<img alt="" src="/musings/polygon/image-04.webp" width="1200" height="1100" loading="eager" fetchpriority="high" decoding="async" />
 
 That said, Polygon’s recent fiasco regarding code changes, centralization issues, and vulnerability issues have caused the number of transactions conducted on the chain to drop by more than 50% compared to its peak. Additionally, this timing coincides with the launch of many Ethereum layer 2 scaling solutions such as Optimism and Arbitrum, adding competition to the ecosystem that Polygon is trying to play in.
 
-<img src="/musings/polygon/image-05.webp" width="1200" height="1100" loading="lazy" decoding="async" />
+<img alt="" src="/musings/polygon/image-05.webp" width="1200" height="1100" loading="lazy" decoding="async" />
 
 The growth of Polygon’s DeFi ecosystem has also stagnated. Although there are a few Polygon-first projects such as Quickswap, the majority of DeFi apps on Polygon are ETH-based projects that actively try to go multi-chain. Only 3 out of the top 20 DeFi projects by TVL in Polygon are a Polygon-first project.
 
-<img src="/musings/polygon/image-02.webp" width="504" height="363" loading="lazy" decoding="async" />
+<img alt="" src="/musings/polygon/image-02.webp" width="504" height="363" loading="lazy" decoding="async" />
 
 ### <u>Team and Investors</u>
 
@@ -54,7 +54,7 @@ MATIC token has a total supply of 10,000,000,000 tokens. Approximately 68.72% of
 
 Launchpad sales, early supporters, private sales, and seed rounds combined accumulate to roughly 24% of the total token supply.
 
-<img src="/musings/polygon/image-01.webp" width="1200" height="675" loading="lazy" decoding="async" />
+<img alt="" src="/musings/polygon/image-01.webp" width="1200" height="675" loading="lazy" decoding="async" />
 
 *360 million AVAX supply distribution*
 
@@ -62,7 +62,7 @@ Launchpad sales, early supporters, private sales, and seed rounds combined accum
 
 Approximately 1/4th of Polygon’s Market Capitalization consists of value locked in the network, which is pretty low compared to other pure-play layer 1 blockchains. Its Fully Diluted Valuation, however, indicates that it is less likely for MATIC to lose value due to token dilution in the future. Lastly, the development activities in MATIC’s main GitHub repository seem to be lacking as of recently (past two quarters). This is not a positive sentiment considering the fact that the timing coincides with the launch of other layer 2 solutions for Ethereum.
 
-<img src="/musings/polygon/image-03.webp" width="681" height="270" loading="lazy" decoding="async" />
+<img alt="" src="/musings/polygon/image-03.webp" width="681" height="270" loading="lazy" decoding="async" />
 
 ### <u>Conclusion</u>
 

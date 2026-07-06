@@ -19,7 +19,7 @@ DeFi Kingdoms is an 8-bit GameFi built on Harmony blockchain that is integrated 
 
 DeFi Kingdom gameplay is similar to Pokemon (8-bit)
 
-<img src="/musings/defi-kingdoms-thread/image-01.webp" width="1130" height="876" loading="lazy" decoding="async" />
+<img alt="" src="/musings/defi-kingdoms-thread/image-01.webp" width="1130" height="876" loading="eager" fetchpriority="high" decoding="async" />
 
 Token use cases include:
 
@@ -55,7 +55,7 @@ Though progress has been slow as seen in the delayed Q4 2021 Phase 2 (Heroes & Q
 
 Users are greeted with a play now screen instead of a bunch of explanations regarding what DeFi Kingdom is.
 
-<img src="/musings/defi-kingdoms-thread/image-02.webp" width="1200" height="719" loading="lazy" decoding="async" />
+<img alt="" src="/musings/defi-kingdoms-thread/image-02.webp" width="1200" height="719" loading="lazy" decoding="async" />
 
 When the users have several sufficient Harmony (ONE) tokens, they could instantly start playing DeFi Kingdoms and use its features such as liquidity pool, staking, etc even though they do not have funds to summon a new character.
 

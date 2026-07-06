@@ -4,6 +4,8 @@ import { AUTHOR, EMAIL_USER, SOCIALS, SITE_URL, TAGLINE } from '../consts';
 import { entries } from '../data/experience';
 
 const siteHost = new URL(SITE_URL).hostname;
+const work = entries.filter((e) => e.kind !== 'education');
+const education = entries.filter((e) => e.kind === 'education');
 ---
 
 <BaseLayout title={`${AUTHOR} resume`} path="/resume" footer={false}>
@@ -15,7 +17,7 @@ const siteHost = new URL(SITE_URL).hostname;
         <p class="resume__tagline">{TAGLINE}</p>
         <p class="resume__location">Jakarta · UTC+7 / California · UTC−7</p>
       </div>
-      <button class="resume__print" type="button" onclick="window.print()">print / save as pdf</button>
+      <button class="resume__print" type="button" data-print>print / save as pdf</button>
     </header>
 
     <div class="resume__links" aria-label="Profile links">
@@ -39,7 +41,30 @@ const siteHost = new URL(SITE_URL).hostname;
       <h2 id="experience-h">experience</h2>
       <div class="resume__entries">
         {
-          entries.map((entry) => (
+          work.map((entry) => (
+            <article class="resume__entry">
+              <p class="resume__dates">{entry.dates}</p>
+              <div>
+                <h3>
+                  {entry.role} <span>{entry.org}</span>
+                </h3>
+                <ul>
+                  {entry.bullets.map((line) => (
+                    <li>{line}</li>
+                  ))}
+                </ul>
+              </div>
+            </article>
+          ))
+        }
+      </div>
+    </section>
+
+    <section class="resume__section" aria-labelledby="education-h">
+      <h2 id="education-h">education</h2>
+      <div class="resume__entries">
+        {
+          education.map((entry) => (
             <article class="resume__entry">
               <p class="resume__dates">{entry.dates}</p>
               <div>
@@ -339,6 +364,8 @@ const siteHost = new URL(SITE_URL).hostname;
 </style>
 
 <script>
+  document.querySelector('[data-print]')?.addEventListener('click', () => window.print());
+
   const link = document.querySelector('.resume__email');
   if (link instanceof HTMLAnchorElement) {
     const user = link.dataset.emailUser;

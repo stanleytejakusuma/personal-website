@@ -21,7 +21,7 @@ Voyager is founded to solve these challenges. The exchange offers a next generat
 
 As of early December 2021, the cryptocurrency CEXs market cap has reached $140 billion USD. This indicates that CEXs arguably holds an essential role in the crypto ecosystem. These platforms provide invaluable services such as cryptocurrencies trading and accurate price action. To power the ecosystem, exchange tokens are created with means of being a utility. The usage of exchange tokens varies across exchanges, with some having a governance mechanism to decide the exchange’s future development, however it is generally used to pay transaction fees, provide liquidity in the trading pairs, or to participate in Airdrops and Initial Exchange Offerings (IEO).
 
-<img src="/musings/voyager/image-02.webp" width="1200" height="650" loading="lazy" decoding="async" />
+<img alt="" src="/musings/voyager/image-02.webp" width="1200" height="650" loading="eager" fetchpriority="high" decoding="async" />
 
 *Figure 1. Total Cryptocurrency Market Cap vs. CEXs*
 
@@ -95,7 +95,7 @@ VGX is mainly a utility token for the exchange itself, currently the use cases a
 
 > With the second whitepaper, Voyager introduces a loyalty system with benefits based on the quantity of VGX held in the account.
 >
-<img src="/musings/voyager/image-01.webp" width="642" height="495" loading="lazy" decoding="async" />
+<img alt="" src="/musings/voyager/image-01.webp" width="642" height="495" loading="lazy" decoding="async" />
 >
 > *Figure 2. Loyalty Program Schedule (whitepaper v2.0)*
 

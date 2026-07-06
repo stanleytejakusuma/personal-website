@@ -18,7 +18,7 @@ https://twitter.com/avalancheavax/status/1466483775722987526?lang=en
 
 DeFi Kingdom $JEWEL, as of December 2, 2021, has officially announced its first-ever cross chain expansion alongside the release of a new realm – Crystalvale – and a myriad of new features and resources!!!
 
-<img src="/musings/defi-kingdoms-v2/image-01.webp" width="600" height="276" loading="lazy" decoding="async" />
+<img alt="" src="/musings/defi-kingdoms-v2/image-01.webp" width="600" height="276" loading="eager" fetchpriority="high" decoding="async" />
 
 The expansion leverages $AVAX subnets of near-instant transaction speeds, low fees, and over 4,500 TPS.
 
@@ -46,7 +46,7 @@ Heroes brave enough would go on a dangerous voyage lasting 9 days. Surviving her
 
 The survival chance is determined by heroes’ level, rank, and rarity.
 
-<img src="/musings/defi-kingdoms-v2/image-02.webp" width="750" height="1166" loading="lazy" decoding="async" />
+<img alt="" src="/musings/defi-kingdoms-v2/image-02.webp" width="750" height="1166" loading="lazy" decoding="async" />
 
 (image from DeFi Kingdom docs)
 

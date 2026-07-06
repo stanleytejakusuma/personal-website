@@ -15,7 +15,7 @@ tickers:
 
 A Thread about
 
-<img src="/musings/boba-network-thread/image-05.webp" width="1200" height="1200" loading="lazy" decoding="async" />
+<img alt="" src="/musings/boba-network-thread/image-05.webp" width="1200" height="1200" loading="eager" fetchpriority="high" decoding="async" />
 
 @bobanetwork is an $ETH alts that focuses on the L2 ecosystem. The protocol promises lower gas fees, fast finality tx, hybrid compute that can trigger AWS Lambda, and secured by ETH!
 
@@ -85,7 +85,7 @@ $BOBA is a compute-focused **Optimistic Rollup** @optimismPBC. Boba uses the Tur
 
 Turing performs using L2TGeth – Go Ethereum. Enabling devs to use single line function calls.
 
-<img src="/musings/boba-network-thread/image-01.webp" width="1024" height="576" loading="lazy" decoding="async" />
+<img alt="" src="/musings/boba-network-thread/image-01.webp" width="1024" height="576" loading="lazy" decoding="async" />
 
 (source: [<u>here</u>](https://boba.network/turing-hybrid-compute/))
 
@@ -121,13 +121,13 @@ For those interested in developing an app in Boba, use **The Graph**! It’s an 
 
 Boba bridge supports NFT for both L1 and L2. Below is the flowchart representing the NFT bridge from the docs.
 
-<img src="/musings/boba-network-thread/image-04.webp" width="1200" height="1113" loading="lazy" decoding="async" />
+<img alt="" src="/musings/boba-network-thread/image-04.webp" width="1200" height="1113" loading="lazy" decoding="async" />
 
 Supporting the network, $BOBA is the native token with the main use cases as **governance** and **staking**.
 
 $BOBA has a fixed total supply of 500M, currently ~150M in circulation. Remaining amounts are linearly released over the next 4 years. Those that receive BOBA in TGE are $OMG hodlers.
 
-<img src="/musings/boba-network-thread/image-02.webp" width="562" height="358" loading="lazy" decoding="async" />
+<img alt="" src="/musings/boba-network-thread/image-02.webp" width="562" height="358" loading="lazy" decoding="async" />
 
 (image from [<u>here</u>](https://boba.network/token/))
 
@@ -139,6 +139,6 @@ State of Boba
 
 $66.63M TVL including staking, LP farming, and borrowings.
 
-<img src="/musings/boba-network-thread/image-03.webp" width="528" height="327" loading="lazy" decoding="async" />
+<img alt="" src="/musings/boba-network-thread/image-03.webp" width="528" height="327" loading="lazy" decoding="async" />
 
 Top 3 by TVL are $OLO (44.38%) – Boba’s DEX & AMM, $SYN (17.75%) – cross-chain liquidity network, and @BodhFinance (15.85%) – Boba’s lending platform.

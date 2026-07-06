@@ -23,11 +23,11 @@ tickers:
 
 4/ Network TL;DR governance sets the ‘anchor rate’ (target APY), staking rewards make up the ‘real yield’, the ‘real yield’ is stabilized around the ‘anchor rate’ – reserves and borrowing serves as incentive to help real yield reach around the anchor rate
 
-<img src="/musings/anchor-protocol-thread/image-02.webp" width="697" height="124" loading="lazy" decoding="async" />
+<img alt="" src="/musings/anchor-protocol-thread/image-02.webp" width="697" height="124" loading="eager" fetchpriority="high" decoding="async" />
 
 5/ At its core, Anchor relies on the Terra money market – a web assembly smart contract on the $LUNA blockchain that facilitates deposits and borrowing of Terra stablecoin. The interest rate of the platform is algorithmically determined and encoded by the pool’s utilization ratio.
 
-<img src="/musings/anchor-protocol-thread/image-06.webp" width="636" height="462" loading="lazy" decoding="async" />
+<img alt="" src="/musings/anchor-protocol-thread/image-06.webp" width="636" height="462" loading="lazy" decoding="async" />
 
 6/ The deposited stablecoins are represented by Anchor Terra ($aTerra). $ANC is structured to provide benefits: high and stable deposit yield powered by bonded assets collateral, instant withdrawals, and principal protection via liquidation risk of under-collateralization.
 
@@ -35,20 +35,20 @@ tickers:
 
 8/ Diving in-depth towards its borrowing, ANC employs a borrowing limit per account. The borrow limit is based on the user’s liability compared with max LTV. The **applied** borrow rate is constantly adjusted based on supply and demand for stablecoins (automatically adjusted by algorithm).
 
-<img src="/musings/anchor-protocol-thread/image-05.webp" width="507" height="40" loading="lazy" decoding="async" />
+<img alt="" src="/musings/anchor-protocol-thread/image-05.webp" width="507" height="40" loading="lazy" decoding="async" />
 
 9/ $ANC Tokenomics: use cases include governance, yield benchmark, and network purposes (incentives). Anchor also captures protocol fees; 10% of value flowing into yield reserve would be used for value accrual of ANC.
 
-<img src="/musings/anchor-protocol-thread/image-04.webp" width="718" height="445" loading="lazy" decoding="async" />
+<img alt="" src="/musings/anchor-protocol-thread/image-04.webp" width="718" height="445" loading="lazy" decoding="async" />
 % of bAsset rewards and 0.1% of liquidation fees regardless of cash flow is positive or negative would be bought back. The token also employs a burning mechanism to meet its anchor rate benchmark. Minting is the equivalent of burning; burn to redeem deposited assets.
 
 11/ The current state of $ANC has deposits more than its collateral, almost 5:3 ratio. Furthermore, the project has bought back 193,700 in the last 72 hours. With a total of 3,541,288 ANC since TGE.
 
-<img src="/musings/anchor-protocol-thread/image-03.webp" width="747" height="364" loading="lazy" decoding="async" />
+<img alt="" src="/musings/anchor-protocol-thread/image-03.webp" width="747" height="364" loading="lazy" decoding="async" />
 
 12/ $bLUNA makes up 88.42% of the total collateral and bETH 11.58%. This indicates that the protocol is heavily influenced by bLUNA price. The more volatile $LUNA is the higher probability of liquidation.
 
-<img src="/musings/anchor-protocol-thread/image-01.webp" width="686" height="314" loading="lazy" decoding="async" />
+<img alt="" src="/musings/anchor-protocol-thread/image-01.webp" width="686" height="314" loading="lazy" decoding="async" />
 
 13/ Security-wise, $ANC has verified all contract nodes and balances publicly. The network has gone through multiple audits: ANC Smart Contract – Cryptonics, ANC Token and Distributions Smart Contract – Cryptonics, and ETHAnchor – Solidified.
 

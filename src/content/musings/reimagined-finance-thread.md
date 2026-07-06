@@ -17,7 +17,7 @@ DeFi as we may know is currently hiking steadily and increasing the TVL. But hav
 
 Come Reimagined Finance ($REFI). With the product of Farming-as-a-Service, users could enjoy the profits distributed from yield farming across various DeFi projects.
 
-<img src="/musings/reimagined-finance-thread/image-01.webp" width="357" height="171" loading="lazy" decoding="async" />
+<img alt="" src="/musings/reimagined-finance-thread/image-01.webp" width="357" height="171" loading="eager" fetchpriority="high" decoding="async" />
 
 ReFi has a notion of easing passive income for anyone in the cryptospace through DeFi markets without the complexities. The capital is allocated across a diversified portfolio on low, medium, and high risk buckets.
 
@@ -35,11 +35,11 @@ Diving deeper into the platform, the initial portfolio baskets are classified ba
 
 The low-risk farms consist of the 40% treasury proceeds into stablecoin farms. Started off by bridging ETH to $FTM and purchasing USDc, the asset would be used to add liquidity to the fUSDT/DAI/USDC pool (30.61% APY).
 
-<img src="/musings/reimagined-finance-thread/image-03.webp" width="700" height="85" loading="lazy" decoding="async" />
+<img alt="" src="/musings/reimagined-finance-thread/image-03.webp" width="700" height="85" loading="lazy" decoding="async" />
 
 Another 30% of the treasury proceeds goes into FTM/TOMB and FTM/TSHARE liquidity pools with a lock up period of 30 days. The respective APY is 5905.801% and 1306.032%. $TOMB is algorithmically pegged to $FTM – a leveraged play by the team. $TSHARE is the governance token.
 
-<img src="/musings/reimagined-finance-thread/image-02.webp" width="700" height="330" loading="lazy" decoding="async" />
+<img alt="" src="/musings/reimagined-finance-thread/image-02.webp" width="700" height="330" loading="lazy" decoding="async" />
 
 The remaining 30% of the treasury proceeds goes into $TIME and $SPELL. The team mainly exploits hype around these tokens for high risk farms.
 

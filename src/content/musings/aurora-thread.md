@@ -18,7 +18,7 @@ It’s undisputed now that $ETH has a problem in the gas cost and respective tra
 
 Being in the $NEAR protocol, Aurora is able to validate each block in 1 seconds, average transaction finality 2 seconds, and exceptionally low transaction cost $0.02.
 
-<img src="/musings/aurora-thread/image-01.webp" width="1200" height="630" loading="lazy" decoding="async" />
+<img alt="" src="/musings/aurora-thread/image-01.webp" width="1200" height="630" loading="eager" fetchpriority="high" decoding="async" />
 
 Several key features:
 
@@ -74,7 +74,7 @@ To facilitate the network transmission, Aurora released a native token $AURORA w
 
 Most of the token allocation is kept in the DAO with reasons for future projects, the second most allocation is kept as a community treasury.
 
-<img src="/musings/aurora-thread/image-02.webp" width="832" height="897" loading="lazy" decoding="async" />
+<img alt="" src="/musings/aurora-thread/image-02.webp" width="832" height="897" loading="lazy" decoding="async" />
 
 The vesting for locked tokens follows a two-year unlocking schedule with linear-vesting every 3 months.
 

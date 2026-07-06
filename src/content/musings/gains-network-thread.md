@@ -36,7 +36,7 @@ Stay tuned for a surprise finding! 🧵
 
 2/ $GNS is a decentralized synthetic trading platform with low fees and high tx speed. Built on $MATIC chain and moving to @arbitrum soon
 
-<img src="/musings/gains-network-thread/image-06.webp" width="1200" height="472" loading="lazy" decoding="async" />
+<img alt="" src="/musings/gains-network-thread/image-06.webp" width="1200" height="472" loading="eager" fetchpriority="high" decoding="async" />
 
 3/ First of all, how does the gTrade platform work? confused
 
@@ -48,11 +48,11 @@ Stay tuned for a surprise finding! 🧵
 
 \- No order books or required liquidity
 
-<img src="/musings/gains-network-thread/image-10.webp" width="720" height="324" loading="lazy" decoding="async" />
+<img alt="" src="/musings/gains-network-thread/image-10.webp" width="720" height="324" loading="lazy" decoding="async" />
 
 4/ As a result the gTrade is remarkably efficient in handling trades. With only ~$110M in market cap, but able to generate $330M+ in volume on 13th Oct 2022. To date, the volume has reached $19B+ with 79% crypto 20% forex 0.1% stocks contribution. 📊
 
-<img src="/musings/gains-network-thread/image-02.webp" width="918" height="463" loading="lazy" decoding="async" />
+<img alt="" src="/musings/gains-network-thread/image-02.webp" width="918" height="463" loading="lazy" decoding="async" />
 
 5/ Trades are opened with $DAI as collateral regardless of the pair, it allows the protocol to be 50x more capital efficient.⚡
 
@@ -60,7 +60,7 @@ More details on trading pairs (https://gains-network.gitbook.io/docs-home/gtrade
 
 6/ gTrade applies a relatively small fee schedule to minimize High-Frequency Trading (HFT)/Quants to exploit the nature of synthetic assets (crypto 0.16% stocks 0.24% forex 0.016%). 32.5% of which in total are distributed to stakers of $GNS.
 
-<img src="/musings/gains-network-thread/image-08.webp" width="636" height="129" loading="lazy" decoding="async" />
+<img alt="" src="/musings/gains-network-thread/image-08.webp" width="636" height="129" loading="lazy" decoding="async" />
 
 7/ When a trade is opened $DAI is sent to the DAI vault as collateral. Then when the user closes the trade, one of the two things will happen:
 
@@ -68,7 +68,7 @@ More details on trading pairs (https://gains-network.gitbook.io/docs-home/gtrade
 
 ➖ conversely, the vault receives DAI if the P&L is negative
 
-<img src="/musings/gains-network-thread/image-07.webp" width="920" height="347" loading="lazy" decoding="async" />
+<img alt="" src="/musings/gains-network-thread/image-07.webp" width="920" height="347" loading="lazy" decoding="async" />
 
 8/ Continuing from the vault, there are 3 pools at the heart of Gains Network:
 
@@ -102,7 +102,7 @@ The vault is set to stay overcollateralized at 30%. Meaning that, if the
 
 the vault will use the extra DAI to buy $GNS and burn it
 
-<img src="/musings/gains-network-thread/image-09.webp" width="326" height="113" loading="lazy" decoding="async" />
+<img alt="" src="/musings/gains-network-thread/image-09.webp" width="326" height="113" loading="lazy" decoding="async" />
 
 13/ $GNS/$DAI Pool
 
@@ -118,15 +118,15 @@ is the usual LP pools present in most similar projects.
 
 GNS was initially called GFarm2 with an initial supply of 31.02M. Currently, the network has 30.24M supply in circulation including GFarrm2. 73% of which are currently being staked in the $GNS pool.
 
-<img src="/musings/gains-network-thread/image-11.webp" width="928" height="364" loading="lazy" decoding="async" />
+<img alt="" src="/musings/gains-network-thread/image-11.webp" width="928" height="364" loading="lazy" decoding="async" />
 
 15/ With a high staked TVL to MCap ratio, concerns are raised whether it is truly decentralized. The chart below provides the answer for just that; with the highest accumulator only owning 7% of the total in circulation.
 
-<img src="/musings/gains-network-thread/image-04.webp" width="916" height="471" loading="lazy" decoding="async" />
+<img alt="" src="/musings/gains-network-thread/image-04.webp" width="916" height="471" loading="lazy" decoding="async" />
 
 16/ The protocol experienced an ATH in volume on 13th October 2022. Surprisingly, this volume is made up of mostly forex trades, which begs the question; is GNS starting to receive exposure from non-crypto markets? 🤔
 
-<img src="/musings/gains-network-thread/image-01.webp" width="923" height="475" loading="lazy" decoding="async" />
+<img alt="" src="/musings/gains-network-thread/image-01.webp" width="923" height="475" loading="lazy" decoding="async" />
 
 17/ Team
 
@@ -134,7 +134,7 @@ The team has not been properly doxxed, but we are only given knowledge of the ro
 
 https://www.reddit.com/r/GainsNetwork/comments/rps38j/team_behind_gains_network/
 
-<img src="/musings/gains-network-thread/image-03.webp" width="493" height="499" loading="lazy" decoding="async" />
+<img alt="" src="/musings/gains-network-thread/image-03.webp" width="493" height="499" loading="lazy" decoding="async" />
 
 18/ Audit
 
@@ -152,7 +152,7 @@ https://www.certik.com/projects/gains-network
 
 20/ If Gains could migrate to @arbitrum, it would provide sufficient market participants to be on par with $GMX. As you can see from the comparison below
 
-<img src="/musings/gains-network-thread/image-05.webp" width="427" height="216" loading="lazy" decoding="async" />
+<img alt="" src="/musings/gains-network-thread/image-05.webp" width="427" height="216" loading="lazy" decoding="async" />
 
 21/ That said, there are still limitations and concerns for the network:😨
 
@@ -172,7 +172,7 @@ https://www.certik.com/projects/gains-network
 
 23/ (cont.) Here, each time an order is opened, it makes a request in real time to 8 nodes to the DON. LINK then takes the median and gives it to $GNS. No more scam wicks (goodbye $GMX $AVAX).
 
-<img src="/musings/gains-network-thread/image-12.webp" width="720" height="272" loading="lazy" decoding="async" />
+<img alt="" src="/musings/gains-network-thread/image-12.webp" width="720" height="272" loading="lazy" decoding="async" />
 
 Stay Tuned for our next dApp Weekly Spotlight?
 

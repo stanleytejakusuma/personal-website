@@ -23,11 +23,11 @@ Time efficiency in the crypto space is crucial considering its fast-paced nature
 
 DCA investors could be declared as risk-averse. A sharp downturn should not affect DCA investors that deeply, instead it should be welcomed since cost averaging down would be beneficial. Thereby, reducing the long-term risk of an asset by lowering its average value in the portfolio.
 
-<img src="/musings/why-dca-matters-in-crypto/image-02.webp" width="404" height="189" loading="lazy" decoding="async" />
+<img alt="" src="/musings/why-dca-matters-in-crypto/image-02.webp" width="404" height="189" loading="eager" fetchpriority="high" decoding="async" />
 
 A clear example, an investor approaches $BTC in late 2017 when the price is at $15,000, the start of the bull run. The investor values Bitcoin to be at least $100,000 with reasons as follows: given the asset adoption, more implementations in the physical world, the Metcalfe’s law – value of a communication network is $`n^{2}`$ (n is the number of users), driving an exponential factor – essentially more people means higher value, and linear regression of Bitcoin asset price close to be 1:1 to that of gold. The investor’s chose the plan of execution to only sell when the price has reached $100,000 and buy when the asset rises or falls 20%. In late December 2017, the bull run started and the investor bought at the top; then the week after it instantly turned into bear with a following of flat performance. The investor should not be worried about FUD here, since his plan was to buy BTC each time there is a 20% change in the asset. For the years 2018 to 2020, BTC trades in a price interval of 300%. By the moment another bull run starts in mid-2020, the investor should already have a floating profit provided that he follows his initial plan.
 
-<img src="/musings/why-dca-matters-in-crypto/image-01.webp" width="329" height="359" loading="lazy" decoding="async" />
+<img alt="" src="/musings/why-dca-matters-in-crypto/image-01.webp" width="329" height="359" loading="lazy" decoding="async" />
 
 *Another Example of DCA with $2,000 monthly invested (source: altcointrading.net)*
 

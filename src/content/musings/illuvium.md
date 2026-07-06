@@ -22,7 +22,7 @@ Game Overview
 
 Illuvium is a “game child” of both Pokémon and Hearthstone. Lore heavy, where players act as a survivor of an intergalactic space fleet investigating a distress beacon. However, once players arrive, they are welcomed by a myriad of mythical creatures called Illuvials. Luckily, the players have the power by using a shard (equivalent to Pokémon’s Poké Ball) to capture these creatures and harness its power.
 
-<img src="/musings/illuvium/image-04.webp" width="1200" height="675" loading="lazy" decoding="async" />
+<img alt="" src="/musings/illuvium/image-04.webp" width="1200" height="675" loading="eager" fetchpriority="high" decoding="async" />
 
 Sanctum Mesa region
 
@@ -46,7 +46,7 @@ On numerous occasions, Illuvium outsourced several of Chainlink’s products: Ve
 
 In terms of handling security risks and bug issues that could break down the system, Illuvium’s team is one of the fastest teams in the crypto gaming industry to resolve the complication. An [<u>audit</u>](https://gateway.pinata.cloud/ipfs/QmUYW3XnSU81MhFbZ2LT8nU9tX45XrUE8sDLM2pE7jgp14) for Illuvium’s yield farming on June 30, 2021 by Quantstamp indicated that there are 16 total issues with 12 already resolved (1 high risk but likewise has been resolved). The gaming platform is then rewarded with a Fast Response Times from the security contractor. Following the audit, the team decided to halt building the game itself but instead focusing on resolving security issues, which could be seen from its medium posts.
 
-<img src="/musings/illuvium/image-03.webp" width="763" height="307" loading="lazy" decoding="async" />
+<img alt="" src="/musings/illuvium/image-03.webp" width="763" height="307" loading="lazy" decoding="async" />
 
 Quantstamp Audit Result
 
@@ -72,7 +72,7 @@ Token Distribution:
 
 - In-game Rewards: 1M (not started)
 
-<img src="/musings/illuvium/image-01.webp" width="1200" height="377" loading="lazy" decoding="async" />
+<img alt="" src="/musings/illuvium/image-01.webp" width="1200" height="377" loading="lazy" decoding="async" />
 
 $ILV distribution (source: [<u>here</u>](https://docs.illuvium.io/whitepaper/tokenomics))
 
@@ -116,7 +116,7 @@ Voting for the proposal, however, still follows the same conventional approach o
 
 Alternatives/Competitors
 
-<img src="/musings/illuvium/image-02.webp" width="519" height="348" loading="lazy" decoding="async" />
+<img alt="" src="/musings/illuvium/image-02.webp" width="519" height="348" loading="lazy" decoding="async" />
 
 Pokemon Go & Hearthstone Statistics
 
@@ -126,7 +126,7 @@ Looking at Illuvium’s direct competitors, it’s more than reasonable to say t
 
 Team
 
-<img src="/musings/illuvium/image-05.webp" width="1200" height="899" loading="lazy" decoding="async" />
+<img alt="" src="/musings/illuvium/image-05.webp" width="1200" height="899" loading="lazy" decoding="async" />
 
 Illuvium Team (source: [<u>link</u>](https://medium.com/illuvium/5-illuvium-dream-team-weve-brought-in-worldwide-talent-to-make-a-damn-good-game-340bbd6c6e70))
 

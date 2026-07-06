@@ -18,7 +18,7 @@ For those that are interested in the tech side of crypto, take a look at this th
 
 @agoric ($BLD) is a smart contracting platform (currently in beta) of $ATOM and a PoS protocol that utilizes secure JavaScript smart contracts readily to be built and deployed in DeFi. The hardened JS enables Agoric to mitigate decentralized financial system risks.
 
-<img src="/musings/agoric-thread/image-01.webp" width="1180" height="638" loading="lazy" decoding="async" />
+<img alt="" src="/musings/agoric-thread/image-01.webp" width="1180" height="638" loading="eager" fetchpriority="high" decoding="async" />
 
 (image from agoric.com)
 
@@ -38,7 +38,7 @@ The blockchain model itself is based on a paper by Miller & Dexler, 1988. The pa
 
 [<u>https://papers.agoric.com/assets/pdf/papers/markets-and-computation-agoric-open-systems.pdf</u>](https://papers.agoric.com/assets/pdf/papers/markets-and-computation-agoric-open-systems.pdf)
 
-<img src="/musings/agoric-thread/image-03.webp" width="1200" height="1330" loading="lazy" decoding="async" />
+<img alt="" src="/musings/agoric-thread/image-03.webp" width="1200" height="1330" loading="lazy" decoding="async" />
 
 The Agoric chain has a vision of being **fast** by using Tendermint consensus and **predictable** by improving gas economics for users to experience trade-offs between price and urgency.
 
@@ -62,7 +62,7 @@ Agoric Team:
 
 - Michael Jablon – 25+ years of strategic leadership, leveraged disruptive techs (IP, VoIP, Smart Home), and VP of product and strategy @GetSpectrum
 
-<img src="/musings/agoric-thread/image-02.webp" width="1200" height="568" loading="lazy" decoding="async" />
+<img alt="" src="/musings/agoric-thread/image-02.webp" width="1200" height="568" loading="lazy" decoding="async" />
 
 Investors (Total of $85M worth of funding):
 

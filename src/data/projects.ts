@@ -40,11 +40,11 @@ export const projects: Project[] = [
   {
     name: 'Flipside on-chain analytics',
     description:
-      'A library of 128 dbt data models spanning 12+ blockchains (Solana, Ethereum, Bitcoin, Aptos, NEAR, Sei, and more) on Snowflake. Curated, tested transformations that turn raw chain data into queryable analytics, exposed through an endpoint for downstream tools.',
+      'A library of 128 dbt data models spanning 10+ blockchains (Solana, Ethereum, Bitcoin, Aptos, NEAR, Sei, and more) on Snowflake. Curated, tested transformations that turn raw chain data into queryable analytics, exposed through an endpoint for downstream tools.',
     category: 'data & analytics',
     status: 'archived',
     stack: ['dbt', 'Snowflake', 'SQL'],
-    metrics: ['128 dbt models', '12+ blockchains'],
+    metrics: ['128 dbt models', '10+ blockchains'],
     order: 1,
   },
   {

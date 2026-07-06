@@ -15,7 +15,7 @@ tickers:
 
 1/ Juno ($JUNO) is a permissionless interoperable smart contract hub built on the Cosmos blockchain. A sovereign public blockchain – Juno aims to provide a sandbox ecosystem for deployment. Network features: decentralized, permission-less, and censorship-resistant.
 
-<img src="/musings/juno-thread/image-01.webp" width="1200" height="588" loading="lazy" decoding="async" />
+<img alt="" src="/musings/juno-thread/image-01.webp" width="1200" height="588" loading="eager" fetchpriority="high" decoding="async" />
 
 2/ As a layer 1 smart contract hub, Juno has goals to solve the first-generation smart contract bottlenecks issues: limited scalability, high cost for deployment, and complicated environment for devs.
 
@@ -67,7 +67,7 @@ Primary purpose: offload smart contracts load and bring utility to the hub.
 
 12/ Juno breaks the entry-barrier in smart contracts creation. Users are able to develop contracts with almost no coding, all basic functions are in UI. Main concern about this is bad actors since anyone could essentially create a smart contract. [<u>https://junomint.ezstaking.io/</u>](https://junomint.ezstaking.io/)
 
-<img src="/musings/juno-thread/image-04.webp" width="1200" height="612" loading="lazy" decoding="async" />
+<img alt="" src="/musings/juno-thread/image-04.webp" width="1200" height="612" loading="lazy" decoding="async" />
 
 13/ Juno as the native asset of the network’s use cases:
 
@@ -83,7 +83,7 @@ Primary purpose: offload smart contracts load and bring utility to the hub.
 
 14/ Total supply of $JUNO is 64 million. Circulating supply 33 million. Maximum supply in 2033 185 million. Supply increases from $JUNO rewards to stakers. Majority of initial supply stakedroped to $ATOM holders (47% of genesis supply).
 
-<img src="/musings/juno-thread/image-03.webp" width="1200" height="838" loading="lazy" decoding="async" />
+<img alt="" src="/musings/juno-thread/image-03.webp" width="1200" height="838" loading="lazy" decoding="async" />
 
 15/ Incentive/Reward schedule
 
@@ -107,7 +107,7 @@ Fixed inflation on each phase (year). Phase 1: 40%, phase 2: 20%, phase 3: 10%, 
 
 19/ The network currently supports up to 47 dApps, most of which are classified as TOOLS to support the network. DeFi and Smart Contracts are close to even in terms of numbers. More on [<u>https://www.junonetwork.io/ecosystem/</u>](https://www.junonetwork.io/ecosystem/).
 
-<img src="/musings/juno-thread/image-02.webp" width="1200" height="719" loading="lazy" decoding="async" />
+<img alt="" src="/musings/juno-thread/image-02.webp" width="1200" height="719" loading="lazy" decoding="async" />
 
 20/ Future Roadmap:
 
