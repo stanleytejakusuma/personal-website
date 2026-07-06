@@ -57,7 +57,7 @@ export const entries: Entry[] = [
     role: 'Data Scientist',
     org: 'The Data Mine, Purdue',
     bullets: [
-      'Cut electricity-usage prediction time across the Midwest and South by 24% for the Midcontinent ISO (MISO).',
+      'Built electricity-usage prediction models covering the Midwest and South for the Midcontinent ISO (MISO).',
       'Applied random forests and feature importance to model electricity-fluctuation edge cases.',
     ],
   },
