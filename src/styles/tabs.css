@@ -48,6 +48,39 @@
   margin: 0;
 }
 
+/* availability badge — the one recruiter-facing signal, kept above the fold */
+.shell__status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  align-self: flex-start;
+  padding: 0.28rem 0.7rem;
+  border: 1px solid color-mix(in srgb, var(--color-accent) 45%, var(--color-border));
+  border-radius: 999px;
+  color: var(--color-fg);
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  text-decoration: none;
+  transition: border-color 160ms var(--ease-out);
+}
+
+.shell__status:hover,
+.shell__status:focus-visible {
+  border-color: var(--color-accent);
+}
+
+.shell__status-dot {
+  width: 7px;
+  height: 7px;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  background: var(--color-accent);
+}
+
+.shell__status-cta {
+  color: var(--color-accent);
+}
+
 /* tab bar */
 .tabs {
   display: flex;

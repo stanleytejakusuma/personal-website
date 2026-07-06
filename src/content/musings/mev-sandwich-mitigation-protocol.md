@@ -2,6 +2,7 @@
 title: MEV Sandwich Mitigation Protocol
 description: A research paper proposing a contract-layer mitigation of sandwich attacks on Uniswap V4 using action hooks.
 date: '2024-01-30'
+featured: true
 venue: boiler
 tags:
 - MEV

@@ -8,7 +8,7 @@ import Experience from '../components/Experience.astro';
 import FeaturedProjects from '../components/FeaturedProjects.astro';
 import Musings from '../components/Musings.astro';
 import SocialIcons from '../components/SocialIcons.astro';
-import { TAGLINE } from '../consts';
+import { EMAIL_USER, TAGLINE } from '../consts';
 import '../styles/tabs.css';
 ---
 
@@ -22,6 +22,15 @@ import '../styles/tabs.css';
           <SocialIcons />
         </div>
         <p class="tagline">{TAGLINE}</p>
+        <a
+          class="shell__status"
+          href="#"
+          rel="nofollow"
+          data-email-user={EMAIL_USER}
+          data-email-domain-a="gm"
+          data-email-domain-b="ail"
+          data-email-tld="com"
+        ><span class="shell__status-dot" aria-hidden="true"></span>open to data · quant · ai/ml roles <span class="shell__status-cta">— email me</span></a>
         <CommandBar />
       </div>
 

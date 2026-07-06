@@ -9,7 +9,7 @@ export interface Entry {
 
 export const entries: Entry[] = [
   {
-    dates: '2024–2026',
+    dates: 'Oct 2024 – May 2026',
     role: 'Analytics Engineer',
     org: 'Flipside Crypto',
     bullets: [
@@ -30,7 +30,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    dates: '2021–2022',
+    dates: 'Dec 2021 – Jun 2022',
     role: 'Data Scientist Intern',
     org: 'Kargo Technologies',
     bullets: [
@@ -67,7 +67,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    dates: '2020–2024',
+    dates: 'Aug 2020 – May 2024',
     role: 'B.S. Data Science',
     org: 'Purdue University',
     bullets: [

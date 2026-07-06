@@ -37,7 +37,6 @@
     <div class="tcard">
       <p class="tcard__cmd"><span class="tcard__prompt">visitor@stanley:~$</span> cat stanley.json</p>
       <pre class="tcard__out">{`{`}
-  <span class="k">"status"</span>: <span class="v">"open to data &amp; quant roles"</span>,
   <span class="k">"base"</span>: [<span class="v">"Jakarta · UTC+7"</span>, <span class="v">"California · UTC-7"</span>],
   <span class="k">"alma_mater"</span>: <span class="v">"Purdue — data science"</span>,
   <span class="k">"daily_drivers"</span>: [<span class="v">"python"</span>, <span class="v">"sql"</span>, <span class="v">"dbt"</span>, <span class="v">"typescript"</span>],
@@ -163,6 +162,13 @@ mountain_air     <span class="bar">▓▓</span><span class="dim">░░░░�
   @media (max-width: 880px) {
     .about {
       grid-template-columns: 1fr;
+    }
+
+    /* Phone widths can't fit the longest JSON lines; iOS shows no scrollbar
+       on overflow, so wrap instead of clipping mid-token. */
+    .tcard__out {
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
     }
   }
 

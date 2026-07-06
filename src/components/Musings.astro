@@ -30,7 +30,7 @@ let currentYear = '';
       <p class="mono-label">musings</p>
       <h2 class="section-heading" id="musings-h">Research archive.</h2>
     </div>
-    <p class="musings__count" data-mcount>{entries.length} entries</p>
+    <p class="musings__count" data-mcount role="status">{entries.length} entries</p>
   </div>
 
   <p class="musings__note">Crypto research written 2021–2024, preserved unedited — not financial advice.</p>
@@ -317,7 +317,6 @@ let currentYear = '';
   }
 
   .musings__search:focus-visible {
-    outline: none;
     border-color: color-mix(in srgb, var(--color-accent) 58%, var(--color-border));
   }
 

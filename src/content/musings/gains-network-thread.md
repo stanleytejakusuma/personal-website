@@ -4,6 +4,7 @@ description: "0/ Let\u2019s take a break from the $BNB $FTT drama and look at @G
   \ that reached an ATH volume of $300M! $GNS is a decentralized leveraged trading\
   \ protocol that enables..."
 date: '2022-06-01'
+featured: true
 venue: wagmi
 tags:
 - DeFi

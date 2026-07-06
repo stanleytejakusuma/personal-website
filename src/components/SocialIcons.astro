@@ -65,11 +65,11 @@ const links = [
 </style>
 
 <script>
-  const link = document.querySelector('.socials__link[data-email-user]');
-  if (link instanceof HTMLAnchorElement) {
+  document.querySelectorAll('a[data-email-user]').forEach((link) => {
+    if (!(link instanceof HTMLAnchorElement)) return;
     const user = link.dataset.emailUser;
     const domain = `${link.dataset.emailDomainA || ''}${link.dataset.emailDomainB || ''}`;
     const tld = link.dataset.emailTld;
     if (user && domain && tld) link.href = `mailto:${user}@${domain}.${tld}`;
-  }
+  });
 </script>
