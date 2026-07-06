@@ -40,6 +40,12 @@ const {
     <ThemeScript />
     <SEO title={title} description={description} path={path} ogType={ogType} ogImage={ogImage} publishedTime={publishedTime} />
     <link rel="alternate" type="application/rss+xml" title="Stanley Tejakusuma — musings" href="/rss.xml" />
+    <!-- Cloudflare Web Analytics -->
+    <script
+      is:inline
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "911732d2c6244b62881bc58399b02d86"}'></script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
