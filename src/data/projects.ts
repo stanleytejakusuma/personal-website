@@ -87,9 +87,9 @@ export const projects: Project[] = [
     repo: 'https://github.com/stanleytejakusuma/card-counter',
   },
   {
-    name: 'Hermes',
+    name: 'Kairos',
     description:
-      'A personal operating system built on a self-improving agent runtime: finances, health, feeds, and daily routines behind one brain, delivered as a daily digest. Spec-first, in active development.',
+      'A personal agent OS built on the Hermes runtime: finances, health, feeds, and daily routines behind one brain, delivered as a daily digest. Spec-first, in active development.',
     status: 'in-dev',
     since: 'Jul 2026',
     stack: ['Python', 'LLM agents'],
