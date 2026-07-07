@@ -15,6 +15,7 @@ const href = project.link ?? project.repo;
     <span class="prow__title">
       <span class="prow__name">{project.name}</span>
       <span class="prow__stack">{project.stack.join(' · ')}</span>
+      <span class="prow__since">since {project.since}</span>
     </span>
     <span class={`prow__status status--${project.status}`}>{STATUS_LABEL[project.status]}</span>
   </summary>

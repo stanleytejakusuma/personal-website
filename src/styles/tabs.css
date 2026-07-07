@@ -213,6 +213,12 @@
   color: var(--color-muted);
 }
 
+.prow__since {
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  color: color-mix(in srgb, var(--color-muted) 75%, var(--color-bg));
+}
+
 .prow__detail {
   padding: 0 0 1.1rem;
 }
