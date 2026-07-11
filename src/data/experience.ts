@@ -19,7 +19,7 @@ export const entries: Entry[] = [
     role: 'Analytics Engineer',
     org: 'Flipside Crypto',
     bullets: [
-      'Built Snowflake + dbt medallion ELT pipelines across 10+ chains — NEAR, Solana, Aptos, Monad, Flow, Sei, and cross-chain protocols.',
+      'Built Snowflake + dbt medallion ELT pipelines across 10+ chains: NEAR, Solana, Aptos, Monad, Flow, Sei, and cross-chain protocols.',
       'Designed an agent-driven cost-intelligence pipeline for Snowflake spend: outlier detection → root-cause diagnosis → auto-drafted remediation PRs, human-gated.',
       'Anchored the NEAR client relationship; shipped an Intents intelligence layer showing NEAR Intents acts as a cross-chain swap aggregator.',
       'Shipped cross-EVM hot-wallet detection and a weekly external-parity audit cross-validating DEX, bridge, and lending coverage against DeFiLlama.',
@@ -30,8 +30,8 @@ export const entries: Entry[] = [
     role: 'Research & Delegation Lead',
     org: 'Boiler Blockchain, Purdue',
     bullets: [
-      'Led the delegations team overseeing $6M+ in governance votes across Optimism, dYdX, Stader Labs, and Origin — personally ran the Optimism delegation with public, transparent voting rationales.',
-      'Built and taught the “Introduction to Blockchain” certification course — top chains, DeFi, stablecoins, and DeFi vs CeFi vs TradFi — with bi-weekly forums.',
+      'Led the delegations team overseeing $6M+ in governance votes across Optimism, dYdX, Stader Labs, and Origin. Personally ran the Optimism delegation with transparent voting rationales.',
+      'Built and taught the “Introduction to Blockchain” certification course (top chains, DeFi, stablecoins, DeFi vs CeFi vs TradFi) with bi-weekly forums.',
       'Published bi-weekly research on Medium and Twitter backed by original Dune Analytics, including decomposing the Gains Network ($GNS) economic flywheel.',
     ],
   },
@@ -40,7 +40,7 @@ export const entries: Entry[] = [
     role: 'Data Scientist Intern',
     org: 'Kargo Technologies',
     bullets: [
-      'Built automated business-line P&L trackers (financing, fulfillment, logistics) for a B2B freight marketplace — Metabase SQL piped to Sheets, then automated in Python.',
+      'Built automated business-line P&L trackers (financing, fulfillment, logistics) for a B2B freight marketplace. Metabase SQL piped to Sheets, then automated in Python.',
       'Produced investor-relations analytics: GTV, disbursement, and NPL metrics, route-level profitability, and comparable-company benchmarking against 8 public comps.',
       'Reported directly to the COO and finance team; researched cohort-retention and customer-lifetime-value models.',
     ],
@@ -50,7 +50,7 @@ export const entries: Entry[] = [
     role: 'Research Writer',
     org: 'Wagmi Journal',
     bullets: [
-      'My first crypto role — self-taught Dune Analytics on the job to pair data with the writing. Bi-weekly research theses across DeFi, NFTs, DAOs, and regulation for angel investors.',
+      'My first crypto role. Self-taught Dune Analytics on the job to pair data with the writing. Bi-weekly research theses across DeFi, NFTs, DAOs, and regulation for angel investors.',
       'Built my first Dune queries (incl. a DeFi Pulse Index $DPI holder tracker) and a Python + Binance price-action screener.',
       'Much of that research lives on in the musings archive here.',
     ],
@@ -70,7 +70,7 @@ export const entries: Entry[] = [
     role: 'Barista',
     org: 'Starbucks',
     bullets: [
-      'My first employment, ever. Survived the 7am rush — turns out that was my first lesson in high-frequency order flow.',
+      'My first employment, ever. Survived the 7am rush. Turns out that was my first lesson in high-frequency order flow.',
     ],
   },
   {

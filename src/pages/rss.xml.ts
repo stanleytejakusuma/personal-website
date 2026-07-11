@@ -2,7 +2,7 @@ import type { APIRoute } from 'astro';
 import { getCollection } from 'astro:content';
 import { SITE_DESC } from '../consts';
 
-const FEED_TITLE = 'Stanley Tejakusuma — musings';
+const FEED_TITLE = 'Stanley Tejakusuma · musings';
 
 const escapeXml = (value: string) =>
   value

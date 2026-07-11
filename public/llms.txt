@@ -1,12 +1,12 @@
 # Stanley Tejakusuma
 
-> Personal site of Stanley Tejakusuma — data, statistics, modeling, and the tools that act on it. Open to data · quant · ai/ml roles.
+> Personal site of Stanley Tejakusuma. Data engineer across blockchain and analytics: pipelines, models, and trading systems. Open to data · quant · ai/ml roles.
 
 ## Pages
 
-- [Home](https://stanleytejakusuma.com/): tabbed one-pager — about, experience, projects, and the musings research archive
+- [Home](https://stanleytejakusuma.com/): tabbed one-pager with about, experience, projects, and the musings research archive
 - [Resume](https://stanleytejakusuma.com/resume/): printable resume with full work history and contact links
-- [Musings archive](https://stanleytejakusuma.com/#musings): 65 crypto and data research write-ups (2021–2024) — 61 served at /musings/<slug>/, 4 as external link-outs
+- [Musings archive](https://stanleytejakusuma.com/#musings): 65 crypto and data research write-ups (2021-2024); 61 served at /musings/<slug>/, 4 as external link-outs
 - [RSS feed](https://stanleytejakusuma.com/rss.xml): every musing with dates and links
 - [Sitemap](https://stanleytejakusuma.com/sitemap-index.xml)
 - [GitHub](https://github.com/stanleytejakusuma): open-source projects

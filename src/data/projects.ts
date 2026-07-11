@@ -24,7 +24,7 @@ export const projects: Project[] = [
   {
     name: 'AEGIS',
     description:
-      'A governed workspace for researching, backtesting, and deploying multiple quantitative strategies under one engineering process. Built on vectorbt and CCXT, with a per-strategy spec-and-review gate so every program is reproducible and comparable before it touches risk.',
+      'A workspace for researching, backtesting, and deploying multiple quantitative strategies under one engineering process. Built on vectorbt and CCXT, with a per-strategy spec-and-review gate so every program is reproducible and comparable before it touches risk.',
     status: 'live',
     since: 'Jan 2026',
     stack: ['Python', 'vectorbt', 'CCXT'],
@@ -33,7 +33,7 @@ export const projects: Project[] = [
   {
     name: 'ring-mcp',
     description:
-      'An MCP server that gives any agent access to your Oura Ring data — sleep, readiness, and activity as clean tools over the official v2 API. Bring your own token; built so an assistant can reason about your recovery, not just chart it.',
+      'An MCP server that gives any agent access to your Oura Ring data: sleep, readiness, and activity as clean tools over the official v2 API. Bring your own token. Built so an assistant can reason about your recovery instead of just charting it.',
     status: 'open-source',
     since: 'Jul 2026',
     stack: ['TypeScript', 'MCP', 'Oura API'],
@@ -43,7 +43,7 @@ export const projects: Project[] = [
   {
     name: 'citadel-finance',
     description:
-      'A self-hosted personal-finance stack: a dashboard for net worth and runway with an interactive spend-sensitivity slider, a REST API with audit logging, and frictionless ingestion via a Telegram bot and iOS Shortcuts. Built end to end in two days, then trimmed to what real use proved necessary.',
+      'A self-hosted personal-finance stack: a dashboard for net worth and runway with an interactive spend-sensitivity slider, a REST API with audit logging, and ingestion via a Telegram bot and iOS Shortcuts. Built end to end in two days, then trimmed to what real use proved necessary.',
     status: 'live',
     since: 'Jun 2026',
     stack: ['FastAPI', 'HTMX', 'SQLite'],
@@ -52,7 +52,7 @@ export const projects: Project[] = [
   {
     name: 'antebot',
     description:
-      'A betting-strategy lab: 79 scripted strategies across dice, blackjack, roulette, baccarat, and more — Martingale to D’Alembert and beyond — built to measure precisely how every progression system meets the house edge. Negative EV, empirically confirmed. The orchestration, bankroll simulation, and variance tracking outlived the thesis.',
+      'A betting-strategy lab: 79 scripted strategies across dice, blackjack, roulette, baccarat, and more, from Martingale to D’Alembert, built to measure exactly how every progression system meets the house edge. Negative EV, empirically confirmed. The orchestration, bankroll simulation, and variance tracking outlived the thesis.',
     status: 'archived',
     since: 'Mar 2026',
     stack: ['JavaScript', 'Node', 'statistics'],
@@ -61,7 +61,7 @@ export const projects: Project[] = [
   {
     name: 'knowledge-graph',
     description:
-      'A projection system that merges four heterogeneous memory sources into one lint-enforced knowledge graph: atomic 1:1 nodes, semantic and rollup edges, conflict-aware sweeps, and annotation-preserving regeneration.',
+      'A projection system that merges four separate memory sources into one lint-enforced knowledge graph: atomic 1:1 nodes, semantic and rollup edges, conflict-aware sweeps, and annotation-preserving regeneration.',
     status: 'live',
     since: 'Mar 2026',
     stack: ['Python', 'Qdrant', 'Obsidian'],
@@ -98,7 +98,7 @@ export const projects: Project[] = [
   {
     name: 'telegram-archiver',
     description:
-      'A self-hosted pipeline that archives the Telegram channels I follow into TimescaleDB — incremental sync, freshness watchdogs, and a search API over years of message history. Built because scroll-back is not a database.',
+      'A self-hosted pipeline that archives the Telegram channels I follow into TimescaleDB. Incremental sync, freshness watchdogs, and a search API over years of message history. Built because scroll-back is not a database.',
     status: 'live',
     since: 'Feb 2026',
     stack: ['Python', 'Telethon', 'TimescaleDB'],
@@ -116,7 +116,7 @@ export const projects: Project[] = [
   {
     name: 'probabilistic-stdev-bands',
     description:
-      'A TradingView indicator that models price dispersion with probabilistic standard-deviation bands, giving a statistical read on volatility and likely ranges instead of fixed levels.',
+      'A TradingView indicator that models price dispersion with probabilistic standard-deviation bands. Gives a statistical read on volatility and likely ranges instead of fixed levels.',
     status: 'open-source',
     since: 'Mar 2026',
     stack: ['Pine Script', 'statistics'],
@@ -135,7 +135,7 @@ export const projects: Project[] = [
   {
     name: 'atlas',
     description:
-      'A self-hosted, sovereign LLM: fine-tuning an open model on my own knowledge-graph corpus so an assistant that actually knows my context runs entirely on local hardware. Staged evaluation gates each checkpoint before it ships — and the recipe is still evolving.',
+      'A self-hosted, sovereign LLM: fine-tuning an open model on my own knowledge-graph corpus so an assistant that actually knows my context runs entirely on local hardware. Staged evaluation gates each checkpoint before it ships, and the recipe is still evolving.',
     status: 'in-dev',
     since: 'Apr 2026',
     stack: ['Python', 'Unsloth', 'TRL', 'Ollama'],
@@ -153,7 +153,7 @@ export const projects: Project[] = [
   {
     name: 'axiom homelab',
     description:
-      "A NAS-based homelab that runs my life's backend: market-data and Telegram archivers, dashboards, bots, and monitoring as a Docker fleet — with backups, alerting, and multi-network egress. Uptime is a feature.",
+      "A NAS-based homelab that runs my life's backend: market-data and Telegram archivers, dashboards, bots, and monitoring as a Docker fleet, with backups, alerting, and multi-network egress. Uptime is a feature.",
     status: 'live',
     since: 'Nov 2025',
     stack: ['Docker', 'Linux', 'Tailscale'],

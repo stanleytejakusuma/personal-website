@@ -161,7 +161,7 @@ The beforeSwap hook seems promising in determining the vulnerability of a transa
 
 <img alt="" src="/musings/mev-sandwich-mitigation-protocol/image-06.webp" width="560" height="2048" loading="lazy" decoding="async" />
 
-Figure X: Attack Detection Flow
+Figure 1: Attack Detection Flow
 
 **7 CODE SNIPPETS (HACKATHON)**
 
@@ -193,11 +193,11 @@ Within the calldata of the sent transaction, the intended position of execution 
 
 <img alt="" src="/musings/mev-sandwich-mitigation-protocol/image-10.webp" width="1200" height="661" loading="lazy" decoding="async" />
 
-Figure X: Acknowledgement checkbox left unchecked. User unable to confirm transaction.
+Figure 2: Acknowledgement checkbox left unchecked. User unable to confirm transaction.
 
 <img alt="" src="/musings/mev-sandwich-mitigation-protocol/image-02.webp" width="1200" height="658" loading="lazy" decoding="async" />
 
-Figure X: Acknowledge checkbox checked. Users are able to confirm transactions.
+Figure 3: Acknowledge checkbox checked. Users are able to confirm transactions.
 
 Uniswap’s traditional swap process is intuitive with just a few clicks. However, a possible enhancement could be introduced at the 5th step (after the user signs the message to “Allow TOKEN to be used for swapping”). Once a user signs the message, an algorithm promptly evaluates the potential risk of an MEV attack on their transaction. If detected, a warning pops up, granting users an informed choice:
 
