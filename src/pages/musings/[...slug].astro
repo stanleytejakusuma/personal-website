@@ -1,7 +1,11 @@
 ---
 import { getCollection, render } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { AUTHOR, SITE_URL } from '../../consts';
+import { AUTHOR, SITE_DESC, SITE_URL } from '../../consts';
+
+// Verbatim slice of the existing site description — never hand-author new
+// bio copy for this byline, only reuse what's already published.
+const credential = SITE_DESC.replace(`${AUTHOR}. `, '');
 
 const VENUES = {
   wagmi: 'Wagmi Journal',
@@ -61,6 +65,13 @@ const blogPosting = {
   <article class="representative musing-post" aria-labelledby="musing-h">
     <a class="musing-post__back inline-link" href="/#musings">← musings</a>
 
+    <p class="mono-label">archive</p>
+    <h1 class="section-heading" id="musing-h">{entry.data.title}</h1>
+    <p class="musing-post__byline">
+      <span>{AUTHOR}</span>
+      <span>{credential}</span>
+    </p>
+
     <header class="archive-banner">
       <span><time datetime={entry.data.date.toISOString()}>{dateLabel}</time></span>
       <span>{VENUES[entry.data.venue]}</span>
@@ -68,9 +79,6 @@ const blogPosting = {
       <span>preserved as written</span>
       <span>not financial advice</span>
     </header>
-
-    <p class="mono-label">archive</p>
-    <h1 class="section-heading" id="musing-h">{entry.data.title}</h1>
 
     <div class="musing-post__meta" aria-label="Article metadata">
       {entry.data.tags.map((tag) => <span>{tag}</span>)}
@@ -157,6 +165,22 @@ const blogPosting = {
     color: var(--color-muted);
     font-family: var(--font-mono);
     font-size: 0.72rem;
+  }
+
+  .musing-post__byline {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem 0.7rem;
+    margin: 0 0 1.25rem;
+    color: var(--color-muted);
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+  }
+
+  .musing-post__byline span:not(:last-child)::after {
+    content: '·';
+    margin-left: 0.7rem;
+    color: var(--color-muted);
   }
 
   .archive-banner span:not(:last-child)::after {

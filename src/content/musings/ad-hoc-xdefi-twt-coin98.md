@@ -16,7 +16,7 @@ tickers:
 - C98
 ---
 
-**XDEFI**
+## XDEFI
 
 <u>Summary</u>
 
@@ -72,7 +72,7 @@ tickers:
 
 4.  Token Distribution: Ecosystem Fund (30%), Early Investors (28%), Play to (L)earn (16%), XDEFI Wallet Team (15%), Public Sale (9%), Advisors (2%).
 
-**TWT**
+## TWT
 
 <u>Summary</u>
 
@@ -116,7 +116,7 @@ tickers:
 
 3.  Token distribution: Users acquisition (40%), developers (15%), TWT community (15%), reserve stores (30%).
 
-**COIN98**
+## COIN98
 
 <u>Summary</u>
 

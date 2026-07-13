@@ -31,7 +31,7 @@ The new update raised a round led by @alexisohanian (co-founder of Reddit) from 
 
 There is not much information yet on which blockchain will Doodles 2 be, but team ensures that changing appearances in the new update will be gasless.
 
-**EXAMPLE BLOCKFI THREAD**
+## EXAMPLE BLOCKFI THREAD
 
 Blockfi Thread
 
