@@ -24,7 +24,7 @@ export const projects: Project[] = [
   {
     name: 'AEGIS',
     description:
-      'A workspace for researching, backtesting, and deploying multiple quantitative strategies under one engineering process. Built on vectorbt and CCXT, with a per-strategy spec-and-review gate so every program is reproducible and comparable before it touches risk.',
+      "A workspace for researching, backtesting, and deploying multiple quantitative strategies under one engineering process. Built on vectorbt and CCXT, with a per-strategy spec-and-review gate so every program is reproducible and comparable before it touches risk. If it can't survive review, it doesn't ship.",
     status: 'live',
     since: 'Jan 2026',
     stack: ['Python', 'vectorbt', 'CCXT'],
@@ -52,7 +52,7 @@ export const projects: Project[] = [
   {
     name: 'antebot',
     description:
-      'A betting-strategy lab: 79 scripted strategies across dice, blackjack, roulette, baccarat, and more, from Martingale to D’Alembert, built to measure exactly how every progression system meets the house edge. Negative EV, empirically confirmed. The orchestration, bankroll simulation, and variance tracking outlived the thesis.',
+      "A betting-strategy lab: 79 scripted strategies across dice, blackjack, roulette, baccarat, and more, from Martingale to D'Alembert, built to measure exactly how every progression system meets the house edge. Negative EV, empirically confirmed. The orchestration, bankroll simulation, and variance tracking outlived the thesis.",
     status: 'archived',
     since: 'Mar 2026',
     stack: ['JavaScript', 'Node', 'statistics'],
@@ -61,7 +61,7 @@ export const projects: Project[] = [
   {
     name: 'knowledge-graph',
     description:
-      'A projection system that merges four separate memory sources into one lint-enforced knowledge graph: atomic 1:1 nodes, semantic and rollup edges, conflict-aware sweeps, and annotation-preserving regeneration.',
+      "A projection system that merges four separate memory sources into one lint-enforced knowledge graph: atomic 1:1 nodes, semantic and rollup edges, conflict-aware sweeps, and annotation-preserving regeneration. Basically: one place where nothing I've learned gets lost or contradicts itself.",
     status: 'live',
     since: 'Mar 2026',
     stack: ['Python', 'Qdrant', 'Obsidian'],
@@ -116,7 +116,7 @@ export const projects: Project[] = [
   {
     name: 'probabilistic-stdev-bands',
     description:
-      'A TradingView indicator that models price dispersion with probabilistic standard-deviation bands. Gives a statistical read on volatility and likely ranges instead of fixed levels.',
+      'A TradingView indicator that models price dispersion with probabilistic standard-deviation bands. Gives a statistical read on volatility and likely ranges instead of fixed levels. I got tired of drawing horizontal lines and pretending they meant something.',
     status: 'open-source',
     since: 'Mar 2026',
     stack: ['Pine Script', 'statistics'],
