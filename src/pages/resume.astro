@@ -8,7 +8,12 @@ const work = entries.filter((e) => e.kind !== 'education');
 const education = entries.filter((e) => e.kind === 'education');
 ---
 
-<BaseLayout title="Resume" path="/resume" footer={false}>
+<BaseLayout
+  title="Resume"
+  description={`${AUTHOR} — printable resume with full work history and contact links.`}
+  path="/resume"
+  footer={false}
+>
   <article class="resume" aria-labelledby="resume-h">
     <header class="resume__header">
       <div>
