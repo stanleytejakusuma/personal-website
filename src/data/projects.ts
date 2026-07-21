@@ -2,6 +2,11 @@
 
 export type Status = 'live' | 'archived' | 'open-source' | 'in-dev' | 'concluded';
 
+// Curated domain taxonomy for the projects filter, kept deliberately small
+// (mirrors the sector-chip pattern on the musings tab). Every project gets
+// at least one; cross-cutting projects (e.g. an operated AI agent) carry two.
+export type Tag = 'ai-agents' | 'trading-quant' | 'infra-ops' | 'agent-safety';
+
 export interface Project {
   name: string;
   description: string;
@@ -9,6 +14,7 @@ export interface Project {
   since: string;
   stack: string[];
   metrics: string[];
+  tags: Tag[];
   repo?: string;
   link?: string;
 }
@@ -21,6 +27,15 @@ export const STATUS_LABEL: Record<Status, string> = {
   concluded: 'concluded',
 };
 
+export const TAG_LABEL: Record<Tag, string> = {
+  'ai-agents': 'AI & Agents',
+  'trading-quant': 'Trading & Quant',
+  'infra-ops': 'Infra & Ops',
+  'agent-safety': 'Agent Safety',
+};
+
+export const TAG_ORDER: Tag[] = ['ai-agents', 'trading-quant', 'infra-ops', 'agent-safety'];
+
 export const projects: Project[] = [
   {
     name: 'AEGIS',
@@ -30,6 +45,7 @@ export const projects: Project[] = [
     since: 'Jan 2026',
     stack: ['Python', 'vectorbt', 'CCXT'],
     metrics: ['multi-strategy', 'backtested'],
+    tags: ['trading-quant'],
   },
   {
     name: 'ring-mcp',
@@ -39,6 +55,7 @@ export const projects: Project[] = [
     since: 'Jul 2026',
     stack: ['TypeScript', 'MCP', 'Oura API'],
     metrics: ['3 tools', 'open source'],
+    tags: ['infra-ops'],
     repo: 'https://github.com/stanleytejakusuma/ring-mcp',
   },
   {
@@ -49,6 +66,7 @@ export const projects: Project[] = [
     since: 'Jun 2026',
     stack: ['FastAPI', 'HTMX', 'SQLite'],
     metrics: ['runway modeling', '2-day build'],
+    tags: ['infra-ops'],
   },
   {
     name: 'antebot',
@@ -58,6 +76,7 @@ export const projects: Project[] = [
     since: 'Mar 2026',
     stack: ['JavaScript', 'Node', 'statistics'],
     metrics: ['79 strategies', '-EV, proven'],
+    tags: ['trading-quant'],
   },
   {
     name: 'knowledge-graph',
@@ -67,6 +86,7 @@ export const projects: Project[] = [
     since: 'Mar 2026',
     stack: ['Python', 'Qdrant', 'Obsidian'],
     metrics: ['6k nodes · 21k edges', '4 sources -> 1 graph'],
+    tags: ['ai-agents', 'infra-ops'],
     repo: 'https://github.com/stanleytejakusuma/kg-sync',
   },
   {
@@ -77,6 +97,7 @@ export const projects: Project[] = [
     since: 'Feb 2026',
     stack: ['Python', 'FastAPI', 'TimescaleDB'],
     metrics: ['196 symbols', '1m OHLCV'],
+    tags: ['infra-ops', 'trading-quant'],
   },
   {
     name: 'card-counter',
@@ -86,6 +107,7 @@ export const projects: Project[] = [
     since: 'Mar 2026',
     stack: ['React 19', 'TypeScript', 'Zustand'],
     metrics: ['pure-logic engine', 'Kelly sizing'],
+    tags: ['trading-quant'],
     repo: 'https://github.com/stanleytejakusuma/card-counter',
   },
   {
@@ -96,6 +118,7 @@ export const projects: Project[] = [
     since: 'Jul 2026',
     stack: ['Python', 'LLM agents'],
     metrics: ['agentic RAG', 'daily driver'],
+    tags: ['ai-agents', 'infra-ops'],
   },
   {
     name: 'telegram-archiver',
@@ -105,6 +128,7 @@ export const projects: Project[] = [
     since: 'Feb 2026',
     stack: ['Python', 'Telethon', 'TimescaleDB'],
     metrics: ['self-hosted', 'searchable history'],
+    tags: ['infra-ops'],
   },
   {
     name: 'solagin-live',
@@ -114,6 +138,7 @@ export const projects: Project[] = [
     since: 'Jan 2026',
     stack: ['Python', 'asyncio', 'exchange APIs'],
     metrics: ['risk engine', 'live reconciliation'],
+    tags: ['trading-quant'],
   },
   {
     name: 'probabilistic-stdev-bands',
@@ -123,6 +148,7 @@ export const projects: Project[] = [
     since: 'Mar 2026',
     stack: ['Pine Script', 'statistics'],
     metrics: ['open source'],
+    tags: ['trading-quant'],
     repo: 'https://github.com/stanleytejakusuma/probabilistic-stdev-bands',
   },
   {
@@ -133,6 +159,7 @@ export const projects: Project[] = [
     since: 'May 2026',
     stack: ['Python', 'FastAPI', 'Docker'],
     metrics: ['auto-heal', 'human-in-the-loop'],
+    tags: ['ai-agents', 'infra-ops'],
   },
   {
     name: 'atlas',
@@ -142,6 +169,7 @@ export const projects: Project[] = [
     since: 'Apr 2026',
     stack: ['Python', 'Unsloth', 'TRL', 'Ollama'],
     metrics: ['711-case eval harness', 'judge ensemble'],
+    tags: ['ai-agents'],
     repo: 'https://github.com/stanleytejakusuma/atlas',
   },
   {
@@ -152,6 +180,7 @@ export const projects: Project[] = [
     since: 'Jul 2026',
     stack: ['systems design', 'Mermaid'],
     metrics: ['fail-closed', 'no LLM signs'],
+    tags: ['agent-safety', 'ai-agents'],
     repo: 'https://github.com/stanleytejakusuma/proposer-verifier',
   },
   {
@@ -162,6 +191,7 @@ export const projects: Project[] = [
     since: 'Jul 2026',
     stack: ['Python', 'Ed25519', 'red-teaming'],
     metrics: ['recall 1.0', '79 tests'],
+    tags: ['agent-safety', 'ai-agents'],
     repo: 'https://github.com/stanleytejakusuma/model-routing',
   },
   {
@@ -172,6 +202,7 @@ export const projects: Project[] = [
     since: 'Apr 2026',
     stack: ['Python', 'Telegram', 'LLM'],
     metrics: ['auto trade capture', 'behavioral classification'],
+    tags: ['trading-quant', 'ai-agents'],
   },
   {
     name: 'axiom homelab',
@@ -181,5 +212,6 @@ export const projects: Project[] = [
     since: 'Nov 2025',
     stack: ['Docker', 'Linux', 'Tailscale'],
     metrics: ['24/7', 'self-hosted'],
+    tags: ['infra-ops'],
   },
 ];

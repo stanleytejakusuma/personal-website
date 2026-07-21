@@ -1,10 +1,162 @@
 ---
 import ProjectCard from './ProjectCard.astro';
-import { projects } from '../data/projects';
+import { projects, TAG_LABEL, TAG_ORDER } from '../data/projects';
 ---
 
-<div class="projects">
+<div class="projects" data-projects>
+  <div class="projects__head">
+    <input
+      class="projects__search"
+      type="search"
+      data-psearch
+      placeholder="search projects…"
+      aria-label="Search projects by name, description, or stack"
+      autocomplete="off"
+      spellcheck="false"
+    />
+    <p class="projects__count" data-pcount role="status">{projects.length} projects</p>
+  </div>
+
+  <div class="projects__filters" role="group" aria-label="Filter projects by tag">
+    <button class="pfilter is-active" type="button" data-filter="all" aria-pressed="true">All</button>
+    {TAG_ORDER.map((tag) => (
+      <button class="pfilter" type="button" data-filter={tag} aria-pressed="false">{TAG_LABEL[tag]}</button>
+    ))}
+  </div>
+
   <div class="prow-list">
     {projects.map((project) => <ProjectCard project={project} />)}
   </div>
+
+  <p class="projects__empty" data-projects-empty hidden>no projects match. try a different tag or clear the search.</p>
 </div>
+
+<script>
+  const root = document.querySelector<HTMLElement>('[data-projects]');
+  const buttons = Array.from(root?.querySelectorAll<HTMLButtonElement>('[data-filter]') ?? []);
+  const rows = Array.from(root?.querySelectorAll<HTMLDetailsElement>('[data-project-row]') ?? []);
+  const search = root?.querySelector<HTMLInputElement>('[data-psearch]');
+  const count = root?.querySelector<HTMLElement>('[data-pcount]');
+  const empty = root?.querySelector<HTMLElement>('[data-projects-empty]');
+  const total = rows.length;
+
+  let activeFilter = 'all';
+
+  const applyFilters = () => {
+    const q = (search?.value || '').trim().toLowerCase();
+    let visible = 0;
+
+    rows.forEach((row) => {
+      const tags = (row.dataset.tags || '').split('|');
+      const matchesTag = activeFilter === 'all' || tags.includes(activeFilter);
+      const matchesQuery = !q || (row.dataset.search || '').includes(q);
+      row.hidden = !(matchesTag && matchesQuery);
+      if (!row.hidden) visible++;
+    });
+
+    if (count) count.textContent = visible === total ? `${total} projects` : `${visible} / ${total} projects`;
+    if (empty) empty.hidden = visible !== 0;
+  };
+
+  buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+      activeFilter = button.dataset.filter || 'all';
+      buttons.forEach((b) => {
+        const active = b === button;
+        b.classList.toggle('is-active', active);
+        b.setAttribute('aria-pressed', active ? 'true' : 'false');
+      });
+      applyFilters();
+    });
+  });
+
+  // Debounced: mirrors the musings search so the live-region count doesn't
+  // announce on every keystroke.
+  let searchTimer: number | undefined;
+  search?.addEventListener('input', () => {
+    window.clearTimeout(searchTimer);
+    searchTimer = window.setTimeout(applyFilters, 250);
+  });
+</script>
+
+<style>
+  .projects {
+    display: grid;
+    gap: 0.9rem;
+  }
+
+  .projects__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .projects__count {
+    margin: 0;
+    color: var(--color-muted);
+    font-family: var(--font-mono);
+    font-size: 0.76rem;
+    white-space: nowrap;
+  }
+
+  .projects__search {
+    width: min(100%, 320px);
+    padding: 0.4rem 0.7rem;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    background: color-mix(in srgb, var(--color-surface) 55%, transparent);
+    color: var(--color-fg);
+    font-family: var(--font-mono);
+    /* 16px floor keeps iOS Safari from zooming the page on focus */
+    font-size: max(16px, 0.8rem);
+  }
+
+  .projects__search::placeholder {
+    color: var(--color-muted);
+  }
+
+  .projects__search:focus-visible {
+    border-color: color-mix(in srgb, var(--color-accent) 58%, var(--color-border));
+  }
+
+  .projects__filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+  }
+
+  .pfilter {
+    min-height: 30px;
+    padding: 0.28rem 0.58rem;
+    border: 1px solid var(--color-border);
+    border-radius: 999px;
+    background: transparent;
+    color: var(--color-muted);
+    cursor: pointer;
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    transition: background-color 160ms var(--ease-out), border-color 160ms var(--ease-out),
+      color 160ms var(--ease-out);
+  }
+
+  .pfilter:hover,
+  .pfilter:focus-visible,
+  .pfilter.is-active {
+    border-color: color-mix(in srgb, var(--color-accent) 58%, var(--color-border));
+    color: var(--color-accent);
+  }
+
+  .pfilter.is-active {
+    background: color-mix(in srgb, var(--color-accent) 10%, transparent);
+  }
+
+  .projects__empty {
+    padding: 2rem 0;
+    color: var(--color-muted);
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    text-align: center;
+  }
+</style>

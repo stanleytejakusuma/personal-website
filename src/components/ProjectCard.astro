@@ -8,9 +8,12 @@ interface Props {
 
 const { project } = Astro.props;
 const href = project.link ?? project.repo;
+const searchIndex = [project.name, project.description, project.stack.join(' '), project.metrics.join(' ')]
+  .join(' ')
+  .toLowerCase();
 ---
 
-<details class="prow">
+<details class="prow" data-project-row data-tags={project.tags.join('|')} data-search={searchIndex}>
   <summary class="prow__summary">
     <span class="prow__title">
       <span class="prow__name">{project.name}</span>
