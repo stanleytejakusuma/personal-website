@@ -8,7 +8,12 @@ import { entries } from '../data/experience';
   {
     entries.map((entry) => (
       <article class="xp__entry">
-        <p class="xp__dates">{entry.dates}</p>
+        <div class="xp__rail">
+          <p class="xp__dates">{entry.dates}</p>
+          {entry.logo && (
+            <img class="xp__logo" src={entry.logo} alt={entry.org} loading="lazy" decoding="async" />
+          )}
+        </div>
         <div class="xp__body">
           <p class="xp__role">
             {entry.role} <span class="xp__org">· {entry.org}</span>
@@ -31,7 +36,7 @@ import { entries } from '../data/experience';
 
 <style>
   .xp {
-    max-width: 72ch;
+    max-width: none;
     font-family: var(--font-mono);
   }
 
@@ -72,6 +77,27 @@ import { entries } from '../data/experience';
     line-height: 2;
     text-transform: uppercase;
     letter-spacing: 0.06em;
+  }
+
+  .xp__rail {
+    min-width: 0;
+  }
+
+  /* Uniform light chip normalizes the mixed logos (gradient icon, gray
+     wordmark, transparent png, svg). Fixed height, natural width; the chip
+     stays light in both themes because logos are made for light grounds. */
+  .xp__logo {
+    display: inline-block;
+    height: 22px;
+    width: auto;
+    max-width: 100%;
+    margin-top: 0.65rem;
+    padding: 4px 6px;
+    background: #fff;
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    box-sizing: content-box;
+    vertical-align: top;
   }
 
   .xp__role {

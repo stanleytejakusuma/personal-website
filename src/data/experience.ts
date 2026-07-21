@@ -11,6 +11,8 @@ export interface Entry {
   // Public artifact for this entry — rendered as a small link on the
   // experience tab only (the print resume stays link-free per entry).
   repo?: string;
+  // Org/school logo, shown on the experience tab only (not the print resume).
+  logo?: string;
 }
 
 export const entries: Entry[] = [
@@ -18,6 +20,7 @@ export const entries: Entry[] = [
     dates: 'Oct 2024 – May 2026',
     role: 'Analytics Engineer',
     org: 'Flipside Crypto',
+    logo: '/logos/flipside.jpeg',
     bullets: [
       'Built Snowflake + dbt medallion ELT pipelines across 10+ chains: NEAR, Solana, Aptos, Monad, Flow, Sei, and cross-chain protocols.',
       'Shipped a pipeline "bugbot": failures on incremental runs feed a scheduled LLM agent that diagnoses the root cause and drafts the fix PR, human-gated.',
@@ -31,6 +34,7 @@ export const entries: Entry[] = [
     dates: '2022–2024',
     role: 'Research & Delegation Lead',
     org: 'Boiler Blockchain, Purdue',
+    logo: '/logos/boiler-blockchain.png',
     bullets: [
       'Led the delegations team overseeing $6M+ in governance votes across Optimism, dYdX, Stader Labs, and Origin. Personally ran the Optimism delegation with transparent voting rationales.',
       'Built and taught the “Introduction to Blockchain” certification course (top chains, DeFi, stablecoins, DeFi vs CeFi vs TradFi) with bi-weekly forums.',
@@ -41,6 +45,7 @@ export const entries: Entry[] = [
     dates: 'Dec 2021 – Jun 2022',
     role: 'Data Scientist Intern',
     org: 'Kargo Technologies',
+    logo: '/logos/kargo.png',
     bullets: [
       'Built automated business-line P&L trackers (financing, fulfillment, logistics) for a B2B freight marketplace. Metabase SQL piped to Sheets, then automated in Python.',
       'Produced investor-relations analytics: GTV, disbursement, and NPL metrics, route-level profitability, and comparable-company benchmarking against 8 public comps.',
@@ -51,6 +56,7 @@ export const entries: Entry[] = [
     dates: '2021–2022',
     role: 'Research Writer',
     org: 'Wagmi Journal',
+    logo: '/logos/wagmi.png',
     bullets: [
       'My first crypto role. Self-taught Dune Analytics on the job to pair data with the writing. Bi-weekly research theses across DeFi, NFTs, DAOs, and regulation for angel investors.',
       'Built my first Dune queries (incl. a DeFi Pulse Index $DPI holder tracker) and a Python + Binance price-action screener.',
@@ -61,6 +67,7 @@ export const entries: Entry[] = [
     dates: '2021',
     role: 'Data Scientist',
     org: 'The Data Mine, Purdue',
+    logo: '/logos/miso.png',
     bullets: [
       'Built electricity-usage prediction models covering the Midwest and South for the Midcontinent ISO (MISO).',
       'Applied random forests and feature importance to model electricity-fluctuation edge cases.',
@@ -71,6 +78,7 @@ export const entries: Entry[] = [
     dates: '2021',
     role: 'Barista',
     org: 'Starbucks',
+    logo: '/logos/starbucks.svg',
     bullets: [
       'My first employment, ever. Survived the 7am rush. Turns out that was my first lesson in high-frequency order flow.',
     ],
@@ -79,6 +87,7 @@ export const entries: Entry[] = [
     dates: 'Aug 2020 – May 2024',
     role: 'B.S. Data Science',
     org: 'Purdue University',
+    logo: '/logos/purdue.jpeg',
     kind: 'education',
     bullets: [
       'Business economics minor. Boiler Blockchain, boxing club, Dean’s List.',
