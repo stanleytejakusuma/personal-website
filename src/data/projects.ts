@@ -92,11 +92,11 @@ export const projects: Project[] = [
   {
     name: 'market-data-service',
     description:
-      'A self-hosted market-data pipeline that backfills and incrementally archives one-minute OHLCV for around 196 instruments into a TimescaleDB hypertable, served behind a FastAPI read API. Built for reliability, with freshness watchdogs and multi-route egress.',
+      'A self-hosted market-data pipeline that backfills and incrementally archives one-minute OHLCV for 388 instruments, 223 crypto and 165 US equities, into a TimescaleDB hypertable, served behind one canonical FastAPI read API for both asset classes. Built for reliability, with freshness watchdogs, timezone-aware coverage checks, and multi-route egress.',
     status: 'live',
     since: 'Feb 2026',
     stack: ['Python', 'FastAPI', 'TimescaleDB'],
-    metrics: ['196 symbols', '1m OHLCV'],
+    metrics: ['388 symbols', '1m OHLCV'],
     tags: ['infra-ops', 'trading-quant'],
   },
   {
@@ -113,7 +113,7 @@ export const projects: Project[] = [
   {
     name: 'Kairos',
     description:
-      'A self-hosted agentic RAG gateway on the Hermes runtime, operated daily: multi-source ingestion across chat platforms and call transcripts, a tool registry, scheduled agents, and self-hosted web search. Any action that reaches the real world routes through human approval first.',
+      'A self-hosted agentic RAG gateway on the Hermes runtime, operated daily: multi-source ingestion across chat platforms, X watchlists, Reddit, and call transcripts, a tool registry, scheduled agents, and self-hosted web search. Any action that reaches the real world routes through human approval first.',
     status: 'live',
     since: 'Jul 2026',
     stack: ['Python', 'LLM agents'],
