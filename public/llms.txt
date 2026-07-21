@@ -1,6 +1,6 @@
 # Stanley Tejakusuma
 
-> Personal site of Stanley Tejakusuma. Data engineer across blockchain and analytics: pipelines, models, and trading systems. Open to data · quant · ai/ml roles.
+> Personal site of Stanley Tejakusuma. Data and AI engineer across blockchain and analytics: pipelines, agents, and trading systems. Open to data · quant · ai/ml roles.
 
 ## Pages
 
@@ -10,3 +10,11 @@
 - [RSS feed](https://stanleytejakusuma.com/rss.xml): every musing with dates and links
 - [Sitemap](https://stanleytejakusuma.com/sitemap-index.xml)
 - [GitHub](https://github.com/stanleytejakusuma): open-source projects
+
+## AI projects
+
+- atlas: LLM fine-tuning experiments (QLoRA, SFT then DPO on an open-weights 14B model) with a 703-case eval harness and judge ensemble
+- Kairos: self-hosted agentic RAG gateway with multi-source ingestion, a tool registry, scheduled agents, and human-approval guardrails
+- knowledge-graph: personal knowledge graph of around 6,000 nodes and 21,000 embedding-similarity edges; training corpus for atlas
+- trading-journal: LLM pipeline that captures trades and classifies trading psychology over each trade's event timeline
+- ring-mcp: open-source MCP server that exposes Oura Ring data as agent tools

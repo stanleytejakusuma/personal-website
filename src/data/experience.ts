@@ -20,7 +20,9 @@ export const entries: Entry[] = [
     org: 'Flipside Crypto',
     bullets: [
       'Built Snowflake + dbt medallion ELT pipelines across 10+ chains: NEAR, Solana, Aptos, Monad, Flow, Sei, and cross-chain protocols.',
-      'Designed an agent-driven cost-intelligence pipeline for Snowflake spend: outlier detection → root-cause diagnosis → auto-drafted remediation PRs, human-gated.',
+      'Shipped a pipeline "bugbot": failures on incremental runs feed a scheduled LLM agent that diagnoses the root cause and drafts the fix PR, human-gated.',
+      'Designed a cost-intelligence pipeline connecting Snowflake compute spend with CI runtime: outlier detection → root-cause diagnosis → proposed efficiency fixes.',
+      'Built a multi-agent "pipeline architect" for new-chain onboarding: parallel agents for context discovery (chain classification, transaction structure, RPC), model scaffolding, and ingestion.',
       'Anchored the NEAR client relationship; shipped an Intents intelligence layer showing NEAR Intents acts as a cross-chain swap aggregator.',
       'Shipped cross-EVM hot-wallet detection and a weekly external-parity audit cross-validating DEX, bridge, and lending coverage against DeFiLlama.',
     ],

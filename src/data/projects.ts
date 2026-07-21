@@ -1,6 +1,6 @@
 // Single source of truth for the featured project lineup.
 
-export type Status = 'live' | 'archived' | 'open-source' | 'in-dev';
+export type Status = 'live' | 'archived' | 'open-source' | 'in-dev' | 'concluded';
 
 export interface Project {
   name: string;
@@ -18,6 +18,7 @@ export const STATUS_LABEL: Record<Status, string> = {
   archived: 'archived',
   'open-source': 'open source',
   'in-dev': 'in dev',
+  concluded: 'concluded',
 };
 
 export const projects: Project[] = [
@@ -61,11 +62,11 @@ export const projects: Project[] = [
   {
     name: 'knowledge-graph',
     description:
-      "A projection system that merges four separate memory sources into one lint-enforced knowledge graph: atomic 1:1 nodes, semantic and rollup edges, conflict-aware sweeps, and annotation-preserving regeneration. Basically: one place where nothing I've learned gets lost or contradicts itself.",
+      "A projection system that merges four separate memory sources into one lint-enforced knowledge graph: around 6,000 atomic nodes and 21,000 semantic edges built from embedding similarity, with conflict-aware sweeps and annotation-preserving regeneration. It powers retrieval for my agents and doubled as the training corpus for atlas. Basically: one place where nothing I've learned gets lost or contradicts itself.",
     status: 'live',
     since: 'Mar 2026',
     stack: ['Python', 'Qdrant', 'Obsidian'],
-    metrics: ['4 sources -> 1 graph', 'lint-enforced'],
+    metrics: ['6k nodes · 21k edges', '4 sources -> 1 graph'],
   },
   {
     name: 'market-data-service',
@@ -89,11 +90,11 @@ export const projects: Project[] = [
   {
     name: 'Kairos',
     description:
-      'A personal agent OS built on the Hermes runtime: finances, health, feeds, and daily routines behind one brain, delivered as a daily digest. Spec-first, in active development.',
-    status: 'in-dev',
+      'A self-hosted agentic RAG gateway on the Hermes runtime, operated daily: multi-source ingestion across chat platforms and call transcripts, a tool registry, scheduled agents, and self-hosted web search. Any action that reaches the real world routes through human approval first.',
+    status: 'live',
     since: 'Jul 2026',
     stack: ['Python', 'LLM agents'],
-    metrics: ['life-OS', 'daily digest'],
+    metrics: ['agentic RAG', 'daily driver'],
   },
   {
     name: 'telegram-archiver',
@@ -135,20 +136,20 @@ export const projects: Project[] = [
   {
     name: 'atlas',
     description:
-      'A self-hosted, sovereign LLM: fine-tuning an open model on my own knowledge-graph corpus so an assistant that actually knows my context runs entirely on local hardware. Staged evaluation gates each checkpoint before it ships, and the recipe is still evolving.',
-    status: 'in-dev',
+      'Controlled fine-tuning experiments toward a self-hosted LLM: QLoRA on an open-weights 14B model, SFT then DPO, trained on my own knowledge-graph corpus and graded by a 703-case eval harness across 14 categories with a judge ensemble on high-stakes cases. Three training rounds, none beat a strong hosted baseline, so the fine-tunes were shelved and retrieval won. A measured negative result is still a result.',
+    status: 'concluded',
     since: 'Apr 2026',
     stack: ['Python', 'Unsloth', 'TRL', 'Ollama'],
-    metrics: ['self-hosted LLM', 'QLoRA fine-tune'],
+    metrics: ['703-case eval harness', 'judge ensemble'],
   },
   {
     name: 'trading-journal',
     description:
-      'A post-trade journal that runs itself: a Telegram bot watches my futures account, pings me for the rationale while the trade is fresh, and has a language model score the decision after it closes. Turns hindsight into a structured dataset.',
+      'A post-trade journal that runs itself: a Telegram bot watches my futures account, pings me for the rationale while the trade is fresh, and a language model classifies the trading psychology across the full event timeline once the trade closes. Turns hindsight into a structured behavioral dataset.',
     status: 'live',
     since: 'Apr 2026',
     stack: ['Python', 'Telegram', 'LLM'],
-    metrics: ['auto trade capture', 'LLM scoring'],
+    metrics: ['auto trade capture', 'behavioral classification'],
   },
   {
     name: 'axiom homelab',
