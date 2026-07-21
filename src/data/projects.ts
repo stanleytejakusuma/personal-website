@@ -67,6 +67,7 @@ export const projects: Project[] = [
     since: 'Mar 2026',
     stack: ['Python', 'Qdrant', 'Obsidian'],
     metrics: ['6k nodes · 21k edges', '4 sources -> 1 graph'],
+    repo: 'https://github.com/stanleytejakusuma/kg-sync',
   },
   {
     name: 'market-data-service',
