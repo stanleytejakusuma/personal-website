@@ -13,7 +13,9 @@
 
 ## AI projects
 
-- atlas: LLM fine-tuning experiments (QLoRA, SFT then DPO on an open-weights 14B model) with a 711-case eval harness and judge ensemble
+- atlas: LLM fine-tuning program (QLoRA, SFT then DPO on 14B and 32B bases) with a 711-case eval harness and judge ensemble; open source at https://github.com/stanleytejakusuma/atlas
+- proposer-verifier: architecture write-up for capital-bearing LLM agents; the brain proposes, a deterministic fail-closed signer decides; https://github.com/stanleytejakusuma/proposer-verifier
+- model-routing: fail-closed capital-action gate with Ed25519-signed single-use intents and a red-team harness at recall 1.0; https://github.com/stanleytejakusuma/model-routing
 - Kairos: self-hosted agentic RAG gateway with multi-source ingestion, a tool registry, scheduled agents, and human-approval guardrails
 - knowledge-graph: personal knowledge graph of around 6,000 nodes and 21,000 embedding-similarity edges; training corpus for atlas
 - trading-journal: LLM pipeline that captures trades and classifies trading psychology over each trade's event timeline

@@ -136,11 +136,32 @@ export const projects: Project[] = [
   {
     name: 'atlas',
     description:
-      'Controlled fine-tuning experiments toward a self-hosted LLM: QLoRA on an open-weights 14B model, SFT then DPO, trained on my own knowledge-graph corpus and graded by a 711-case eval harness across 14 categories with a judge ensemble on high-stakes cases. Three training rounds, none beat a strong hosted baseline, so the fine-tunes were shelved and retrieval won. A measured negative result is still a result.',
+      'Controlled fine-tuning experiments toward a self-hosted LLM: QLoRA on 14B and 32B bases, SFT then DPO, graded by a 711-case eval harness across 14 categories with a judge ensemble on high-stakes cases. The final version beat the hosted baseline on the harness, then lost a live A/B zero topics to thirty-five and hit the pre-registered kill rule, so the fine-tunes were shelved. The harness is the point. A measured negative result is still a result.',
     status: 'concluded',
     since: 'Apr 2026',
     stack: ['Python', 'Unsloth', 'TRL', 'Ollama'],
     metrics: ['711-case eval harness', 'judge ensemble'],
+    repo: 'https://github.com/stanleytejakusuma/atlas',
+  },
+  {
+    name: 'proposer-verifier',
+    description:
+      'An architecture write-up for capital-bearing LLM agents: split the system into a brain that can only propose and a deterministic signer that verifies every intent through a layered fail-closed pipeline. No LLM in the signing path, ever. The pattern behind my live agent execution, published as docs and diagrams.',
+    status: 'open-source',
+    since: 'Jul 2026',
+    stack: ['systems design', 'Mermaid'],
+    metrics: ['fail-closed', 'no LLM signs'],
+    repo: 'https://github.com/stanleytejakusuma/proposer-verifier',
+  },
+  {
+    name: 'model-routing',
+    description:
+      'A fail-closed gate between an agent harness and irreversible actions: an LLM classifier with human confirmation, Ed25519-signed single-use intents bound to the exact action, and a red-team harness holding recall 1.0 across 59 adversarial cases. Ships with a shadow-runner path for deploying it without breaking anyone.',
+    status: 'open-source',
+    since: 'Jul 2026',
+    stack: ['Python', 'Ed25519', 'red-teaming'],
+    metrics: ['recall 1.0', '79 tests'],
+    repo: 'https://github.com/stanleytejakusuma/model-routing',
   },
   {
     name: 'trading-journal',
