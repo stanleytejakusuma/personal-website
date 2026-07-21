@@ -136,11 +136,11 @@ export const projects: Project[] = [
   {
     name: 'atlas',
     description:
-      'Controlled fine-tuning experiments toward a self-hosted LLM: QLoRA on an open-weights 14B model, SFT then DPO, trained on my own knowledge-graph corpus and graded by a 703-case eval harness across 14 categories with a judge ensemble on high-stakes cases. Three training rounds, none beat a strong hosted baseline, so the fine-tunes were shelved and retrieval won. A measured negative result is still a result.',
+      'Controlled fine-tuning experiments toward a self-hosted LLM: QLoRA on an open-weights 14B model, SFT then DPO, trained on my own knowledge-graph corpus and graded by a 711-case eval harness across 14 categories with a judge ensemble on high-stakes cases. Three training rounds, none beat a strong hosted baseline, so the fine-tunes were shelved and retrieval won. A measured negative result is still a result.',
     status: 'concluded',
     since: 'Apr 2026',
     stack: ['Python', 'Unsloth', 'TRL', 'Ollama'],
-    metrics: ['703-case eval harness', 'judge ensemble'],
+    metrics: ['711-case eval harness', 'judge ensemble'],
   },
   {
     name: 'trading-journal',

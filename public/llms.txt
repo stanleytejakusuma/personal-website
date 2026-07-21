@@ -13,7 +13,7 @@
 
 ## AI projects
 
-- atlas: LLM fine-tuning experiments (QLoRA, SFT then DPO on an open-weights 14B model) with a 703-case eval harness and judge ensemble
+- atlas: LLM fine-tuning experiments (QLoRA, SFT then DPO on an open-weights 14B model) with a 711-case eval harness and judge ensemble
 - Kairos: self-hosted agentic RAG gateway with multi-source ingestion, a tool registry, scheduled agents, and human-approval guardrails
 - knowledge-graph: personal knowledge graph of around 6,000 nodes and 21,000 embedding-similarity edges; training corpus for atlas
 - trading-journal: LLM pipeline that captures trades and classifies trading psychology over each trade's event timeline
