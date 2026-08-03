@@ -1,7 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 
-const FILTERS = ['DeFi', 'L1/L2', 'NFT', 'GameFi', 'MEV', 'Research', 'CEX/FinTech', 'Evergreen'];
+const FILTERS = ['DeFi', 'L1/L2', 'NFT', 'GameFi', 'MEV', 'Research', 'CEX/FinTech', 'Evergreen', 'Engineering'];
 const VENUES = {
   wagmi: 'Wagmi',
   boiler: 'Boiler',
@@ -11,6 +11,12 @@ const VENUES = {
 const entries = (
   await getCollection('musings', ({ data }) => (import.meta.env.PROD ? !data.draft : true))
 ).sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+// A tag with no chip is unreachable in the UI, so fail the build instead of
+// shipping a post that cannot be filtered to. FILTERS stays hand-ordered.
+const unchipped = [...new Set(entries.flatMap((e) => e.data.tags))].filter((t) => !FILTERS.includes(t));
+if (unchipped.length > 0) {
+  throw new Error(`Musings.astro: tag(s) with no filter chip: ${unchipped.join(', ')}`);
+}
 
 // pinned "featured" reads — flagged per-post via `featured: true` in frontmatter.
 const featured = entries.filter((e) => e.data.featured && !e.data.external);
