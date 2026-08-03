@@ -36,7 +36,19 @@ export const TAG_LABEL: Record<Tag, string> = {
 
 export const TAG_ORDER: Tag[] = ['ai-agents', 'trading-quant', 'infra-ops', 'agent-safety'];
 
-export const projects: Project[] = [
+const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+// 'Mon YYYY' -> sortable epoch. Parsed explicitly rather than via `new Date(s)`,
+// whose bare-month-year handling is implementation-defined and timezone-sensitive.
+function sinceTs(since: string): number {
+  const [mon, year] = since.split(' ');
+  const m = MONTHS.indexOf(mon);
+  if (m < 0 || !/^\d{4}$/.test(year ?? '')) {
+    throw new Error(`projects.ts: unparseable "since" value ${JSON.stringify(since)} — expected "Mon YYYY"`);
+  }
+  return Date.UTC(Number(year), m);
+}
+
+const projectList: Project[] = [
   {
     name: 'AEGIS',
     description:
@@ -141,6 +153,17 @@ export const projects: Project[] = [
     tags: ['trading-quant'],
   },
   {
+    name: 'pi-king',
+    description:
+      'A tmux-backed session manager for the Pi coding agent: /bg hands a running session to tmux and frees the terminal. The dashboard lists every session on the machine to reattach with a keypress. Reattaching resumes the same process, not a transcript replayed into a new one. Liveness is verified by process identity, so a crashed session disappears rather than lying about its state.',
+    status: 'open-source',
+    since: 'Jul 2026',
+    stack: ['TypeScript', 'tmux', 'Pi'],
+    metrics: ['zero runtime deps', 'reattach in-process'],
+    tags: ['ai-agents', 'infra-ops'],
+    repo: 'https://github.com/stanleytejakusuma/pi-king',
+  },
+  {
     name: 'probabilistic-stdev-bands',
     description:
       'A TradingView indicator that models price dispersion with probabilistic standard-deviation bands. Gives a statistical read on volatility and likely ranges instead of fixed levels. I got tired of drawing horizontal lines and pretending they meant something.',
@@ -215,3 +238,7 @@ export const projects: Project[] = [
     tags: ['infra-ops'],
   },
 ];
+
+// Newest first. Ties (five projects share Jul 2026) keep their authored order —
+// Array#sort is stable per spec, so the ordering above still decides within a month.
+export const projects: Project[] = [...projectList].sort((a, b) => sinceTs(b.since) - sinceTs(a.since));
