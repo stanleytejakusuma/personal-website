@@ -67,7 +67,7 @@ const projectList: Project[] = [
     since: 'Jul 2026',
     stack: ['TypeScript', 'MCP', 'Oura API'],
     metrics: ['3 tools', 'open source'],
-    tags: ['infra-ops'],
+    tags: ['ai-agents', 'infra-ops'],
     repo: 'https://github.com/stanleytejakusuma/ring-mcp',
   },
   {
