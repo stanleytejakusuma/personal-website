@@ -164,6 +164,50 @@ const projectList: Project[] = [
     repo: 'https://github.com/stanleytejakusuma/pi-king',
   },
   {
+    name: 'transcript-digest',
+    description:
+      "A skill that turns any transcript into a structured, confidence-tagged brief. Point it at a local file or a link from YouTube, TikTok, X and podcasts alike, and it fetches captions or transcribes locally before digesting. It distrusts diarization on purpose: attributes lines by content instead of a speaker label that's often silently wrong, and tags every claim CONFIRMED, LIKELY and UNVERIFIED instead of pretending uniform certainty.",
+    status: 'open-source',
+    since: 'Aug 2026',
+    stack: ['Markdown', 'yt-dlp', 'Whisper'],
+    metrics: ['url or file', 'confidence-tagged'],
+    tags: ['ai-agents', 'infra-ops'],
+    repo: 'https://github.com/stanleytejakusuma/transcript-digest',
+  },
+  {
+    name: 'things-orient',
+    description:
+      "A read-only skill that renders Things 3 board state into an agent's context: the full board for planning or a lighter search-first pass before creating a task. It only ever observes. Proposing or writing a change is a different skill's job entirely.",
+    status: 'open-source',
+    since: 'Aug 2026',
+    stack: ['Markdown', 'MCP', 'Things 3'],
+    metrics: ['read-only', 'dedup-first'],
+    tags: ['ai-agents', 'infra-ops'],
+    repo: 'https://github.com/stanleytejakusuma/things-orient',
+  },
+  {
+    name: 'things-sync',
+    description:
+      'Reconciles a Things 3 board against a conversation: scans for task-shaped statements and produces an explicit add, update, move or close diff before touching anything. A WIP cap, a required blocker note on anything Waiting, and a closure needs real evidence, not a vibe.',
+    status: 'open-source',
+    since: 'Aug 2026',
+    stack: ['Markdown', 'MCP', 'Things 3'],
+    metrics: ['diff-then-approve', 'WIP-capped'],
+    tags: ['ai-agents', 'infra-ops'],
+    repo: 'https://github.com/stanleytejakusuma/things-sync',
+  },
+  {
+    name: 'telegram-archive',
+    description:
+      "A read-only CLI for a Telegram archive in TimescaleDB: search, freshness checks, message context, link extraction, CSV and JSON export, all shipped over SSH and docker exec so the database never needs direct exposure. Ships the query half only. The ingestion half needs a Telegram session that's effectively full account access, and that's not something to copy-paste from a stranger's example.",
+    status: 'open-source',
+    since: 'Aug 2026',
+    stack: ['Python', 'TimescaleDB', 'SSH'],
+    metrics: ['SSH + psql', 'zero hardcoded config'],
+    tags: ['ai-agents', 'infra-ops'],
+    repo: 'https://github.com/stanleytejakusuma/telegram-archive',
+  },
+  {
     name: 'probabilistic-stdev-bands',
     description:
       'A TradingView indicator that models price dispersion with probabilistic standard-deviation bands. Gives a statistical read on volatility and likely ranges instead of fixed levels. I got tired of drawing horizontal lines and pretending they meant something.',
