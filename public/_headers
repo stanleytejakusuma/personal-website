@@ -1,6 +1,9 @@
 /musings-index.json
   X-Robots-Tag: noindex
 
+/legal/*
+  X-Robots-Tag: noindex, nofollow
+
 /*
   X-Content-Type-Options: nosniff
   X-Frame-Options: SAMEORIGIN

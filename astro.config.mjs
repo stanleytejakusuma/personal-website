@@ -22,6 +22,7 @@ export default defineConfig({
   site: 'https://stanleytejakusuma.com',
   integrations: [
     sitemap({
+      filter: (page) => !page.includes('/legal/'),
       serialize(item) {
         const slug = item.url.match(/\/musings\/([^/]+)\/?$/);
         if (slug && lastmodBySlug[slug[1]]) item.lastmod = lastmodBySlug[slug[1]];
