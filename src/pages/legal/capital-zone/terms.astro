@@ -1,0 +1,54 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Terms — capital-zone"
+  description="Terms of service for capital-zone, a private read-only Gmail tool built by Stanley Tejakusuma for his own use."
+  path="/legal/capital-zone/terms"
+>
+  <section class="representative representative--narrow terms" aria-labelledby="terms-h">
+    <p class="mono-label">legal / terms</p>
+    <h1 class="section-heading" id="terms-h">Terms of service — capital-zone</h1>
+    <p class="section-copy">
+      capital-zone is a private tool Stanley Tejakusuma built for his own use. It is not a public
+      service, and no one else may sign up or use it.
+    </p>
+
+    <h2 class="terms__heading">Access</h2>
+    <p class="section-copy">
+      Only accounts owned by Stanley Tejakusuma are connected. The tool requests read-only Gmail
+      access (<code>gmail.readonly</code>) and never sends, deletes or changes email.
+    </p>
+
+    <h2 class="terms__heading">No warranty</h2>
+    <p class="section-copy">
+      The tool is provided as-is for personal record-keeping. It gives no financial advice and makes
+      no guarantee that its information is complete or correct.
+    </p>
+
+    <h2 class="terms__heading">Privacy</h2>
+    <p class="section-copy">
+      How data is handled is described in the{' '}
+      <a class="inline-link" href="/legal/capital-zone/privacy">privacy policy</a>.
+    </p>
+
+    <h2 class="terms__heading">Ending access</h2>
+    <p class="section-copy">
+      Access can be removed at any time from Google Account → Security → Your connections to
+      third-party apps &amp; services.
+    </p>
+
+    <h2 class="terms__heading">Contact</h2>
+    <p class="section-copy">gstanleytejakusuma@gmail.com · Last updated 9 November 2026</p>
+  </section>
+</BaseLayout>
+
+<style>
+  .terms__heading {
+    margin: 2.2rem 0 0.5rem;
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+    font-weight: 600;
+  }
+</style>
